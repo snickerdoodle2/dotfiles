@@ -1,0 +1,33 @@
+(defwidget navbar []
+ (centerbox 
+  :class "navbar"
+  :orientation "h"
+  (left)
+  (center)
+  ""
+ ))
+
+(deflisten current_workspace :initial "1" "bash ~/.config/eww/scripts/active-workspace")
+
+(defwidget left []
+    (box
+        :class "workspaces"
+        :halign "start"
+        :valign "center"
+        :spacing 4
+        (for workspace in "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+        (label :class "${workspace == current_workspace ? "active" : ""}":text "󰑊")
+        )
+     )
+)
+
+(defpoll time :interval "5s" `date +%H:%M`)
+
+(defwidget center []
+    (label
+        :text {time}
+        :class "clock"
+        :hexpand true
+    )
+)
+

@@ -1,0 +1,29 @@
+* {
+    all: unset;
+}
+
+.navbar {
+    margin: 8px 8px 0 8px;
+    padding: 0 8px 0 8px;
+    border-radius: 8px;
+    background: #303446;
+    font-size: 16px;
+    font-family: "JetBrainsMonoNf";
+    color: #c6d0f5;
+}
+
+.clock {
+    font-weight: 700;
+}
+
+.workspaces {
+    background: #232634;
+    padding: 0 8px 0 8px;
+    border-radius: 9999px;
+    color: #414559;
+    font-size: 20px;
+}
+
+.active {
+    color: #ca9ee6;
+}
