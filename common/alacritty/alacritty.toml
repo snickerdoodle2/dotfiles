@@ -1,0 +1,27 @@
+import = [
+    "~/.config/alacritty/catppuccin/catppuccin-frappe.toml",
+    "~/.config/alacritty/local.toml"
+]
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "ExtraBold"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "ExtraBold Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "SemiBold Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "SemiLight"
+
+[window.padding]
+y = 4
+x = 6
+
+[shell]
+program = "nu"
