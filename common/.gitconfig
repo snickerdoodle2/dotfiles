@@ -1,0 +1,7 @@
+[include]
+    path = ~/.gitcredentials
+[user]
+	name = Dominik Pilipczuk
+	email = 63516830+snickerdoodle2@users.noreply.github.com
+[init]
+	defaultBranch = main
