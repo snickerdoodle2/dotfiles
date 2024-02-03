@@ -4,7 +4,7 @@
   :orientation "h"
   (left)
   (center)
-  ""
+  (right)
  ))
 
 (deflisten current_workspace :initial "1" "bash ~/.config/eww/scripts/active-workspace")
@@ -31,3 +31,18 @@
     )
 )
 
+(defwidget right []
+    (revealer
+    :transition "crossfade"
+    :reveal {current_submap != ""}
+    :duration "150ms"
+    :halign "end"
+
+    (label
+        :class "indicator ${current_submap}"
+        :text "󰑊"
+    )
+    )
+)
+
+(deflisten current_submap :initial "" "bash ~/.config/eww/scripts/active-submap")
