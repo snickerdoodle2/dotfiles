@@ -603,8 +603,10 @@ $env.config = {
 }
 
 use ~/.cache/starship/init.nu
-use ~/.config/nushell/themes/catppuccin-latte.nu 
-$env.config = ($env.config | merge { color_config: (catppuccin-latte)})
+use ~/.config/nushell/themes/catppuccin-frappe.nu 
+$env.config = ($env.config | merge { color_config: (catppuccin-frappe)})
+
+source ~/.zoxide.nu
 
 alias cat = bat
 alias vim = nvim

@@ -17,4 +17,10 @@ $env.NU_PLUGIN_DIRS = [
     ($nu.default-config-dir | path join 'plugins') # add <nushell-config-dir>/plugins
 ]
 
+mkdir ~/.cache/starship
+starship init nu | save -f ~/.cache/starship/init.nu
+
+zoxide init nushell | str replace "$env.PWD -- $rest" "$env.PWD -- ...$rest" --all | str replace -a "def-env" "def --env" | save -f ~/.zoxide.nu
+
+
 $env.EDITOR = 'nvim'
