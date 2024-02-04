@@ -8,7 +8,7 @@ $env.config = {
     }
 
     rm: {
-        always_trash: false # always act as if -t was given. Can be overridden with -p
+        always_trash: true # always act as if -t was given. Can be overridden with -p
     }
 
     table: {
@@ -604,6 +604,7 @@ $env.config = {
 
 use ~/.cache/starship/init.nu
 use ~/.config/nushell/themes/catppuccin-frappe.nu 
+source ~/.config/nushell/scripts/gitlog.nu
 $env.config = ($env.config | merge { color_config: (catppuccin-frappe)})
 
 source ~/.zoxide.nu
