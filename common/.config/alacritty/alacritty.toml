@@ -17,7 +17,7 @@ style = "SemiBold Italic"
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
-style = "SemiLight"
+style = "Medium"
 
 [window.padding]
 y = 4
@@ -25,3 +25,7 @@ x = 6
 
 [shell]
 program = "nu"
+args = [
+    "--config", "~/.config/nushell/config.nu",
+    "--env-config", "~/.config/nushell/env.nu",
+]
