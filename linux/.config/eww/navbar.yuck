@@ -31,17 +31,47 @@
     )
 )
 
-(defwidget right []
-    (revealer
-    :transition "crossfade"
-    :reveal {current_submap != ""}
-    :duration "150ms"
-    :halign "end"
+(defpoll net :interval "60s"
+  :initial "N/A"
+  `nmcli -t -f SIGNAL,ACTIVE device wifi \
+    | awk -F':' '{if($2=="yes")print$1}'`)
 
-    (label
-        :class "indicator ${current_submap}"
-        :text "󰑊"
+(defwidget battery []
+    (label :text "${EWW_BATTERY.BAT1.capacity}%")
+)
+
+(defwidget network []
+    (label :text {
+        net == "" ? "󰤮" :
+        net < 26 ? "󰤟" :
+        net < 51 ? "󰤢" :
+        net < 76 ? "󰤥" : "󰤨"
+    })
+)
+
+(defwidget laptop []
+    (box
+    :halign "end"
+    (network)
+    (battery)
     )
+)
+
+(defwidget right []
+    (box
+        :halign "end"
+        :space-evenly false
+        (laptop)
+        (revealer
+        :transition "crossfade"
+        :reveal {current_submap != ""}
+        :duration "150ms"
+        :halign "end"
+            (label
+                :class "indicator ${current_submap}"
+                :text "󰑊"
+            )
+        )
     )
 )
 

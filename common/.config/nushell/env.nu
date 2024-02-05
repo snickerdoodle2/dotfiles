@@ -19,7 +19,10 @@ $env.NU_PLUGIN_DIRS = [
 
 # GO SETUP
 $env.GOPATH = ($env.HOME | path join '.go')
-$env.PATH = ($env.PATH | split row (char esep) | append ($env.GOPATH | path join 'bin'))
+$env.PATH = ($env.PATH | split row (char esep) |
+    append ($env.GOPATH | path join 'bin') |
+    append ($env.HOME | path join '.cargo/bin')
+    )
 
 # HOMEBREW ENV VARS
 $env.HOMEBREW_NO_ENV_HINTS = 1

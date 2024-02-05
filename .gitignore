@@ -1,2 +1,3 @@
-common/alacritty/local.toml
+common/.config/alacritty/local.toml
+common/.config/nushell/history.txt
 .DS_STORE
