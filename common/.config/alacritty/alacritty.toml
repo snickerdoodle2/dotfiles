@@ -23,6 +23,9 @@ style = "Medium"
 y = 4
 x = 6
 
+[env]
+TERM = "xterm-256color"
+
 [shell]
 program = "nu"
 args = [
