@@ -3,7 +3,7 @@
   :class "navbar"
   :orientation "h"
   (left)
-  (center)
+  (box)
   (right)
  ))
 
@@ -11,57 +11,29 @@
 
 (defwidget left []
     (box
-        :class "workspaces"
         :halign "start"
         :valign "center"
         :spacing 4
+        :space-evenly false
         (for workspace in "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
-        (label :class "${workspace == current_workspace ? "active" : ""}":text "󰑊")
+        (box :valign "center" :class "${workspace == current_workspace ? "active" : ""} workspace")
         )
      )
 )
-
-(defpoll time :interval "5s" `date +%H:%M`)
-
-(defwidget center []
-    (label
-        :text {time}
-        :class "clock"
-        :hexpand true
-    )
-)
-
-(defpoll net :interval "60s"
-  :initial "N/A"
-  `nmcli -t -f SIGNAL,ACTIVE device wifi \
-    | awk -F':' '{if($2=="yes")print$1}'`)
-
-(defwidget battery []
-    (label :text "${EWW_BATTERY.BAT1.capacity}%")
-)
-
-(defwidget network []
-    (label :text {
-        net == "" ? "󰤮" :
-        net < 26 ? "󰤟" :
-        net < 51 ? "󰤢" :
-        net < 76 ? "󰤥" : "󰤨"
-    })
-)
-
-(defwidget laptop []
-    (box
-    :halign "end"
-    (network)
-    (battery)
-    )
-)
-
 (defwidget right []
     (box
         :halign "end"
+        :valign "center"
+        :class "right"
+        :height 32
         :space-evenly false
-        (laptop)
+        :spacing 16
+        (clock)
+    )
+)
+
+(defwidget mode []
+    (box
         (revealer
         :transition "crossfade"
         :reveal {current_submap != ""}
@@ -72,6 +44,17 @@
                 :text "󰑊"
             )
         )
+    )
+)
+
+(defpoll time :interval "1s" `date +%H:%M`)
+(defpoll date :interval "1m" `date +"%a, %d. %b %Y"`)
+
+(defwidget clock []
+    (label
+        :class "clock"
+        :text time
+        :tooltip date
     )
 )
 

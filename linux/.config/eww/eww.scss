@@ -3,36 +3,73 @@
 }
 
 .navbar {
-    margin: 8px 8px 0 8px;
-    padding: 0 8px 0 8px;
-    border-radius: 8px;
-    background: #303446;
-    font-size: 16px;
-    font-family: "JetBrainsMonoNf";
-    color: #c6d0f5;
+    margin: 8px 16px 0px 16px;
 }
 
-.clock {
-    font-weight: 700;
-}
-
-.workspaces {
-    background: #232634;
-    padding: 0 8px 0 8px;
-    border-radius: 9999px;
-    color: #414559;
-    font-size: 20px;
+.workspace {
+    background: rgb(48, 52, 70);
+    padding: 11px;
+    border-radius: 15px;
+    transition: padding 0.5s cubic-bezier(.55, -0.68, .48, 1.68);
 }
 
 .active {
-    color: #ca9ee6;
+    background: radial-gradient(circle,
+            rgb(242, 213, 207) 0%,
+            rgb(238, 190, 190) 16%,
+            rgb(202, 158, 230) 32%,
+            rgb(231, 130, 132) 48%,
+            rgb(234, 153, 156) 64%,
+            rgb(239, 159, 118) 80%,
+        );
+    background-size: 400% 400%;
+    padding: 13px 26px 13px 26px;
+    box-shadow: rgba(0, 0, 0, 0.288) 2 2 5 2px;
+    animation: gradient_f 40s ease-in-out infinite;
 }
 
-.indicator {
-    font-size: 20px;
-    padding: 0 8px 0 0;
+.right>* {
+    background: red;
+    padding: 0px 16px 0px 16px;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "JetBrains Mono Nerd Font";
 }
 
-.indicator.resize {
-    color: 	#a6d189;
+.clock {
+    color: #414559;
+    background: radial-gradient(circle,
+            rgb(229, 200, 144) 0%,
+            rgb(166, 209, 137) 16%,
+            rgb(129, 200, 190) 32%,
+            rgb(153, 209, 219) 48%,
+            rgb(133, 193, 220) 64%,
+            rgb(140, 170, 238) 80%,
+        );
+    background-size: 400%;
+    animation: gradient_f 60s ease-in-out infinite;
+}
+
+tooltip {
+    background-color: #232634;
+    color: #c6d0f5;
+    font-weight: 700;
+    font-family: "JetBrains Mono Nerd Font";
+    border-radius: 8px;
+    padding: 2px 4px 2px 4px;
+}
+
+@keyframes gradient_f {
+    0% {
+        background-position: 0% 200%;
+    }
+
+    50% {
+        background-position: 200% 0%;
+    }
+
+    100% {
+        background-position: 400% 200%;
+    }
 }
