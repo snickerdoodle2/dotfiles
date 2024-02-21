@@ -1,3 +1,31 @@
+$flamingo: rgb(238, 190, 190);
+$pink: rgb(244, 184, 228);
+$mauve: rgb(202, 158, 230);
+$red: rgb(231, 130, 132);
+$maroon: rgb(234, 153, 156);
+$peach: rgb(239, 159, 118);
+$yellow: rgb(229, 200, 144);
+$green: rgb(166, 209, 137);
+$teal: rgb(129, 200, 190);
+$sky: rgb(153, 209, 219);
+$sapphire: rgb(133, 193, 220);
+$blue: rgb(140, 170, 238);
+$lavender: rgb(186, 187, 241);
+$text: rgb(198, 208, 245);
+$subtext1: rgb(181, 191, 226);
+$subtext0: rgb(165, 173, 206);
+$overlay2: rgb(148, 156, 187);
+$overlay1: rgb(131, 139, 167);
+$overlay0: rgb(115, 121, 148);
+$surface2: rgb(98, 104, 128);
+$surface1: rgb(81, 87, 109);
+$surface0: rgb(65, 69, 89);
+$base: rgb(48, 52, 70);
+$mantle: rgb(41, 44, 60);
+$crust: rgb(35, 38, 52);
+
+$shadow: $base 2 2 5 2px;
+
 * {
     all: unset;
 }
@@ -7,7 +35,7 @@
 }
 
 .workspace {
-    background: rgb(48, 52, 70);
+    background: $crust;
     padding: 11px;
     border-radius: 15px;
     transition: padding 0.5s cubic-bezier(.55, -0.68, .48, 1.68);
@@ -24,16 +52,18 @@
         );
     background-size: 400% 400%;
     padding: 13px 26px 13px 26px;
-    box-shadow: rgba(0, 0, 0, 0.288) 2 2 5 2px;
+    box-shadow: $shadow;
     animation: gradient_f 40s ease-in-out infinite;
 }
 
-.right>* {
-    background: red;
+.right>box,
+label {
+    background: $crust;
     padding: 0px 16px 0px 16px;
     border-radius: 9999px;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 12px;
+    box-shadow: $shadow;
     font-family: "JetBrains Mono Nerd Font";
 }
 
@@ -56,8 +86,22 @@ tooltip {
     color: #c6d0f5;
     font-weight: 700;
     font-family: "JetBrains Mono Nerd Font";
+    font-size: 10px;
     border-radius: 8px;
     padding: 2px 4px 2px 4px;
+}
+
+tooltip * {
+    all: unset;
+}
+
+.indicator {
+    font-size: 20px;
+    color: $crust;
+}
+
+.indicator.resize {
+    color: $green;
 }
 
 @keyframes gradient_f {

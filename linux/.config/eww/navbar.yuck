@@ -28,12 +28,12 @@
         :height 32
         :space-evenly false
         :spacing 16
+        (toolbar)
         (clock)
     )
 )
 
-(defwidget mode []
-    (box
+(defwidget toolbar []
         (revealer
         :transition "crossfade"
         :reveal {current_submap != ""}
@@ -44,7 +44,6 @@
                 :text "󰑊"
             )
         )
-    )
 )
 
 (defpoll time :interval "1s" `date +%H:%M`)
