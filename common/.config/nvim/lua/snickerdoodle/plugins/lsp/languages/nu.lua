@@ -1,6 +1,6 @@
 return {
     "LhKipp/nvim-nu",
-    event = { "BufReadPre", "BufNewFile" },
+    event = { "BufReadPre *.nu", "BufNewFile *.nu" },
     dependencies = {
         "nvimtools/none-ls.nvim"
     },

@@ -45,7 +45,8 @@ return {
                 { name = 'nvim_lsp' },
                 { name = 'path' },
                 { name = 'luasnip' },
-                { name = 'copilot' }
+                { name = 'copilot' },
+                { name = 'crates' }
             }
         })
     end
