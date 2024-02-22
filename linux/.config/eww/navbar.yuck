@@ -20,6 +20,9 @@
         )
      )
 )
+
+(defpoll device_type :interval "1s" `~/.config/eww/scripts/check-laptop`)
+
 (defwidget right []
     (box
         :halign "end"
@@ -28,12 +31,12 @@
         :height 32
         :space-evenly false
         :spacing 16
-        (toolbar)
+        (mode)
         (clock)
     )
 )
 
-(defwidget toolbar []
+(defwidget mode []
         (revealer
         :transition "crossfade"
         :reveal {current_submap != ""}

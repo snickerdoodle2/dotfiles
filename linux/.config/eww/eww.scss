@@ -57,13 +57,13 @@ $shadow: $base 2 2 5 2px;
 }
 
 .right>box,
-label {
+label,
+image {
     background: $crust;
     padding: 0px 16px 0px 16px;
     border-radius: 9999px;
     font-weight: 700;
     font-size: 12px;
-    box-shadow: $shadow;
     font-family: "JetBrains Mono Nerd Font";
 }
 
@@ -77,6 +77,7 @@ label {
             rgb(133, 193, 220) 64%,
             rgb(140, 170, 238) 80%,
         );
+    box-shadow: $shadow;
     background-size: 400%;
     animation: gradient_f 60s ease-in-out infinite;
 }
@@ -89,10 +90,6 @@ tooltip {
     font-size: 10px;
     border-radius: 8px;
     padding: 2px 4px 2px 4px;
-}
-
-tooltip * {
-    all: unset;
 }
 
 .indicator {
