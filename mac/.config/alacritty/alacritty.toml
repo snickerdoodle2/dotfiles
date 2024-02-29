@@ -1,0 +1,36 @@
+import = [
+    "~/.config/alacritty/catppuccin/catppuccin-frappe.toml",
+]
+
+[font]
+size = 15
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "ExtraBold"
+
+[font.bold_italic]
+style = "ExtraBold Italic"
+
+[font.italic]
+style = "SemiBold Italic"
+
+[font.normal]
+style = "Medium"
+
+[window.padding]
+y = 4
+x = 6
+
+[window]
+decorations = "buttonless"
+
+[env]
+TERM = "xterm-256color"
+
+[shell]
+program = "nu"
+args = [
+    "--config", "~/.config/nushell/config.nu",
+    "--env-config", "~/.config/nushell/env.nu",
+]
