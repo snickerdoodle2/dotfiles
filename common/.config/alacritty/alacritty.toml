@@ -1,9 +1,7 @@
 import = [
     "~/.config/alacritty/catppuccin/catppuccin-frappe.toml",
+    "~/.config/alacritty/local.toml",
 ]
-
-[font]
-size = 15
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
@@ -24,9 +22,6 @@ style = "Medium"
 [window.padding]
 y = 4
 x = 6
-
-[window]
-decorations = "buttonless"
 
 [env]
 TERM = "xterm-256color"
