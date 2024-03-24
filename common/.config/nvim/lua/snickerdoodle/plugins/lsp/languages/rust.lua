@@ -1,7 +1,7 @@
 return {
     {
         'simrat39/rust-tools.nvim',
-        event = { "BufReadPre", "BufNewFile" },
+        ft = "rust",
         enabled = true,
         dependencies = {
             { 'neovim/nvim-lspconfig' }, -- Required
