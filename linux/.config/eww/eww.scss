@@ -41,7 +41,7 @@ $shadow: $base 2 2 5 2px;
     transition: padding 0.5s cubic-bezier(.55, -0.68, .48, 1.68);
 }
 
-.active {
+.workspace.active {
     background: radial-gradient(circle,
             rgb(242, 213, 207) 0%,
             rgb(238, 190, 190) 16%,
@@ -64,7 +64,7 @@ image {
     border-radius: 9999px;
     font-weight: 700;
     font-size: 12px;
-    font-family: "JetBrains Mono";
+    font-family: "JetBrains Mono Nerd Font";
 }
 
 .clock {
