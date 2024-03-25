@@ -24,6 +24,8 @@ $base: rgb(48, 52, 70);
 $mantle: rgb(41, 44, 60);
 $crust: rgb(35, 38, 52);
 
+$shadow: $base 0 0 10 1px;
+
 * {
     all: unset;
 }
