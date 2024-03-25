@@ -3,6 +3,8 @@ return {
     lazy = true,
     dependencies = { "rafamadriz/friendly-snippets" },
     config = function()
-        require("luasnip.loaders.from_vscode").lazy_load()
+        local loader = require("luasnip.loaders.from_vscode")
+        loader.lazy_load()
+        loader.lazy_load({ paths = vim.fn.stdpath("config") .. "/snippets" })
     end
 }

@@ -1,0 +1,9 @@
+{
+	"context": {
+        "prefix": "ctx, cancel",
+		"body": [
+            "ctx, cancel := context.WithTimeout(context.Background(), $0*time.Second)",
+            "defer cancel()"
+		]
+	}
+}
