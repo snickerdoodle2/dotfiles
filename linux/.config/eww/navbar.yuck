@@ -25,8 +25,15 @@
         )
      )
 )
+(defwidget status []
+    (label
+        :text "${wired_connection > 0 ? "" : ""}"
+    )
+)
 
-(defpoll device_type :interval "1s" `~/.config/eww/scripts/check-laptop`)
+(defpoll wired_connection :interval "10s" :initial "0" `~/.config/eww/scripts/check-wired`)
+
+(defpoll device_type :interval "86400s" `~/.config/eww/scripts/check-laptop`)
 
 (defwidget right []
     (box
@@ -37,6 +44,7 @@
         :space-evenly false
         :spacing 16
         (mode)
+        (status)
         (clock)
     )
 )

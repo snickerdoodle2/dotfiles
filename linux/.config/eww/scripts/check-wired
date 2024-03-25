@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+nmcli -t device status | awk -F: '{ if ($2 == "ethernet" && $3 == "connected") print("1")}' | wc -l
