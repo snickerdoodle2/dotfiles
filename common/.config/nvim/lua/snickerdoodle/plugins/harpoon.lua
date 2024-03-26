@@ -42,6 +42,7 @@ return {
 
                     if list_item.value:find("^oil://") ~= nil then
                         vim.api.nvim_win_set_cursor(0, { 1, 10 })
+                        return
                     end
 
                     if set_position then
