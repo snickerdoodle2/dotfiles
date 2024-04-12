@@ -605,6 +605,7 @@ $env.config = {
 use ~/.cache/starship/init.nu
 use ~/.config/nushell/themes/catppuccin-frappe.nu 
 source ~/.config/nushell/scripts/gitlog.nu
+source ~/.config/nushell/scripts/just.nu
 $env.config = ($env.config | merge { color_config: (catppuccin-frappe)})
 
 source ~/.zoxide.nu
