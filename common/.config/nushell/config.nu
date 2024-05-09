@@ -232,13 +232,6 @@ $env.config = {
             event: { send: searchhistory }
         }
         {
-            name: open_command_editor
-            modifier: control
-            keycode: char_o
-            mode: [emacs, vi_normal, vi_insert]
-            event: { send: openeditor }
-        }
-        {
             name: move_up
             modifier: none
             keycode: up
@@ -599,6 +592,19 @@ $env.config = {
             mode: emacs
             event: {edit: capitalizechar}
         }
+        {
+            name: change_session
+            modifier: control
+            keycode: char_o
+            mode: [emacs vi_normal vi_insert]
+            event: [
+                { edit: Clear }
+                { edit: InsertString,
+                    value: "tmux-sessionizer"
+                }
+                { send: Enter }
+            ]
+        }
     ]
 }
 
@@ -606,6 +612,7 @@ use ~/.cache/starship/init.nu
 use ~/.config/nushell/themes/catppuccin-frappe.nu 
 source ~/.config/nushell/scripts/gitlog.nu
 source ~/.config/nushell/scripts/just.nu
+source ~/.config/nushell/scripts/tmux.nu
 $env.config = ($env.config | merge { color_config: (catppuccin-frappe)})
 
 source ~/.zoxide.nu
