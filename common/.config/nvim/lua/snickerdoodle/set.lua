@@ -19,15 +19,21 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
-vim.opt.hlsearch = false
+-- Search
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+vim.opt.showmode = false
 
 vim.opt.termguicolors = true
 
 -- 8 line padding
 vim.opt.scrolloff = 8
 
-vim.opt.updatetime = 50
+vim.opt.updatetime = 250
+vim.opt.timeoutlen = 300
 
 vim.opt.colorcolumn = "80"
 
