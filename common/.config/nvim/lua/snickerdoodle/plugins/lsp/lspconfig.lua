@@ -29,19 +29,37 @@ return {
             end
         })
 
-        local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
-        local default_setup = function(server)
-            require('lspconfig')[server].setup({
-                capabilities = lsp_capabilities,
-            })
+        function Merge(t1, t2)
+            if (type(t2) == "table") then
+                for k, v in pairs(t2) do
+                    if (type(v) == "table") and (type(t1[k] or false) == "table") then
+                        Merge(t1[k], t2[k])
+                    else
+                        t1[k] = v
+                    end
+                end
+            end
+            return t1
         end
+
+        local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+        local default_setup = function(server, additional)
+            require('lspconfig')[server].setup(Merge({
+                capabilities = lsp_capabilities,
+            }, additional))
+        end
+
+        default_setup('biome', {
+            cmd = { "bunx", "biome" }
+        })
+
 
         require('mason-lspconfig').setup({
             ensure_installed = {},
             handlers = {
                 default_setup,
                 lua_ls = function()
-                    require('lspconfig').lua_ls.setup({
+                    default_setup('lua_ls', {
                         settings = {
                             Lua = {
                                 completion = {
