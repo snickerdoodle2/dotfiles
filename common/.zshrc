@@ -20,12 +20,15 @@ zinit light Aloxaf/fzf-tab
 
 # ADDITIONAL COMPLETIONS
 zinit snippet OMZP::brew
+zinit snippet OMZP::fnm
 zinit snippet OMZP::gh
 zinit snippet OMZP::git
+zinit snippet OMZP::ripgrep
 zinit snippet OMZP::rust
 
 # LOAD COMPLETIONS
 autoload -U compinit && compinit
+zinit cdreplay -q
 
 # KEYBINDS
 bindkey -e
