@@ -57,6 +57,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # ADDITIONAL TOOLS
 eval "$(zoxide init zsh)"
+eval "$(fnm env --use-on-cd)"
 
 # ALIASES
 alias cat="bat"
