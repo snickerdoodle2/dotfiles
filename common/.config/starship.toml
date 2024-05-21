@@ -7,6 +7,8 @@ $line_break\
 $character
 """
 
+right_format="""$cmd_duration"""
+
 [git_branch]
 symbol = ""
 format = 'on [$symbol $branch ]($style)'
