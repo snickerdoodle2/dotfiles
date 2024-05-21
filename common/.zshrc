@@ -13,7 +13,7 @@ eval "$(brew shellenv)"
 fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
 
 # PLUGINS
-zinit light zsh-users/zsh-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
@@ -61,6 +61,9 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # ADDITIONAL TOOLS
 eval "$(zoxide init zsh)"
 eval "$(fnm env --use-on-cd)"
+
+# FSH THEME
+fast-theme XDG:catppuccin-mocha
 
 # ALIASES
 alias cat="bat"
