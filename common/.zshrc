@@ -25,6 +25,7 @@ zinit snippet OMZP::gh
 zinit snippet OMZP::git
 zinit snippet OMZP::ripgrep
 zinit snippet OMZP::rust
+zinit snippet OMZP::tmux
 
 # LOAD COMPLETIONS
 autoload -U compinit && compinit
