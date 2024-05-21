@@ -59,6 +59,10 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 eval "$(zoxide init zsh)"
 
 # ALIASES
+alias cat="bat"
+alias lg="lazygit"
+alias la="lsd -la"
+alias ll="lsd -l"
+alias ls="lsd"
 alias vim="nvim"
 alias vi="nvim"
-alias lg="lazygit"
