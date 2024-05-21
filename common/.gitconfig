@@ -20,7 +20,7 @@
 
 [delta]
     navigate = true
-    features = catppuccin-frappe
+    features = catppuccin-mocha
 
 [merge]
     conflictstyle = diff3
