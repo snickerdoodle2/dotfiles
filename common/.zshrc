@@ -74,3 +74,8 @@ alias ll="lsd -l"
 alias ls="lsd"
 alias vim="nvim"
 alias vi="nvim"
+
+# SOURCE LOCAL FILE
+if [ -f $HOME/.zshrc.local ]; then
+    source $HOME/.zshrc.local
+fi
