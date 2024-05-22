@@ -37,6 +37,7 @@ bindkey "^p" history-search-backward
 bindkey "^n" history-search-forward
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
+bindkey "^U tmux-sessionizer ^M"
 
 # HISTORY TWEAKS
 HISTSIZE=5000
