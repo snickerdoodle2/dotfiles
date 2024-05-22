@@ -23,7 +23,7 @@ zinit snippet OMZP::brew
 zinit snippet OMZP::fnm
 zinit snippet OMZP::gh
 zinit snippet OMZP::git
-zinit snippet OMZP::ripgrep
+#zinit snippet OMZP::ripgrep
 zinit snippet OMZP::rust
 zinit snippet OMZP::tmux
 
@@ -37,7 +37,7 @@ bindkey "^p" history-search-backward
 bindkey "^n" history-search-forward
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
-bindkey "^U tmux-sessionizer ^M"
+bindkey -s '^o' '^U tmux-sessionizer ^M'
 
 # HISTORY TWEAKS
 HISTSIZE=5000
@@ -63,9 +63,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # ADDITIONAL TOOLS
 eval "$(zoxide init zsh)"
 eval "$(fnm env --use-on-cd)"
-
-# FSH THEME
-fast-theme XDG:catppuccin-mocha
 
 # ALIASES
 alias cat="bat"
