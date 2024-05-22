@@ -8,7 +8,9 @@ return {
             lsp_fallback = true,
         },
         formatters_by_ft = {
-            svelte = { "biome" }
+            svelte = { "biome" },
+            typescript = { "biome" },
+            javascript = { "biome" },
         }
     }
 }
