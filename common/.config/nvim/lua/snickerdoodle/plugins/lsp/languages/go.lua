@@ -12,12 +12,16 @@ return {
     config = function()
         vim.keymap.set("n", "<leader>lta", function()
             vim.ui.input({ prompt = "Tag name to add" }, function(input)
-                vim.cmd("GoTagAdd " .. input)
+                if string.len(input) > 0 then
+                    vim.cmd("GoTagAdd " .. input)
+                end
             end)
         end, {})
         vim.keymap.set("n", "<leader>ltr", function()
             vim.ui.input({ prompt = "Tag name to remove" }, function(input)
-                vim.cmd("GoTagRm " .. input)
+                if string.len(input) > 0 then
+                    vim.cmd("GoTagRm " .. input)
+                end
             end)
         end, {})
 
