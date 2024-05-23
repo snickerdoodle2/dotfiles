@@ -25,7 +25,8 @@ return {
                 })
             },
             window = {
-                completion = cmp.config.window.bordered()
+                completion = cmp.config.window.bordered(),
+                documentation = cmp.config.window.bordered(),
             },
             snippet = {
                 expand = function(args)
@@ -33,10 +34,10 @@ return {
                 end
             },
             mapping = {
-                ['<CR>'] = cmp.mapping.confirm({ select = true }),
+                ['<C-y>'] = cmp.mapping.confirm({ select = true }),
                 ['<C-Space>'] = cmp.mapping.complete(),
-                ['<Tab>'] = cmp.mapping.select_next_item({ behavior = 'select' }),
-                ['<S-Tab>'] = cmp.mapping.select_prev_item({ behavior = 'select' }),
+                ['<C-n>'] = cmp.mapping.select_next_item({ behavior = 'select' }),
+                ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = 'select' }),
                 ['<C-u>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-d>'] = cmp.mapping.scroll_docs(4),
                 ['<Esc>'] = cmp.mapping.abort()
