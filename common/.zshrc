@@ -25,6 +25,7 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 
 # ADDITIONAL COMPLETIONS
+zinit snippet OMZP::1password
 zinit snippet OMZP::brew
 zinit snippet OMZP::fnm
 zinit snippet OMZP::gh
