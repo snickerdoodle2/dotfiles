@@ -23,6 +23,7 @@ fi
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+zinit load atuinsh/atuin
 
 # ADDITIONAL COMPLETIONS
 zinit snippet OMZP::1password
@@ -64,7 +65,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # FZF INTEGRATION
-eval "$(fzf --zsh)"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
