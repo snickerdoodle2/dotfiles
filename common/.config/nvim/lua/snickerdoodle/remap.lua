@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>ee", "<cmd>Oil<CR>")
 
 -- Disable highlight on <Esc>
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR><Esc>', { noremap = true })
 
 -- Move code blocks
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
