@@ -1,3 +1,4 @@
 common/.config/alacritty/local.toml
 common/.config/nushell/history.txt
 .DS_STORE
+monitors.conf
