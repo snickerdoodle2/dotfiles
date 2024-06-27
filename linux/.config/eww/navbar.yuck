@@ -27,13 +27,12 @@
 )
 (defwidget status []
     (label
-        :text "${wired_connection > 0 ? "" : ""}"
+        :class "internet-status"
+        :text "${wired_connection > 0 ? "󰌗" : "󱞐"}"
     )
 )
 
 (defpoll wired_connection :interval "10s" :initial "0" `~/.config/eww/scripts/check-wired`)
-
-(defpoll device_type :interval "86400s" `~/.config/eww/scripts/check-laptop`)
 
 (defwidget right []
     (box
@@ -43,27 +42,20 @@
         :height 32
         :space-evenly false
         :spacing 16
-        (mode)
-        (status)
+        (misc)
         (clock)
     )
 )
 
-(defwidget mode []
-        (revealer
-        :transition "crossfade"
-        :reveal {current_submap != ""}
-        :duration "150ms"
-        :halign "end"
-            (label
-                :class "indicator ${current_submap}"
-                :text "󰑊"
-            )
-        )
-)
-
 (defpoll time :interval "1s" `date +%H:%M`)
 (defpoll date :interval "1m" `date +"%a, %d. %b %Y"`)
+
+(defwidget misc []
+    (box
+        (systray :icon-size 16)
+        (status)
+    )
+)
 
 (defwidget clock []
     (label

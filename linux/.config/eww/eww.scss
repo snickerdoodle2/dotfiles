@@ -41,6 +41,7 @@ $shadow: $base 0 0 10 1px;
     transition: padding 0.5s cubic-bezier(.55, -0.68, .48, 1.68);
 }
 
+// TODO: fix gradient to use variables
 ._workspace:hover .workspace,
 .workspace.active {
     background: radial-gradient(circle,
@@ -68,6 +69,10 @@ image {
     font-weight: 700;
     font-size: 12px;
     font-family: "JetBrains Mono Nerd Font";
+}
+
+.internet-status {
+  font-size: 16px;
 }
 
 .clock {
