@@ -68,10 +68,6 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
-# ADDITIONAL TOOLS
-eval "$(zoxide init zsh)"
-eval "$(fnm env --use-on-cd)"
-
 # ALIASES
 alias cat="bat"
 alias lg="lazygit"
@@ -83,3 +79,20 @@ alias vi="nvim"
 
 # EXPORTS
 export EDITOR="nvim"
+
+export GOPATH="$HOME/.go"
+if [ -d "$GOPATH/bin" ]; then
+    export PATH="$PATH:$GOPATH/bin"
+fi
+
+if [ -d "$HOME/.cargo/bin" ]; then
+    export PATH="$PATH:$HOME/.cargo/bin"
+fi
+
+if [ -d "$HOME/.local/bin" ]; then
+    export PATH="$PATH:$HOME/.local/bin"
+fi
+
+# ADDITIONAL TOOLS
+eval "$(zoxide init zsh)"
+eval "$(fnm env --use-on-cd)"
