@@ -5,6 +5,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         "hrsh7th/cmp-nvim-lsp",
         'williamboman/mason.nvim',
+        "Fildo7525/pretty_hover",
         { "folke/neodev.nvim", opts = {} },
         { "j-hui/fidget.nvim", opts = {} }
     },
@@ -13,8 +14,12 @@ return {
             desc = 'LSP actions',
             callback = function(event)
                 local opts = { buffer = event.buf }
+
+                local pretty_hover = require("pretty_hover")
+                pretty_hover.setup({})
+
                 vim.lsp.inlay_hint.enable(true)
-                vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+                vim.keymap.set('n', 'K', pretty_hover.hover, opts)
                 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
                 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
                 vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
