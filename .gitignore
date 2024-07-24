@@ -1,4 +1,5 @@
 common/.config/alacritty/local.toml
 common/.config/nushell/history.txt
+linux/.config/systemd/user/default.target.wants
 .DS_STORE
 monitors.conf
