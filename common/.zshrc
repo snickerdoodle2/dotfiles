@@ -11,7 +11,9 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # PROMPT
-eval "$(starship init zsh)"
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+    eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/zen.toml)"
+fi
 
 # HOMEBREW
 if type "brew" > /dev/null; then
