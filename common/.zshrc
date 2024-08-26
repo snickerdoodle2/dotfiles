@@ -77,6 +77,7 @@ alias lg="lazygit"
 alias la="lsd -la"
 alias ll="lsd -l"
 alias ls="lsd"
+alias tree="lsd --tree"
 alias vim="nvim"
 alias vi="nvim"
 
