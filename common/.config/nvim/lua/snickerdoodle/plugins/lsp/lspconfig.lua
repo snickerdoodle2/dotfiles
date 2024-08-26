@@ -55,6 +55,8 @@ return {
             cmd = { "bunx", "biome" }
         })
 
+        default_setup('templ')
+
 
         require('mason-lspconfig').setup({
             ensure_installed = {},
@@ -69,6 +71,28 @@ return {
                                 }
                             }
                         }
+                    })
+                end,
+                html = function()
+                    default_setup('html', {
+                        filetypes = { "html", "templ" },
+                    })
+                end,
+                htmx = function()
+                    default_setup('htmx', {
+                        filetypes = { "html", "templ" },
+                    })
+                end,
+                tailwindcss = function()
+                    default_setup('tailwindcss', {
+                        filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+                        settings = {
+                            tailwindCSS = {
+                                includeLanguages = {
+                                    templ = "html",
+                                },
+                            },
+                        },
                     })
                 end
             },
