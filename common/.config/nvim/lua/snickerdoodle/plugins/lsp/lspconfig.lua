@@ -85,7 +85,7 @@ return {
                 end,
                 tailwindcss = function()
                     default_setup('tailwindcss', {
-                        filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+                        filetypes = { "html", "templ", "astro", "javascript", "typescript", "react" },
                         settings = {
                             tailwindCSS = {
                                 includeLanguages = {
