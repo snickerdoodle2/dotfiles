@@ -10,9 +10,9 @@ return {
                 lsp_fallback = true,
             },
             formatters_by_ft = {
-                svelte = { "biome" },
-                typescript = { "biome" },
-                javascript = { "biome" },
+                svelte = { "prettierd", "biome" },
+                typescript = { "prettierd", "biome" },
+                javascript = { "prettierd", "biome" },
             }
         })
 
