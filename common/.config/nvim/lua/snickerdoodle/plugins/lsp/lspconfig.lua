@@ -51,9 +51,6 @@ return {
             }, additional))
         end
 
-        default_setup('biome', {
-            cmd = { "bunx", "biome" }
-        })
 
         default_setup('templ')
 
