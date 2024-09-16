@@ -29,8 +29,11 @@
                 gh
                 jq
                 just
+                watchexec
                 tldr
                 wget
+                rustup
+                go
 
                 yabai
                 skhd
@@ -62,7 +65,10 @@
                 onActivation.cleanup = "uninstall";
                 taps = [];
                 brews = [];
-                casks = [ "alacritty" ];
+                casks = [ 
+                    "alacritty"
+                    "raycast"
+                ];
             };
         };
     in
