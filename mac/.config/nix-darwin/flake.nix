@@ -70,6 +70,25 @@
                     "raycast"
                 ];
             };
+
+            launchd.user.agents.kanata = {
+                environment = {
+                    PATH = "/Users/domi/.cargo/bin";
+                };
+                serviceConfig = {
+                    ProgramArguments = [
+                        "sudo"
+                        "kanata"
+                        "-c"
+                        "/Users/domi/.config/kanata/caps2esc.kbd"
+                        "-n"
+                    ];
+                    KeepAlive = true;
+                    RunAtLoad = true;
+                    StandardErrorPath = "/var/log/kanata.err.log";
+                    StandardOutPath = "/var/log/kanata.out.log";
+                };
+            };
         };
     in
     {
