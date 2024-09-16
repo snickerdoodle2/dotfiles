@@ -31,15 +31,31 @@
                 just
                 tldr
                 wget
+
+                yabai
+                skhd
                 ];
 
-            services.nix-daemon.enable = true;
+            # nix setup
+            
             nix.settings.experimental-features = "nix-command flakes";
             programs.zsh.enable = true;  
             system.configurationRevision = self.rev or self.dirtyRev or null;
             system.stateVersion = 5;
             nixpkgs.hostPlatform = "aarch64-darwin";
             security.pam.enableSudoTouchIdAuth = true;
+
+            services = {
+                nix-daemon.enable = true;
+                yabai = {
+                    enable = true;
+                    package = pkgs.yabai;
+                };
+                skhd = {
+                    enable = true;
+                    package = pkgs.skhd;
+                };
+            };
 
             homebrew = {
                 enable = true;
