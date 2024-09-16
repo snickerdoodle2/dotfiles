@@ -19,6 +19,18 @@
                 ripgrep
                 tmux
                 lazygit
+                atuin
+                bat
+                btop
+                chafa
+                fd
+                fzf
+                delta
+                gh
+                jq
+                just
+                tldr
+                wget
                 ];
 
             services.nix-daemon.enable = true;
