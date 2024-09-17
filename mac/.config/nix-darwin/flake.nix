@@ -58,6 +58,7 @@
                 casks = [ 
                     "alacritty"
                     "raycast"
+                    "nikitabobko/tap/aerospace"
                 ];
             };
 
