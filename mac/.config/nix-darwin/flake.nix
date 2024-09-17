@@ -34,6 +34,7 @@
                 wget
                 rustup
                 go
+                texlive.combined.scheme-medium
 
                 yabai
                 skhd
