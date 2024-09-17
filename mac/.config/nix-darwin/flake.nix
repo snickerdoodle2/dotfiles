@@ -1,5 +1,5 @@
 {
-    description = "Example Darwin system flake";
+    description = "Macbook Flake";
 
     inputs = {
         nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -35,9 +35,6 @@
                 rustup
                 go
                 texlive.combined.scheme-medium
-
-                yabai
-                skhd
                 ];
 
             # nix setup
@@ -51,13 +48,6 @@
 
             services = {
                 nix-daemon.enable = true;
-                yabai = {
-                    enable = true;
-                    enableScriptingAddition = true;
-                };
-                skhd = {
-                    enable = true;
-                };
             };
 
             homebrew = {
