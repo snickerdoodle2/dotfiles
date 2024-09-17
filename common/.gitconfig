@@ -1,5 +1,6 @@
 [include]
     path = ~/.gitcredentials
+    path = ~/.1password.gitconfig
     path = ~/.catppuccin.gitconfig
 [user]
 	name = Dominik Pilipczuk
