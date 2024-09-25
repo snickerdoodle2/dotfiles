@@ -48,6 +48,8 @@
     git
     alacritty
     chromium
+    unzip
+    gcc
   ];
 
   programs.zsh.enable = true;
