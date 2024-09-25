@@ -9,7 +9,7 @@
 			system = "x86_64-linux";
 			modules = [
 				./configuration.nix
-				../../../common/.config/nix/package.nix
+				../packages.nix
 			];
 		};
 	};

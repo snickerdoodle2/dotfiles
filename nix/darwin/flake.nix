@@ -57,7 +57,7 @@
         darwinConfigurations."dominik-mb" = nix-darwin.lib.darwinSystem {
             modules = [
                 configuration 
-                ../../../common/.config/nix/package.nix
+                ../packages.nix
             ];
         };
 
