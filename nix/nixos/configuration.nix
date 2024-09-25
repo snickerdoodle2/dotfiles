@@ -39,14 +39,23 @@
   users.users.domi = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    shell = pkgs.zsh;
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     git
+    alacritty
+    chromium
   ];
+
+  programs.zsh.enable = true;
+
+  programs.hyprland = {
+	  enable = true;
+	  xwayland.enable = true;
+  };
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
