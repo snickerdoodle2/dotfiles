@@ -10,33 +10,6 @@
     outputs = inputs@{ self, nix-darwin, nixpkgs }:
         let
         configuration = { pkgs, ... }: {
-            environment.systemPackages = with pkgs; [ 
-                neovim
-                stow
-                zoxide
-                fnm
-                lsd
-                ripgrep
-                tmux
-                lazygit
-                atuin
-                bat
-                btop
-                chafa
-                fd
-                fzf
-                delta
-                gh
-                jq
-                just
-                watchexec
-                tldr
-                wget
-                rustup
-                go
-                texlive.combined.scheme-medium
-                ];
-
             # nix setup
             
             nix.settings.experimental-features = "nix-command flakes";
@@ -82,7 +55,10 @@
 # Build darwin flake using:
 # $ darwin-rebuild build --flake .#dominik-mb
         darwinConfigurations."dominik-mb" = nix-darwin.lib.darwinSystem {
-            modules = [ configuration ];
+            modules = [
+                configuration 
+                ../../../common/.config/nix/package.nix
+            ];
         };
 
 # Expose the package set, including overlays, for convenience.
