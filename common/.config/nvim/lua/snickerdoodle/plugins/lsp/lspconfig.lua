@@ -53,6 +53,7 @@ return {
 
 
         default_setup('templ')
+        default_setup('rust_analyzer')
 
 
         require('mason-lspconfig').setup({
