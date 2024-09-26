@@ -40,6 +40,7 @@
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
     git
@@ -47,6 +48,19 @@
     chromium
     unzip
     gcc
+    eww
+    grim
+    slurp
+    mako
+    gnome.nautilus
+    pavucontrol
+    rofi-wayland
+    socat
+    swww
+    wl-clipboard
+    polkit_gnome
+    discord
+    numix-icon-theme-circle
   ];
 
   programs.zsh.enable = true;
@@ -54,6 +68,11 @@
   programs.hyprland = {
 	  enable = true;
 	  xwayland.enable = true;
+  };
+
+  programs._1password.enable = true;
+  programs._1password-gui = {
+      enable = true;
   };
 
   fonts.packages = with pkgs; [
