@@ -69,6 +69,7 @@
     polkit_gnome
     discord
     numix-icon-theme-circle
+    xdg-user-dirs
   ];
 
   programs.zsh.enable = true;
