@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, zen-browser, inputs, ... }:
 
 {
   imports =
@@ -50,7 +50,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = (with pkgs; [
     git
     alacritty
     google-chrome
@@ -70,7 +70,7 @@
     discord
     numix-icon-theme-circle
     xdg-user-dirs
-  ];
+  ]) ++ ([ inputs.zen-browser.packages.${pkgs.system}.default ]);
 
   programs.zsh.enable = true;
 
