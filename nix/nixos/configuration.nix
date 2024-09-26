@@ -43,7 +43,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.domi = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
   };
 
@@ -107,6 +107,9 @@
           };
       };
   };
+
+  virtualisation.docker.enable = true;
+  virtualisation.docker.storageDriver = "btrfs";
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
