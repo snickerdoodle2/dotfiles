@@ -1,7 +1,7 @@
-{ pkgs, ...}:
+{ pkgs, pkgs-unstable, ...}:
 
 {
-    environment.systemPackages = with pkgs; [ 
+    environment.systemPackages = (with pkgs; [ 
         stow
         zoxide
         fnm
@@ -25,5 +25,9 @@
         rustup
         go
         texlive.combined.scheme-medium
-    ];
+        bun
+        tokei
+    ]) ++ (with pkgs-unstable; [
+        neovim
+    ]);
 }

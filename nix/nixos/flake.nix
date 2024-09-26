@@ -17,7 +17,6 @@
 
 			modules = [
 				../packages.nix
-				../packages-unstable.nix
 				./configuration.nix
 			];
 		};
