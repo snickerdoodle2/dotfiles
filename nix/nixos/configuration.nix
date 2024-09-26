@@ -53,7 +53,7 @@
   environment.systemPackages = with pkgs; [
     git
     alacritty
-    chromium
+    google-chrome
     unzip
     gcc
     eww
