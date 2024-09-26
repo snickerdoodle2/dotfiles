@@ -2,7 +2,6 @@
 
 {
     environment.systemPackages = with pkgs; [ 
-        neovim
         stow
         zoxide
         fnm
