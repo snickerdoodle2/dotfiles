@@ -34,6 +34,8 @@ fi
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+
+export ATUIN_NOBIND="true"
 zinit load atuinsh/atuin
 
 # ADDITIONAL COMPLETIONS
@@ -54,6 +56,7 @@ zinit light Aloxaf/fzf-tab
 
 # KEYBINDS
 bindkey -e
+bindkey "^r" atuin-search
 bindkey "^p" history-search-backward
 bindkey "^n" history-search-forward
 bindkey "^[[A" history-search-backward
