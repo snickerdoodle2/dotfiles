@@ -73,6 +73,24 @@
     kanata
   ]) ++ ([ inputs.zen-browser.packages.${pkgs.system}.default ]);
 
+  services.kanata = {
+      enable = true;
+      package = pkgs.kanata;
+      keyboards.name.config = ''
+          (defsrc
+           caps
+          )
+
+          (defalias
+           escctrl (tap-hold 100 100 esc lctl)
+          )
+
+          (deflayer base
+           @escctrl
+          )
+      '';
+  };
+
   programs.zsh.enable = true;
 
   programs.hyprland = {
