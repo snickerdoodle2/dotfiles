@@ -70,6 +70,7 @@
     discord
     numix-icon-theme-circle
     xdg-user-dirs
+    kanata
   ]) ++ ([ inputs.zen-browser.packages.${pkgs.system}.default ]);
 
   programs.zsh.enable = true;
