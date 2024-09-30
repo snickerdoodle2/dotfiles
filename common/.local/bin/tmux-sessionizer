@@ -14,8 +14,8 @@ fi
 
 if [[ "$selected" = "Create New Session" ]]; then
     name=$(basename "$PWD" | tr " " _)
-    tmux new-session -s $name -c $PWD
-    exit 0
+    tmux new-session -ds $name -c $PWD
+    selected=$name
 fi
 
 if [[ -z $TMUX ]]; then

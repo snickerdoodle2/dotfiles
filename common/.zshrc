@@ -62,7 +62,6 @@ bindkey "^n" history-search-forward
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 bindkey "^y" autosuggest-accept
-bindkey -s '^o' '^U tmux-sessionizer ^M'
 
 # HISTORY TWEAKS
 HISTSIZE=5000
