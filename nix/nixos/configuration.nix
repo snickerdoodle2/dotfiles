@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, zen-browser, inputs, ... }:
+{ config, lib, pkgs, pkgs-unstable, zen-browser, inputs, ... }:
 
 {
   imports =
@@ -71,7 +71,10 @@
     numix-icon-theme-circle
     xdg-user-dirs
     kanata
-  ]) ++ ([ inputs.zen-browser.packages.${pkgs.system}.default ]);
+  ]) ++ ([ inputs.zen-browser.packages.${pkgs.system}.default ])
+  ++ (with pkgs-unstable; [
+    neovim
+  ]);
 
   services.kanata = {
       enable = true;

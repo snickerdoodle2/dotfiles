@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, ...}:
+{ pkgs, ... }:
 
 {
     environment.systemPackages = (with pkgs; [ 
@@ -27,7 +27,5 @@
         texlive.combined.scheme-medium
         bun
         tokei
-    ]) ++ (with pkgs-unstable; [
-        neovim
     ]);
 }

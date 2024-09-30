@@ -3,11 +3,12 @@
 
     inputs = {
         nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+        nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
         nix-darwin.url = "github:LnL7/nix-darwin";
         nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    outputs = inputs@{ self, nix-darwin, nixpkgs }:
+    outputs = inputs@{ self, nix-darwin, nixpkgs, nixpkgs-unstable }:
         let
         configuration = { pkgs, ... }: {
             # nix setup
@@ -18,6 +19,10 @@
             system.stateVersion = 5;
             nixpkgs.hostPlatform = "aarch64-darwin";
             security.pam.enableSudoTouchIdAuth = true;
+
+            environment.systemPackages = (with pkgs; [ 
+                neovim
+            ]);
 
             services = {
                 nix-daemon.enable = true;
