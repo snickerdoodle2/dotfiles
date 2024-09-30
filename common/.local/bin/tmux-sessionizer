@@ -12,6 +12,7 @@ if [[ -z $selected ]]; then
     exit 0 
 fi
 
+# BUG: creating new session starts in $HOME
 if [[ "$selected" = "Create New Session" ]]; then
     name=$(basename "$PWD" | tr " " _)
     tmux new-session -ds $name -c $PWD
