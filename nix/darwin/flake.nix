@@ -31,7 +31,9 @@
             homebrew = {
                 enable = true;
                 onActivation.cleanup = "uninstall";
-                taps = [];
+                taps = [
+                    "nikitabobko/tap"
+                ];
                 brews = [];
                 casks = [ 
                     "alacritty"
