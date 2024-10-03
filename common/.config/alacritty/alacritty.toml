@@ -27,5 +27,5 @@ x = 6
 TERM = "xterm-256color"
 
 [shell]
-program = "tmux"
-args = ["new-session", "-A", "-s", "main", "-c", "$HOME"]
+program = "zsh"
+args = ["-l", "-c", "tmux new-session -A -s main -c $HOME"]
