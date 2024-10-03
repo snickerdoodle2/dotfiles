@@ -27,5 +27,6 @@
         texlive.combined.scheme-medium
         bun
         tokei
+        go-migrate
     ]);
 }
