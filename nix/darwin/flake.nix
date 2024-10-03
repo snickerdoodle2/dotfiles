@@ -37,6 +37,7 @@
                     "alacritty"
                     "raycast"
                     "nikitabobko/tap/aerospace"
+                    "jetbrains-toolbox"
                 ];
             };
 
