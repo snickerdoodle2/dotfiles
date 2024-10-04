@@ -18,10 +18,10 @@ return {
                 footer = {}
             },
             preview = {
-                command = 'chafa --passthrough tmux --clear --fg-only -s 60 --symbols braille',
+                command = 'chafa --passthrough tmux --clear --fg-only -s 55 --symbols braille',
                 file_path = os.getenv("HOME") .. '/.config/nvim/static/shinji.gif',
                 file_height = 15,
-                file_width = 60,
+                file_width = 55,
             }
         }
 
