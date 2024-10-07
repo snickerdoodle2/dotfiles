@@ -41,6 +41,7 @@
                     "nikitabobko/tap/aerospace"
                     "jetbrains-toolbox"
                     "microsoft-teams"
+                    "discord"
                 ];
             };
 
