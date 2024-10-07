@@ -42,6 +42,7 @@
                     "jetbrains-toolbox"
                     "microsoft-teams"
                     "discord"
+                    "obsidian"
                 ];
             };
 
