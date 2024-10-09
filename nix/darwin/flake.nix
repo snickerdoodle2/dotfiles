@@ -36,6 +36,7 @@
                 ];
                 brews = [];
                 casks = [ 
+                    "google-chrome"
                     "alacritty"
                     "raycast"
                     "nikitabobko/tap/aerospace"
