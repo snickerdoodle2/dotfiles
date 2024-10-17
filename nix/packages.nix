@@ -28,5 +28,6 @@
         bun
         tokei
         go-migrate
+        tree-sitter
     ]);
 }
