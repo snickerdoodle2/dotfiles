@@ -111,4 +111,7 @@ fi
 
 # ADDITIONAL TOOLS
 eval "$(zoxide init zsh)"
-eval "$(fnm env --use-on-cd)"
+
+if which fnm &> /dev/null; then
+    eval "$(fnm env --use-on-cd)"
+fi
