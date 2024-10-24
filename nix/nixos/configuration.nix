@@ -51,6 +51,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = (with pkgs; [
+    nodejs
     git
     alacritty
     google-chrome

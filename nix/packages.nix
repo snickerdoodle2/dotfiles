@@ -4,7 +4,6 @@
     environment.systemPackages = (with pkgs; [ 
         stow
         zoxide
-        fnm
         lsd
         ripgrep
         tmux
