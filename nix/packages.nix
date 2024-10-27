@@ -23,7 +23,7 @@
         wget
         rustup
         go
-        texlive.combined.scheme-medium
+        texlive.combined.scheme-full
         bun
         tokei
         go-migrate
