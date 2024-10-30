@@ -81,7 +81,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # FZF INTEGRATION
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd --color=always --icon=always $realpath'
 
 # ALIASES
 alias cat="bat"
