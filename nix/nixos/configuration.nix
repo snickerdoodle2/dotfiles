@@ -72,6 +72,7 @@
     numix-icon-theme-circle
     xdg-user-dirs
     kanata
+    jetbrains-toolbox
   ]) ++ ([ inputs.zen-browser.packages.${pkgs.system}.default ])
   ++ (with pkgs-unstable; [
     neovim
