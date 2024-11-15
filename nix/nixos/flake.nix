@@ -4,6 +4,7 @@
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
         nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
         zen-browser.url = "github:MarceColl/zen-browser-flake";
+        hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
         lanzaboote = {
             url = "github:nix-community/lanzaboote/v0.4.1";
 

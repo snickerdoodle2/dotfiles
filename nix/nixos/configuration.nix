@@ -49,6 +49,7 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.overlays = [inputs.hyprpanel.overlay];
 
   environment.systemPackages = (with pkgs; [
     nodejs
@@ -57,7 +58,6 @@
     google-chrome
     unzip
     gcc
-    eww
     grim
     slurp
     mako
@@ -73,7 +73,8 @@
     xdg-user-dirs
     kanata
     jetbrains-toolbox
-  ]) ++ ([ inputs.zen-browser.packages.${pkgs.system}.default ])
+  ])
+  ++ ([ inputs.zen-browser.packages.${pkgs.system}.default ])
   ++ (with pkgs-unstable; [
     neovim
   ]);
