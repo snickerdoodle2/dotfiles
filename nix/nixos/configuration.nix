@@ -60,7 +60,6 @@
     gcc
     grim
     slurp
-    mako
     gnome.nautilus
     pavucontrol
     rofi-wayland
