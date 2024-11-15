@@ -73,6 +73,7 @@
     kanata
     jetbrains-toolbox
     hyprpanel
+    libnotify
   ])
   ++ ([ inputs.zen-browser.packages.${pkgs.system}.default ])
   ++ (with pkgs-unstable; [
