@@ -73,6 +73,7 @@
     xdg-user-dirs
     kanata
     jetbrains-toolbox
+    hyprpanel
   ])
   ++ ([ inputs.zen-browser.packages.${pkgs.system}.default ])
   ++ (with pkgs-unstable; [
