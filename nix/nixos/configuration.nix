@@ -53,6 +53,7 @@
 
   environment.systemPackages = (with pkgs; [
     nodejs
+    pnpm
     git
     alacritty
     google-chrome
