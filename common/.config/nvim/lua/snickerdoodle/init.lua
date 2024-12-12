@@ -1,5 +1,0 @@
-require("snickerdoodle.remap")
-require("snickerdoodle.set")
-require("snickerdoodle.aucommands")
-require("snickerdoodle.filetypes")
-require("snickerdoodle.lazy")
