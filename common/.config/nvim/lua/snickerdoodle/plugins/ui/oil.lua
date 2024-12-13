@@ -1,6 +1,9 @@
 return {
     'stevearc/oil.nvim',
     event = "VimEnter",
+    dependencies = {
+        'echasnovski/mini.icons',
+    },
     config = function()
         require('oil').setup({
         keymaps = {
@@ -13,7 +16,5 @@ return {
         }
     })
         vim.keymap.set("n", "<leader>ee", "<cmd>Oil<CR>")
-    end,
-    -- Optional dependencies
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    end
 }
