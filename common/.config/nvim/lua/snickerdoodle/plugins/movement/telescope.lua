@@ -6,11 +6,11 @@ return {
         'nvim-tree/nvim-web-devicons',
         { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }
     },
-    event = 'VeryLazy',
+    keys = {
+        { '<leader>ff', function() require('telescope.builtin').find_files() end, {}, mode = 'n', desc='Search files'},
+        { '<leader>fs', function() require('telescope.builtin').live_grep() end, {}, mode = 'n', desc='Search a phrase'},
+    },
     config = function()
         require('telescope').load_extension('fzf')
-        local builtin = require('telescope.builtin')
-        vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-        vim.keymap.set('n', '<leader>fs', builtin.live_grep, {})
     end
 }

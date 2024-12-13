@@ -1,18 +1,15 @@
 return {
     "folke/flash.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    config = function()
-        local flash = require('flash')
-        flash.setup({
+    opts = {
             label = {
                 rainbow = {
                     enabled = true,
                     shade = 9
                 }
             }
-        })
-
-        vim.keymap.set({ 'n', 'o' }, 's', function() flash.jump() end, {})
-        vim.keymap.set({ 'n', 'o' }, 'S', function() flash.treesitter() end, {})
-    end
+    },
+    keys = {
+        { "s", function() require('flash').jump() end, { 'n', 'o' }, desc = "Flash Jump" },
+        { "S", function() require('flash').treesitter() end, { 'n', 'o' }, desc = "Flash Treesitter" },
+    }
 }
