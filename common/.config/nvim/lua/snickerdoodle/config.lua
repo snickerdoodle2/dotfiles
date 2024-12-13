@@ -42,3 +42,6 @@ vim.g.netrw_banner = 0
 vim.opt.signcolumn = "yes"
 
 vim.opt.mouse = nil
+
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
