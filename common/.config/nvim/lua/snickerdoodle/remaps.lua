@@ -4,8 +4,8 @@ vim.g.maplocalleader = ' '
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR><Esc>', { noremap = true })
 
 -- Move code blocks
-vim.keymap.set('v', 'J', ':m '>+1<CR>gv=gv')
-vim.keymap.set('v', 'K', ':m '<-2<CR>gv=gv')
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 
 -- Keep cursor in place while J
 vim.keymap.set('n', 'J', 'mzJ`z')
