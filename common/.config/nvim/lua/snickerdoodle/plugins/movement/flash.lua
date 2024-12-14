@@ -9,7 +9,7 @@ return {
         }
     },
     keys = {
-        { "s", function() require('flash').jump() end,       { 'n', 'o' }, desc = "Flash Jump" },
-        { "S", function() require('flash').treesitter() end, { 'n', 'o' }, desc = "Flash Treesitter" },
+        { "s", function() require('flash').jump() end,       mode = { 'n', 'o' }, desc = "Flash Jump" },
+        { "S", function() require('flash').treesitter() end, mode = { 'n', 'o' }, desc = "Flash Treesitter" },
     }
 }
