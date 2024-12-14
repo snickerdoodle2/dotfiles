@@ -53,7 +53,7 @@ return {
         local ensure_installed = vim.tbl_keys(servers or {})
         local lspconfig = require('lspconfig')
 
-        local setup_local = function (server_name, server)
+        local setup_local = function(server_name, server)
             server = server or {}
             server.capabilities = vim.tbl_extend('force', {}, capabilities, server.capabilities or {})
             lspconfig[server_name].setup(server)
