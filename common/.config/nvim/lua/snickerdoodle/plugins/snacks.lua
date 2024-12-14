@@ -3,7 +3,9 @@ return {
     priority = 1000,
     lazy = false,
     keys = {
-        { '<leader>gB', function() Snacks.gitbrowse() end, desc = 'Browse git' },
+        { '<leader>gB', function() Snacks.gitbrowse() end,      desc = 'Browse git' },
+        { '<leader>s.', function() Snacks.scratch() end,        desc = 'Toggle Scratch Buffer' },
+        { '<leader>ss', function() Snacks.scratch.select() end, desc = 'Select Scratch Buffer' },
     },
     opts = {
         bigfile = {
@@ -29,7 +31,7 @@ return {
                 {
                     section = "terminal",
                     cmd = vim.fn.stdpath('config') ..
-                        "/static/pokemon-colorscripts/pokemon-colorscripts.py -r --no-title --shiny",
+                        "/static/pokemon-colorscripts/pokemon-colorscripts.py -r --no-title --shiny; sleep .1",
                     random = 10,
                     pane = 2,
                     indent = 10,
