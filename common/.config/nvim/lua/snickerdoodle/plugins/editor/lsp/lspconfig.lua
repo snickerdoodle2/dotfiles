@@ -51,17 +51,25 @@ return {
             },
         }
         local ensure_installed = vim.tbl_keys(servers or {})
-        vim.list_extend(ensure_installed, {
-            'stylua', -- Used to format Lua code
-        })
+        local lspconfig = require('lspconfig')
 
-        require('mason-tool-installer').setup({ ensure_installed = ensure_installed })
+        local setup_local = function (server_name, server)
+            server = server or {}
+            server.capabilities = vim.tbl_extend('force', {}, capabilities, server.capabilities or {})
+            lspconfig[server_name].setup(server)
+        end
+
+        setup_local('rust_analyzer')
+
+        -- Installed locally
+
         require('mason-lspconfig').setup {
+            ensure_installed = ensure_installed,
             handlers = {
                 function(server_name)
                     local server = servers[server_name] or {}
                     server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-                    require('lspconfig')[server_name].setup(server)
+                    lspconfig[server_name].setup(server)
                 end,
             },
         }
