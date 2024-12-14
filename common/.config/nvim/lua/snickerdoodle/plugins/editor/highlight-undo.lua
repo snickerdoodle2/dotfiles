@@ -1,5 +1,5 @@
   return {
     'tzachar/highlight-undo.nvim',
-    event = { "BufReadPre", "BufNewFile" },
+    event = "LazyFile",
     opts = {},
   }

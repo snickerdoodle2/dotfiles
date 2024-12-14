@@ -15,9 +15,16 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.g.lazy_events_config = {
+    simple = {
+        LazyFile = { "BufReadPost", "BufNewFile", "BufWritePre" },
+    }
+}
+
 require("lazy").setup({
   spec = {
     -- import your plugins
+    { "bwpge/lazy-events.nvim", import = "lazy-events.import", lazy = false },
     { import = "snickerdoodle.plugins" },
   },
   checker = { enabled = true },
