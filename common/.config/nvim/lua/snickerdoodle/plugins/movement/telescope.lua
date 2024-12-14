@@ -17,6 +17,7 @@ return {
         { '<leader>fs', function() require('telescope.builtin').live_grep() end,    {}, desc = 'Search a phrase' },
         { '<leader>u',  function() require('telescope').extensions.undo.undo() end, {}, desc = 'Undo tree' },
     },
+    cmd = "Telescope",
     config = function()
         local telescope = require('telescope')
         telescope.setup({
