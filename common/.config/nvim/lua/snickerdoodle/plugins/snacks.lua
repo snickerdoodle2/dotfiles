@@ -42,5 +42,6 @@ return {
         indent = {
             animate = { enabled = false },
         },
+        quickfile = {},
     },
 }
