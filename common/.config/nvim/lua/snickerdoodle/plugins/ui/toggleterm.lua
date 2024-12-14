@@ -9,6 +9,6 @@ return {
         local lazygit = terminal:new({ cmd = "lazygit", hidden = true, direction = 'float' })
         vim.keymap.set('n', '<leader>gg', function()
             lazygit:toggle()
-        end)
+        end, { desc = "Open Lazygit" })
     end
 }
