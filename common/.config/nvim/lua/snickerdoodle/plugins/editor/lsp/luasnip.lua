@@ -10,7 +10,7 @@ return {
     cond = function()
         return vim.fn.executable 'make' == 1
     end,
-    config = function ()
+    config = function()
         require("luasnip.loaders.from_vscode").lazy_load()
     end
 }

@@ -25,6 +25,6 @@ vim.keymap.set('v', '<leader>y', '\'+y')
 vim.keymap.set('n', '<leader>Y', '\'+Y')
 
 
--- ex mode 
+-- ex mode
 vim.keymap.set('n', 'Q', '<nop>')
 vim.keymap.set('n', '<F1>', '<nop>')
