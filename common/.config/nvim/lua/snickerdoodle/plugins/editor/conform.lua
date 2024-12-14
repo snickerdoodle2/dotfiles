@@ -9,6 +9,6 @@ return {
         formatters_by_ft = {},
     },
     keys = {
-        { '<F3>', function() require('conform').format({ lsp_fallback = true, timeout_ms = 500 }) end, mode = 'n', desc = 'Format buffer' },
+        { '<F3>', function() require('conform').format({ lsp_fallback = true, timeout_ms = 500 }) end, desc = 'Format buffer' },
     }
 }

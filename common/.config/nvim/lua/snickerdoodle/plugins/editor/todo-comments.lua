@@ -5,7 +5,7 @@ return {
         'nvim-telescope/telescope.nvim',
     },
     keys = {
-        { '<leader>ft', "<cmd>TodoTelescope<cr>", mode = 'n', desc = 'Find TODO comments' },
+        { '<leader>ft', "<cmd>TodoTelescope<cr>", desc = 'Find TODO comments' },
     },
     opts = {}
 }

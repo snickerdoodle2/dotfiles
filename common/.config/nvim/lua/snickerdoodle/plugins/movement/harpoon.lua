@@ -5,12 +5,12 @@ return {
         'nvim-lua/plenary.nvim',
     },
     keys = {
-        { '<leader>a', function() require('harpoon'):list():add() end,                                    mode = 'n', desc = 'Mark file' },
-        { '<C-e>',     function() require('harpoon').ui:toggle_quick_menu(require('harpoon'):list()) end, mode = 'n', desc = 'Show marked files' },
-        { '<C-h>',     function() require('harpoon'):list():select(1) end,                                mode = 'n', desc = 'Jump to file no. 1' },
-        { '<C-j>',     function() require('harpoon'):list():select(2) end,                                mode = 'n', desc = 'Jump to file no. 2' },
-        { '<C-k>',     function() require('harpoon'):list():select(3) end,                                mode = 'n', desc = 'Jump to file no. 3' },
-        { '<C-l>',     function() require('harpoon'):list():select(4) end,                                mode = 'n', desc = 'Jump to file no. 4' }
+        { '<leader>a', function() require('harpoon'):list():add() end,                                    desc = 'Mark file' },
+        { '<C-e>',     function() require('harpoon').ui:toggle_quick_menu(require('harpoon'):list()) end, desc = 'Show marked files' },
+        { '<C-h>',     function() require('harpoon'):list():select(1) end,                                desc = 'Jump to file no. 1' },
+        { '<C-j>',     function() require('harpoon'):list():select(2) end,                                desc = 'Jump to file no. 2' },
+        { '<C-k>',     function() require('harpoon'):list():select(3) end,                                desc = 'Jump to file no. 3' },
+        { '<C-l>',     function() require('harpoon'):list():select(4) end,                                desc = 'Jump to file no. 4' }
     },
     opts = {
         default = {
