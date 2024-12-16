@@ -1,12 +1,3 @@
-vim.api.nvim_create_autocmd('TextYankPost', {
-    desc = 'Highlight when yanking (copying) text',
-    group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
-    callback = function()
-        vim.highlight.on_yank({ timeout = 100 })
-    end,
-})
-
-
 vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI", "BufEnter" }, {
     group = vim.api.nvim_create_augroup("ScrollOffEOF", {}),
     callback = function()
