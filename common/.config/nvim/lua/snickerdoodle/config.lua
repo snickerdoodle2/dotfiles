@@ -1,3 +1,4 @@
+ColorTheme = 'kanagawa'
 -- Relative numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true
