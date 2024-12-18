@@ -1,3 +1,6 @@
+require("config.remaps")
+require("config.augroups")
+
 ColorTheme = 'kanagawa'
 -- Relative numbers
 vim.opt.nu = true

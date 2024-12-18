@@ -24,8 +24,12 @@ vim.g.lazy_events_config = {
 require("lazy").setup({
     spec = {
         -- import your plugins
-        { "bwpge/lazy-events.nvim",        import = "lazy-events.import", lazy = false },
-        { import = "snickerdoodle.plugins" },
+        { "bwpge/lazy-events.nvim",      import = "lazy-events.import", lazy = false },
+        { import = 'plugins.colorscheme' },
+        { import = 'plugins.movement' },
+        { import = 'plugins.editor' },
+        { import = 'plugins.ui' },
+        { import = 'plugins.snacks' },
     },
     checker = { enabled = true },
 })

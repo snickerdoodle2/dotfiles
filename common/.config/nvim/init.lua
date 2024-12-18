@@ -1,1 +1,2 @@
-require("snickerdoodle")
+require("config")
+require("plugins")
