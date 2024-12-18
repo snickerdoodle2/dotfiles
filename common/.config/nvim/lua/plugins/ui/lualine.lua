@@ -15,7 +15,7 @@ return {
         sections = {
             lualine_a = { 'mode' },
             lualine_b = { 'branch', 'diff' },
-            lualine_c = { 'filename', 'diagnostics', require('action-hints').statusline },
+            lualine_c = { 'filename', 'diagnostics' },
             lualine_x = { 'filetype' },
             lualine_y = {},
             lualine_z = { 'location' }
