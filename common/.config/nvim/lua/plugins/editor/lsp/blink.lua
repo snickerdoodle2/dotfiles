@@ -6,6 +6,11 @@ return {
     version = 'v0.*',
     lazy = true,
     opts = {
+        enabled = function()
+            return not vim.tbl_contains({ "oil" }, vim.bo.filetype)
+                and vim.bo.buftype ~= "prompt"
+                and vim.b.completion ~= false
+        end,
         snippets = {
             expand = function(snippet) require('luasnip').lsp_expand(snippet) end,
             active = function(filter)
