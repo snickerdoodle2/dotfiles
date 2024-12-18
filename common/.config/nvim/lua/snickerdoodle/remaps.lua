@@ -17,12 +17,12 @@ vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
 -- Paste while keeping old value
-vim.keymap.set('x', '<leader>p', '\'_dP')
+vim.keymap.set('x', '<leader>p', '"_dP')
 
 -- Copy to system clipboard
-vim.keymap.set('n', '<leader>y', '\'+y')
-vim.keymap.set('v', '<leader>y', '\'+y')
-vim.keymap.set('n', '<leader>Y', '\'+Y')
+vim.keymap.set('n', '<leader>y', '"+y')
+vim.keymap.set('v', '<leader>y', '"+y')
+vim.keymap.set('n', '<leader>Y', '"+Y')
 
 
 -- ex mode
