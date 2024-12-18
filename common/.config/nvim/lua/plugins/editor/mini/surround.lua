@@ -1,7 +1,15 @@
 return {
     'echasnovski/mini.surround',
     version = '*',
-    event = "LazyFile",
+    keys = {
+        { '<leader>sa', mode = { "n", "v" } },
+        { '<leader>sd', mode = { "n" } },
+        { '<leader>sf', mode = { "n" } },
+        { '<leader>sF', mode = { "n" } },
+        { '<leader>sh', mode = { "n" } },
+        { '<leader>sr', mode = { "n" } },
+        { '<leader>sn', mode = { "n" } },
+    },
     opts = {
         mappings = {
             add = '<leader>sa',            -- Add surrounding in Normal and Visual modes
