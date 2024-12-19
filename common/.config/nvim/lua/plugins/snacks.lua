@@ -1,11 +1,13 @@
+-- TODO: git
 return {
     "folke/snacks.nvim",
     priority = 1000,
     lazy = false,
     keys = {
-        { '<leader>gB', function() Snacks.gitbrowse() end,      desc = 'Browse git' },
-        { '<leader>s.', function() Snacks.scratch() end,        desc = 'Toggle Scratch Buffer' },
-        { '<leader>ss', function() Snacks.scratch.select() end, desc = 'Select Scratch Buffer' },
+        { '<leader>goB', function() Snacks.gitbrowse() end,      desc = 'Browse git' },
+        { '<leader>gb', function() Snacks.git.blame_line() end,      desc = 'Git Logs on current line' },
+        { '<leader>s.',  function() Snacks.scratch() end,        desc = 'Toggle Scratch Buffer' },
+        { '<leader>ss',  function() Snacks.scratch.select() end, desc = 'Select Scratch Buffer' },
     },
     opts = {
         bigfile = {
@@ -30,6 +32,7 @@ return {
                 },
                 {
                     section = "terminal",
+                    -- TODO: change this
                     cmd = vim.fn.stdpath('config') ..
                         "/static/pokemon-colorscripts/pokemon-colorscripts.py -r --no-title --shiny; sleep .1",
                     random = 10,
@@ -43,5 +46,6 @@ return {
             animate = { enabled = false },
         },
         quickfile = {},
+        notifier = {}
     },
 }
