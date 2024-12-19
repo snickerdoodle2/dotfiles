@@ -30,6 +30,7 @@ require("lazy").setup({
         { import = 'plugins.editor' },
         { import = 'plugins.ui' },
         { import = 'plugins.snacks' },
+        { import = 'plugins.debugging' },
     },
     checker = { enabled = true },
 })
