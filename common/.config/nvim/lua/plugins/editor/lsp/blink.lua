@@ -30,5 +30,15 @@ return {
                 lazydev = { name = "LazyDev", module = "lazydev.integrations.blink" },
             },
         },
+        completion = {
+            documentation = {
+                auto_show = true,
+                auto_show_delay_ms = 300,
+            }
+        },
+        appearance = {
+            use_nvim_cmp_as_default = true,
+            nerd_font_variant = 'mono'
+        },
     }
 }
