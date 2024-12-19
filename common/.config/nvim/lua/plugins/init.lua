@@ -36,5 +36,4 @@ require("lazy").setup({
 
 vim.cmd("colorscheme " .. ColorTheme)
 -- TODO:
--- Language support (nullls, gopher, tailwind colors)
 -- debugging (DAP, hydra)

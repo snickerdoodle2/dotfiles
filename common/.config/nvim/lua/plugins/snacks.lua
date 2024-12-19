@@ -1,11 +1,10 @@
--- TODO: git
 return {
     "folke/snacks.nvim",
     priority = 1000,
     lazy = false,
     keys = {
         { '<leader>goB', function() Snacks.gitbrowse() end,      desc = 'Browse git' },
-        { '<leader>gb', function() Snacks.git.blame_line() end,      desc = 'Git Logs on current line' },
+        { '<leader>gb',  function() Snacks.git.blame_line() end, desc = 'Git Logs on current line' },
         { '<leader>s.',  function() Snacks.scratch() end,        desc = 'Toggle Scratch Buffer' },
         { '<leader>ss',  function() Snacks.scratch.select() end, desc = 'Select Scratch Buffer' },
     },
