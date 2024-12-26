@@ -1,0 +1,13 @@
+theme = catppuccin-mocha
+
+font-size = 15
+font-family = JetBrainsMono Nerd Font Mono
+font-style = SemiBold
+font-style-bold = ExtraBold
+font-style-italic = SemiBold Italic
+font-style-bold-italic = ExtraBold Italic
+
+command = zsh -l -c "tmux new-session -A -s main -c $HOME"
+
+window-decoration = false
+confirm-close-surface = false
