@@ -95,6 +95,7 @@
                     "discord"
                     "obsidian"
                     "1password"
+                    "docker"
                 ];
                 masApps = {
                     "iStat Menus" = 1319778037;
