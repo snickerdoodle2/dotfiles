@@ -20,13 +20,20 @@
             nixpkgs.hostPlatform = "aarch64-darwin";
             security.pam.enableSudoTouchIdAuth = true;
 
-                system.defaults = {
+            system.defaults = {
                 NSGlobalDomain = {
                     AppleInterfaceStyle = "Dark";
                     InitialKeyRepeat = 0;
                     NSAutomaticCapitalizationEnabled = false;
                     NSDocumentSaveNewDocumentsToCloud = false;
-                    "com.apple.mouse.tapBehavior" = 1;
+
+                };
+
+                trackpad.Clicking = true;
+
+                menuExtraClock = {
+                    ShowDate = 2;
+                    ShowDayOfWeek = false;
                 };
 
                 dock = {
@@ -36,14 +43,30 @@
                         "/Applications/Discord.app"
                     ];
                     tilesize = 32;
+                    wvous-bl-corner = 1;
+                    wvous-br-corner = 1;
+                    wvous-tl-corner = 1;
+                    wvous-tr-corner = 1;
                 };
 
-                controlcenter = {
-                    AirDrop = false;
-                    BatteryShowPercentage = true;
-                    Bluetooth = false;
+                finder = {
+                    FXPreferredViewStyle = "Nlsv";
+                    QuitMenuItem = true;
+                    ShowPathbar = true;
+                    ShowStatusBar = true;
                 };
+
+                loginwindow.autoLoginUser = "domi";
+
+                # FIXME: NOT WORKING???
+                # controlcenter = {
+                #     AirDrop = false;
+                #     BatteryShowPercentage = true;
+                #     Bluetooth = false;
+                # };
             };
+
+            system.startup.chime = false;
 
             environment.systemPackages = (with pkgs; [ 
                 neovim
