@@ -20,6 +20,14 @@
             nixpkgs.hostPlatform = "aarch64-darwin";
             security.pam.enableSudoTouchIdAuth = true;
 
+            system.defaults.dock = {
+                persistent-apps = [
+                    "/Applications/Google Chrome.app"
+                    "/Applications/Discord.app"
+                    "/Applications/Spotify.app"
+                ];
+            };
+
             environment.systemPackages = (with pkgs; [ 
                 neovim
                 fnm
@@ -43,6 +51,7 @@
                     "nikitabobko/tap/aerospace"
                     "jetbrains-toolbox"
                     "microsoft-teams"
+                    "spotify"
                     "discord"
                     "obsidian"
                     "1password"
