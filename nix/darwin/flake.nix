@@ -49,6 +49,9 @@
             };
 
             launchd.daemons.kanata = {
+                environment = {
+                    SHELL = "/bin/dash";
+                };
                 serviceConfig = {
                     ProgramArguments = [
                         "/Users/domi/.cargo/bin/kanata"
