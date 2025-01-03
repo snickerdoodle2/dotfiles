@@ -96,6 +96,10 @@
                     "obsidian"
                     "1password"
                 ];
+                masApps = {
+                    "iStat Menus" = 1319778037;
+                    "Hidden Bar" = 1452453066;
+                };
             };
 
             environment.variables = {
