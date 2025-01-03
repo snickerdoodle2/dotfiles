@@ -38,13 +38,14 @@
                 brews = [];
                 casks = [ 
                     "google-chrome"
-                    "alacritty"
+                    "ghostty"
                     "raycast"
                     "nikitabobko/tap/aerospace"
                     "jetbrains-toolbox"
                     "microsoft-teams"
                     "discord"
                     "obsidian"
+                    "1password"
                 ];
             };
 
