@@ -3,9 +3,17 @@ return {
     dependencies = {
         "L3MON4D3/LuaSnip"
     },
-    version = 'v0.*',
+    version = 'v0.9.*',
     lazy = true,
+    enabled = true,
     opts = {
+        appearance = {
+            use_nvim_cmp_as_default = true,
+            nerd_font_variant = 'mono',
+            kind_icons = {
+                Color = "██",
+            }
+        },
         enabled = function()
             return not vim.tbl_contains({ "oil" }, vim.bo.filetype)
                 and vim.bo.buftype ~= "prompt"
@@ -22,26 +30,22 @@ return {
             jump = function(direction) require('luasnip').jump(direction) end,
         },
         sources = {
-            completion = {
-                enabled_providers = { "lsp", "path", "luasnip", "buffer", "lazydev" },
-            },
+            -- add lazydev to your completion providers
+            default = { "lazydev", "lsp", "path", "luasnip", "buffer" },
             providers = {
-                lsp = { fallback_for = { "lazydev" } },
-                lazydev = { name = "LazyDev", module = "lazydev.integrations.blink" },
+                lazydev = {
+                    name = "LazyDev",
+                    module = "lazydev.integrations.blink",
+                    -- make lazydev completions top priority (see `:h blink.cmp`)
+                    score_offset = 100,
+                },
             },
         },
         completion = {
             documentation = {
                 auto_show = true,
                 auto_show_delay_ms = 300,
-            }
-        },
-        appearance = {
-            use_nvim_cmp_as_default = true,
-            nerd_font_variant = 'mono',
-            kind_icons = {
-                Color = "██",
-            }
+            },
         },
     }
 }
