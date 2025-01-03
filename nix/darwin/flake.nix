@@ -20,12 +20,29 @@
             nixpkgs.hostPlatform = "aarch64-darwin";
             security.pam.enableSudoTouchIdAuth = true;
 
-            system.defaults.dock = {
-                persistent-apps = [
-                    "/Applications/Google Chrome.app"
-                    "/Applications/Discord.app"
-                    "/Applications/Spotify.app"
-                ];
+                system.defaults = {
+                NSGlobalDomain = {
+                    AppleInterfaceStyle = "Dark";
+                    InitialKeyRepeat = 0;
+                    NSAutomaticCapitalizationEnabled = false;
+                    NSDocumentSaveNewDocumentsToCloud = false;
+                    "com.apple.mouse.tapBehavior" = 1;
+                };
+
+                dock = {
+                    persistent-apps = [
+                        "/Applications/Google Chrome.app"
+                        "/Applications/Spotify.app"
+                        "/Applications/Discord.app"
+                    ];
+                    tilesize = 32;
+                };
+
+                controlcenter = {
+                    AirDrop = false;
+                    BatteryShowPercentage = true;
+                    Bluetooth = false;
+                };
             };
 
             environment.systemPackages = (with pkgs; [ 
@@ -56,6 +73,10 @@
                     "obsidian"
                     "1password"
                 ];
+            };
+
+            environment.variables = {
+                EDITOR = "nvim";
             };
 
             launchd.daemons.kanata = {
