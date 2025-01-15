@@ -96,6 +96,7 @@
                     "obsidian"
                     "1password"
                     "docker"
+                    "font-jetbrains-mono-nerd-font"
                 ];
                 masApps = {
                     "iStat Menus" = 1319778037;
