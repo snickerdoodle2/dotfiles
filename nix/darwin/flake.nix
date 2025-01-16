@@ -39,6 +39,7 @@
                 dock = {
                     persistent-apps = [
                         "/Applications/Google Chrome.app"
+                        "/Applications/Obsidian.app"
                         "/Applications/Spotify.app"
                         "/Applications/Discord.app"
                     ];
