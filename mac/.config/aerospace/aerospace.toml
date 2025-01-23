@@ -139,6 +139,10 @@ alt-tab = 'workspace-back-and-forth'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
+alt-shift-quote = 'mode typing'
+
+[mode.typing.binding]
+alt-esc = 'mode main'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
