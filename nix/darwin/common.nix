@@ -7,6 +7,10 @@ args @ {
   brews ? [],
   casks ? [],
   masApps ? {},
+  persistent-apps ? [
+    "/Applications/Google Chrome.app"
+    "/Applications/Obsidian.app"
+  ], # Apps in the dock
 }: let
   common = import ../common/settings.nix args;
   settings = {
@@ -32,12 +36,7 @@ args @ {
       };
 
       dock = {
-        persistent-apps = [
-          "/Applications/Google Chrome.app"
-          "/Applications/Obsidian.app"
-          "/Applications/Spotify.app"
-          "/Applications/Discord.app"
-        ]; # Apps in the dock
+        persistent-apps = persistent-apps; # Apps in the dock
         tilesize = 32; # Dock size
         wvous-bl-corner = 1;
         wvous-br-corner = 1;

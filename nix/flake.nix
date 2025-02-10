@@ -22,6 +22,12 @@
         masApps = {
           "Affinity Photo 2: Image Editor" = 1616822987;
         };
+        persistent-apps = [
+          "/Applications/Google Chrome.app"
+          "/Applications/Obsidian.app"
+          "/Applications/Spotify.app"
+          "/Applications/Discord.app"
+        ];
       };
       configuration = common-darwin;
     in
