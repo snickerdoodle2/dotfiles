@@ -38,7 +38,7 @@ inputs @ {pkgs, ...}: {
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.overlays = [inputs.hyprpanel.overlay];
+  nixpkgs.overlays = [inputs.inputs.hyprpanel.overlay];
 
   environment.systemPackages = with pkgs; [
     git
