@@ -56,6 +56,7 @@
     # TODO: Add linux :)
     nixosConfigurations."dominik-pc" = let
       # host-specific cconfiguration
+      system = "x86_64-linux";
       configuration = {
         networking.hostName = "dominik-pc"; # Define your hostname.
       };
@@ -77,10 +78,9 @@
       };
     in
       nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-
         specialArgs = {
           inherit inputs;
+          inherit system;
         };
 
         modules = [
