@@ -89,7 +89,7 @@
           ./linux/common.nix
           lanzaboote.nixosModules.lanzaboote
           secureBoot
-          (args: let
+          (args @ {pkgs, ...}: let
             packages = import ./common/packages.nix args;
           in {
             environment.systemPackages = packages.common ++ packages.personal;
