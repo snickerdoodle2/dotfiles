@@ -2,6 +2,11 @@ args @ {
   self,
   nixpkgs,
   ...
+}: {
+  taps ? [],
+  brews ? [],
+  casks ? [],
+  masApps ? {},
 }: let
   common = import ../common/settings.nix args;
   settings = {
@@ -64,25 +69,31 @@ args @ {
     homebrew = {
       enable = true;
       onActivation.cleanup = "uninstall";
-      taps = [
-        "nikitabobko/tap"
-      ];
+      taps =
+        taps
+        ++ [
+          "nikitabobko/tap"
+        ];
 
-      brews = [];
-      casks = [
-        "google-chrome"
-        "ghostty"
-        "raycast"
-        "nikitabobko/tap/aerospace"
-        "spotify"
-        "1password"
-        "docker"
-        "font-jetbrains-mono-nerd-font"
-      ];
+      brews = brews ++ [];
+      casks =
+        casks
+        ++ [
+          "google-chrome"
+          "ghostty"
+          "raycast"
+          "nikitabobko/tap/aerospace"
+          "spotify"
+          "1password"
+          "docker"
+          "font-jetbrains-mono-nerd-font"
+        ];
 
-      masApps = {
-        "Hidden Bar" = 1452453066;
-      };
+      masApps =
+        masApps
+        // {
+          "Hidden Bar" = 1452453066;
+        };
     };
 
     # Kanata service (caps2esc)

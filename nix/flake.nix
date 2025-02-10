@@ -13,7 +13,7 @@
     ...
   }: {
     darwinConfigurations."dominik-mb" = let
-      common-darwin = import ./darwin/common.nix inputs;
+      common-darwin = import ./darwin/common.nix inputs {};
       configuration = common-darwin;
     in
       nix-darwin.lib.darwinSystem {
