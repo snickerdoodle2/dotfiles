@@ -10,6 +10,7 @@
     self,
     nix-darwin,
     nixpkgs,
+    ...
   }: {
     darwinConfigurations."dominik-mb" = let
       common-darwin = import ./darwin/common.nix inputs;
