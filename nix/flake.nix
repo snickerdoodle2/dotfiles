@@ -12,6 +12,8 @@
     nixpkgs,
     ...
   }: {
+    # Expose the package set, including overlays, for convenience.
+    darwinPackages = self.darwinConfigurations."dominik-mb".pkgs;
     darwinConfigurations."dominik-mb" = let
       common-darwin = import ./darwin/common.nix inputs {
         casks = [
@@ -44,7 +46,6 @@
         ];
       };
 
-    # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations."dominik-mb".pkgs;
+    # TODO: Add linux :)
   };
 }
