@@ -1,25 +1,7 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-{
-  config,
-  lib,
-  pkgs,
-  pkgs-unstable,
-  zen-browser,
-  inputs,
-  ...
-}: {
-  imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration-dominik-pc.nix
-  ];
-
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
+inputs @ {pkgs, ...}: {
+  boot.loader.systemd-boot.enable = true; # systemd boot
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "dominik-pc"; # Define your hostname.
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
@@ -32,11 +14,13 @@
     keyMap = "pl";
   };
 
+  # sound
   services.pipewire = {
     enable = true;
     pulse.enable = true;
   };
 
+  # needed for gdm
   services.xserver = {
     enable = true;
     displayManager.gdm = {
@@ -56,36 +40,29 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.overlays = [inputs.hyprpanel.overlay];
 
-  environment.systemPackages =
-    (with pkgs; [
-      nodejs
-      pnpm
-      git
-      alacritty
-      google-chrome
-      unzip
-      gcc
-      grim
-      slurp
-      gnome.nautilus
-      pavucontrol
-      rofi-wayland
-      socat
-      swww
-      wl-clipboard
-      polkit_gnome
-      discord
-      numix-icon-theme-circle
-      xdg-user-dirs
-      kanata
-      jetbrains-toolbox
-      hyprpanel
-      libnotify
-    ])
-    ++ [inputs.zen-browser.packages.${pkgs.system}.default]
-    ++ (with pkgs-unstable; [
-      neovim
-    ]);
+  environment.systemPackages = with pkgs; [
+    git
+    alacritty
+    google-chrome
+    unzip
+    gcc
+    grim
+    slurp
+    gnome.nautilus
+    pavucontrol
+    rofi-wayland
+    socat
+    swww
+    wl-clipboard
+    polkit_gnome
+    discord
+    numix-icon-theme-circle
+    xdg-user-dirs
+    kanata
+    jetbrains-toolbox
+    hyprpanel
+    libnotify
+  ];
 
   services.kanata = {
     enable = true;
@@ -147,7 +124,7 @@
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
   # accidentally delete configuration.nix.
-  # system.copySystemConfiguration = true;
+  system.copySystemConfiguration = true;
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
