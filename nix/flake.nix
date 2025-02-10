@@ -85,6 +85,7 @@
 
         modules = [
           configuration
+          ./linux/hosts/dominik-pc.nix
           ./linux/common.nix
           lanzaboote.nixosModules.lanzaboote
           secureBoot
