@@ -2,9 +2,9 @@
   description = "Nix(OS) Flake";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    nix-darwin.url = "github:LnL7/nix-darwin";
-    nix-darwin.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    nixpkgs-darwin.url = "github:NixOS/nixpkgs/nixpkgs-24.11-darwin";
+    nix-darwin.url = "github:LnL7/nix-darwin/nix-darwin-24.11";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs-darwin";
   };
   outputs = inputs @ {
     self,
@@ -14,16 +14,17 @@
   }: {
     darwinConfigurations."dominik-mb" = let
       common-darwin = import ./darwin/common.nix inputs;
-      packages = import ./common/packages.nix inputs;
-      configuration =
-        common-darwin
-        // {
-          environment.systemPackages = packages.common ++ packages.personal;
-        };
+      configuration = common-darwin;
     in
       nix-darwin.lib.darwinSystem {
         modules = [
           configuration
+          (
+            args @ {pkgs, ...}: let
+              packages = import ./common/packages.nix args;
+            in
+              packages.common ++ packages.personal
+          )
         ];
       };
 

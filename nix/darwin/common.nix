@@ -1,6 +1,7 @@
 args @ {
   self,
   nixpkgs,
+  ...
 }: let
   common = import ../common/settings.nix args;
   settings = {
