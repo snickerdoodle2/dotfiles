@@ -13,7 +13,16 @@
     ...
   }: {
     darwinConfigurations."dominik-mb" = let
-      common-darwin = import ./darwin/common.nix inputs {};
+      common-darwin = import ./darwin/common.nix inputs {
+        casks = [
+          "jetbrains-toolbox"
+          "discord"
+          "obsidian"
+        ];
+        masApps = {
+          "Affinity Photo 2: Image Editor" = 1616822987;
+        };
+      };
       configuration = common-darwin;
     in
       nix-darwin.lib.darwinSystem {
