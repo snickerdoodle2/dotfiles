@@ -22,8 +22,9 @@
           (
             args @ {pkgs, ...}: let
               packages = import ./common/packages.nix args;
-            in
-              packages.common ++ packages.personal
+            in {
+              environment.systemPackages = packages.common ++ packages.personal;
+            }
           )
         ];
       };
