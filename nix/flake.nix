@@ -52,6 +52,31 @@
           )
         ];
       };
+    darwinConfigurations."dpilipczuk-swm" = let
+      common-darwin = import ./darwin/common.nix inputs {
+          masApps = {
+              "Slack for Desktop" = 803453959;
+              "Harvest" = 506189836;
+          };
+        persistent-apps = [
+          "/Applications/Google Chrome.app"
+          "/Applications/Spotify.app"
+        ];
+      };
+      configuration = common-darwin;
+    in
+      nix-darwin.lib.darwinSystem {
+        modules = [
+          configuration
+          (
+            args @ {pkgs, ...}: let
+              packages = import ./common/packages.nix args;
+            in {
+              environment.systemPackages = packages.common;
+            }
+          )
+        ];
+      };
 
     # TODO: Add linux :)
     nixosConfigurations."dominik-pc" = let
