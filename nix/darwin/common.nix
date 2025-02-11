@@ -51,6 +51,11 @@ args @ {
         ShowStatusBar = true; # Show status bar (with remaining space etc.)
       };
 
+      WindowManager = {
+        AppWindowGroupingBehavior = false; # Group windows one at a time
+        EnableStandardClickToShowDesktop = false; # click to show desktop only in stage manager
+      };
+
       controlcenter = {
         AirDrop = false;
         BatteryShowPercentage = true;
