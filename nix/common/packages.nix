@@ -18,6 +18,7 @@
     wget
     tree-sitter
     rustup
+    elixir
   ];
   personal = with pkgs; [
     btop
