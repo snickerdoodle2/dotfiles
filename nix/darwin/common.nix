@@ -11,7 +11,6 @@ args @ {
     "/Applications/Google Chrome.app"
     "/Applications/Obsidian.app"
   ], # Apps in the dock
-  kanata-config-path ? "/Users/domi/.config/kanata/caps2esc.kbd",
 }: let
   common = import ../common/settings.nix args;
   settings = {
@@ -79,7 +78,11 @@ args @ {
           "nikitabobko/tap"
         ];
 
-      brews = brews ++ [];
+      brews =
+        brews
+        ++ [
+          "kanata"
+        ];
       casks =
         casks
         ++ [
@@ -98,25 +101,6 @@ args @ {
         // {
           "Hidden Bar" = 1452453066;
         };
-    };
-
-    # Kanata service (caps2esc)
-    launchd.daemons.kanata = {
-      environment = {
-        SHELL = "/bin/dash";
-      };
-      serviceConfig = {
-        ProgramArguments = [
-          "/Users/domi/.cargo/bin/kanata"
-          "-c"
-          kanata-config-path
-          "-n"
-        ];
-        KeepAlive = true;
-        RunAtLoad = true;
-        StandardErrorPath = "/Library/Logs/Kanata/kanata.err.log";
-        StandardOutPath = "/Library/Logs/Kanata/kanata.out.log";
-      };
     };
   };
 in
