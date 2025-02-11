@@ -51,12 +51,11 @@ args @ {
         ShowStatusBar = true; # Show status bar (with remaining space etc.)
       };
 
-      # FIXME: NOT WORKING???
-      # controlcenter = {
-      #     AirDrop = false;
-      #     BatteryShowPercentage = true;
-      #     Bluetooth = false;
-      # };
+      controlcenter = {
+          AirDrop = false;
+          BatteryShowPercentage = true;
+          Bluetooth = false;
+      };
     };
 
     system.startup.chime = false; # Disable startup chime
