@@ -54,6 +54,9 @@
       };
     darwinConfigurations."dpilipczuk-swm" = let
       common-darwin = import ./darwin/common.nix inputs {
+        casks = [
+          "visual-studio-code"
+        ];
         persistent-apps = [
           "/Applications/Google Chrome.app"
           "/Applications/Spotify.app"
