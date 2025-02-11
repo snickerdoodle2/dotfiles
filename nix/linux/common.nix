@@ -1,21 +1,8 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
-{ config, lib, pkgs, pkgs-unstable, zen-browser, inputs, ... }:
-
-{
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration-dominik-pc.nix
-    ];
-
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
+inputs @ {pkgs, ...}: {
+  boot.loader.systemd-boot.enable = true; # systemd boot
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "dominik-pc"; # Define your hostname.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "Europe/Warsaw";
@@ -27,33 +14,33 @@
     keyMap = "pl";
   };
 
+  # sound
   services.pipewire = {
     enable = true;
     pulse.enable = true;
   };
 
+  # needed for gdm
   services.xserver = {
+    enable = true;
+    displayManager.gdm = {
       enable = true;
-      displayManager.gdm = {
-          enable = true;
-          wayland = true;
-      };
+      wayland = true;
+    };
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.domi = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "docker"]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.overlays = [inputs.hyprpanel.overlay];
+  nixpkgs.overlays = [inputs.inputs.hyprpanel.overlay];
 
-  environment.systemPackages = (with pkgs; [
-    nodejs
-    pnpm
+  environment.systemPackages = with pkgs; [
     git
     alacritty
     google-chrome
@@ -61,7 +48,7 @@
     gcc
     grim
     slurp
-    gnome.nautilus
+    nautilus
     pavucontrol
     rofi-wayland
     socat
@@ -75,64 +62,60 @@
     jetbrains-toolbox
     hyprpanel
     libnotify
-  ])
-  ++ ([ inputs.zen-browser.packages.${pkgs.system}.default ])
-  ++ (with pkgs-unstable; [
-    neovim
-  ]);
+  ];
 
   services.kanata = {
-      enable = true;
-      package = pkgs.kanata;
-      keyboards.name.config = ''
-          (defsrc
-           caps
-          )
+    enable = true;
+    package = pkgs.kanata;
+    keyboards.name.config = ''
+      (defsrc
+       caps
+      )
 
-          (defalias
-           escctrl (tap-hold 100 100 esc lctl)
-          )
+      (defalias
+       escctrl (tap-hold 100 100 esc lctl)
+      )
 
-          (deflayer base
-           @escctrl
-          )
-      '';
+      (deflayer base
+       @escctrl
+      )
+    '';
   };
 
   programs.zsh.enable = true;
 
   programs.hyprland = {
-	  enable = true;
-	  xwayland.enable = true;
+    enable = true;
+    xwayland.enable = true;
   };
 
   programs._1password.enable = true;
   programs._1password-gui = {
-      enable = true;
+    enable = true;
   };
 
   fonts.packages = with pkgs; [
-  noto-fonts
-  noto-fonts-cjk
-  noto-fonts-emoji
-  (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-emoji
+    (nerdfonts.override {fonts = ["JetBrainsMono"];})
   ];
 
   security.polkit.enable = true;
   systemd = {
-      user.services.polkit-gnome-authentication-agent = {
-          description = "polkit-gnome-authentication-agent";
-          wantedBy = [ "graphical-session.target" ];
-          wants = [ "graphical-session.target" ];
-          after = [ "graphical-session.target" ];
-          serviceConfig = {
-              Type = "simple";
-              ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-              Restart = "on-failure";
-              RestartSec = 1;
-              TimeoutStopSec = 10;
-          };
+    user.services.polkit-gnome-authentication-agent = {
+      description = "polkit-gnome-authentication-agent";
+      wantedBy = ["graphical-session.target"];
+      wants = ["graphical-session.target"];
+      after = ["graphical-session.target"];
+      serviceConfig = {
+        Type = "simple";
+        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+        Restart = "on-failure";
+        RestartSec = 1;
+        TimeoutStopSec = 10;
       };
+    };
   };
 
   virtualisation.docker.enable = true;
@@ -161,6 +144,4 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }
-
