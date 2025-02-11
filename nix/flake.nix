@@ -54,13 +54,14 @@
       };
     darwinConfigurations."dpilipczuk-swm" = let
       common-darwin = import ./darwin/common.nix inputs {
-          masApps = {
-              "Slack for Desktop" = 803453959;
-              "Harvest" = 506189836;
-          };
+        masApps = {
+          "Slack for Desktop" = 803453959;
+          "Harvest" = 506189836;
+        };
         persistent-apps = [
           "/Applications/Google Chrome.app"
           "/Applications/Spotify.app"
+          "/Applications/Slack.app"
         ];
       };
       configuration = common-darwin;

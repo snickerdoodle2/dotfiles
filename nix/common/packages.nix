@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   common = with pkgs; [
+    neovim
     stow
     zoxide
     lsd
@@ -22,11 +23,9 @@
     btop
     just
     watchexec
-    rustup
     go
     texlive.combined.scheme-full
     bun
     tokei
-    tree-sitter
   ];
 }
