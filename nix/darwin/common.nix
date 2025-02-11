@@ -11,6 +11,7 @@ args @ {
     "/Applications/Google Chrome.app"
     "/Applications/Obsidian.app"
   ], # Apps in the dock
+  kanata-config-path ? "/Users/domi/.config/kanata/caps2esc.kbd",
 }: let
   common = import ../common/settings.nix args;
   settings = {
@@ -108,7 +109,7 @@ args @ {
         ProgramArguments = [
           "/Users/domi/.cargo/bin/kanata"
           "-c"
-          "/Users/domi/.config/kanata/caps2esc.kbd"
+          kanata-config-path
           "-n"
         ];
         KeepAlive = true;
