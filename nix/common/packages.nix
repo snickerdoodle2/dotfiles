@@ -1,32 +1,51 @@
 {pkgs, ...}: {
   common = with pkgs; [
+    # editor
     neovim
-    stow
-    zoxide
-    lsd
-    ripgrep
-    tmux
-    lazygit
+    tree-sitter
+
+    # tui tools
     atuin
+    delta
+    fzf
+    lazygit
+    tmux
+
+    # shell tools
     bat
     fd
-    fzf
-    delta
     gh
     jq
+    lsd
+    ripgrep
+    stow
     tldr
     wget
-    tree-sitter
+    zoxide
+
+    # rust
     rustup
+    cargo-binstall
+
+    # elixir
     elixir
   ];
   personal = with pkgs; [
+    # tui tools
     btop
+
+    # shell tools
     just
-    watchexec
-    go
-    texlive.combined.scheme-full
-    bun
     tokei
+    watchexec
+
+    # golang
+    go
+
+    # bun
+    bun
+
+    # latex
+    texlive.combined.scheme-full
   ];
 }

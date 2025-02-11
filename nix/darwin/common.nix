@@ -52,9 +52,9 @@ args @ {
       };
 
       controlcenter = {
-          AirDrop = false;
-          BatteryShowPercentage = true;
-          Bluetooth = false;
+        AirDrop = false;
+        BatteryShowPercentage = true;
+        Bluetooth = false;
       };
     };
 
@@ -77,14 +77,14 @@ args @ {
       casks =
         casks
         ++ [
-          "google-chrome"
-          "ghostty"
-          "raycast"
-          "nikitabobko/tap/aerospace"
-          "spotify"
           "1password"
           "docker"
           "font-jetbrains-mono-nerd-font"
+          "ghostty"
+          "google-chrome"
+          "nikitabobko/tap/aerospace"
+          "raycast"
+          "spotify"
         ];
 
       masApps =
