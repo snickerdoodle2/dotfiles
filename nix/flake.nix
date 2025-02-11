@@ -69,6 +69,7 @@
       nix-darwin.lib.darwinSystem {
         modules = [
           configuration
+          (import ./darwin/kanata.nix ./darwin/caps2escISO.kbd)
           (
             args @ {pkgs, ...}: let
               packages = import ./common/packages.nix args;
