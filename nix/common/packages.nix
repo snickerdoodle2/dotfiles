@@ -29,6 +29,9 @@
 
     # elixir
     elixir
+
+    # node
+    nodejs
   ];
   personal = with pkgs; [
     # tui tools

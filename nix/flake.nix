@@ -75,10 +75,7 @@
               packages = import ./common/packages.nix args;
             in {
               environment.systemPackages =
-                packages.common
-                ++ (with pkgs; [
-                  fnm
-                ]);
+                packages.common;
             }
           )
         ];
