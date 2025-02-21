@@ -65,7 +65,10 @@ return {
                         },
                     }
                 }
-            }
+            },
+            emmet_language_server = {
+                filetypes = { "heex" }
+            },
         }
         local ensure_installed = vim.tbl_keys(servers or {})
         local lspconfig = require('lspconfig')
