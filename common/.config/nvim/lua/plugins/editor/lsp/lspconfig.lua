@@ -55,6 +55,17 @@ return {
                     },
                 },
             },
+            tailwindcss = {
+                settings = {
+                    tailwindCSS = {
+                        includeLanguages = {
+                            elixir = "html-eex",
+                            eelixir = "html-eex",
+                            heex = "html-eex",
+                        },
+                    }
+                }
+            }
         }
         local ensure_installed = vim.tbl_keys(servers or {})
         local lspconfig = require('lspconfig')
