@@ -29,6 +29,7 @@ return {
                 }
             },
             extensions = {
+                -- TODO: fix keybinds
                 undo = {
                     side_by_side = true,
                     layout_strategy = "vertical",
