@@ -13,9 +13,18 @@ return {
         "debugloop/telescope-undo.nvim",
     },
     keys = {
-        { '<leader>ff', function() require('telescope.builtin').find_files() end,   {}, desc = 'Search files' },
-        { '<leader>fs', function() require('telescope.builtin').live_grep() end,    {}, desc = 'Search a phrase' },
-        { '<leader>u',  function() require('telescope').extensions.undo.undo() end, {}, desc = 'Undo tree' },
+        { '<leader>ff', function() require('telescope.builtin').find_files() end,  {}, desc = 'Search files' },
+        { '<leader>fs', function() require('telescope.builtin').live_grep() end,   {}, desc = 'Search a phrase' },
+        { '<leader>fw', function() require('telescope.builtin').grep_string() end, {}, desc = 'Search word under cursor' },
+        {
+            '<leader>fW',
+            function()
+                require('telescope.builtin').grep_string({ search = vim.fn.expand('<cWORD>') })
+            end,
+            {},
+            desc = 'Search word under cursor (whitespace delimited)'
+        },
+        { '<leader>u', function() require('telescope').extensions.undo.undo() end, {}, desc = 'Undo tree' },
     },
     cmd = "Telescope",
     config = function()
