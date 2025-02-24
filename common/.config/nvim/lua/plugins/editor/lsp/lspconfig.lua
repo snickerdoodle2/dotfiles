@@ -40,6 +40,8 @@ return {
         local capabilities = vim.lsp.protocol.make_client_capabilities()
         capabilities = vim.tbl_deep_extend('force', capabilities, require('blink.cmp').get_lsp_capabilities())
 
+        local lspconfig = require('lspconfig')
+
         local servers = {
             lua_ls = {
                 -- cmd = { ... },
@@ -66,12 +68,14 @@ return {
                     }
                 }
             },
+            elixirls = {
+                root_dir = lspconfig.util.root_pattern('mix.exs')
+            },
             emmet_language_server = {
                 filetypes = { "heex" }
             },
         }
         local ensure_installed = vim.tbl_keys(servers or {})
-        local lspconfig = require('lspconfig')
 
         local setup_local = function(server_name, server)
             server = server or {}
