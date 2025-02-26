@@ -38,5 +38,6 @@ config-path: {
 
   security.sudo.extraConfig = ''
     %admin ALL=(root) NOPASSWD: /opt/homebrew/kanata --cfg /etc/keyboard.kbd
+    %admin ALL=(root) NOPASSWD: '/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/Applications/Karabiner-VirtualHIDDevice-Daemon.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Daemon'
   '';
 }
