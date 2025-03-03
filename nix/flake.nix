@@ -27,6 +27,7 @@
           "jetbrains-toolbox"
           "discord"
           "obsidian"
+          "microsoft-teams"
         ];
         masApps = {
           "Affinity Photo 2: Image Editor" = 1616822987;
