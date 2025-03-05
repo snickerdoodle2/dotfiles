@@ -4,7 +4,7 @@ return {
     dependencies = {
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
-        { 'j-hui/fidget.nvim', opts = {} },
+        'j-hui/fidget.nvim',
         'saghen/blink.cmp'
     },
     config = function()
