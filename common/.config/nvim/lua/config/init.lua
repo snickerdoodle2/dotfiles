@@ -1,7 +1,7 @@
 require("config.remaps")
 require("config.augroups")
 
-ColorTheme = 'kanagawa'
+ColorTheme = 'rose-pine'
 -- Relative numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true
