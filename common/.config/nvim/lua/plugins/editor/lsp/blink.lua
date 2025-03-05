@@ -1,9 +1,7 @@
 return {
     'saghen/blink.cmp',
-    dependencies = {
-        "L3MON4D3/LuaSnip"
-    },
-    version = 'v0.9.*',
+    version = 'v0.13.*',
+    dependencies = 'rafamadriz/friendly-snippets',
     lazy = true,
     enabled = true,
     opts = {
@@ -19,19 +17,10 @@ return {
                 and vim.bo.buftype ~= "prompt"
                 and vim.b.completion ~= false
         end,
-        snippets = {
-            expand = function(snippet) require('luasnip').lsp_expand(snippet) end,
-            active = function(filter)
-                if filter and filter.direction then
-                    return require('luasnip').jumpable(filter.direction)
-                end
-                return require('luasnip').in_snippet()
-            end,
-            jump = function(direction) require('luasnip').jump(direction) end,
-        },
+        fuzzy = { implementation = "prefer_rust_with_warning" },
         sources = {
             -- add lazydev to your completion providers
-            default = { "lazydev", "lsp", "path", "luasnip", "buffer" },
+            default = { "lazydev", "lsp", "path", "snippets", "buffer" },
             providers = {
                 lazydev = {
                     name = "LazyDev",
