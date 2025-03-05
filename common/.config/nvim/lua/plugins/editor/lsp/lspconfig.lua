@@ -57,6 +57,16 @@ return {
                     },
                 },
             },
+            nextls = {
+                init_options = {
+                    extensions = {
+                        credo = { enable = true }
+                    },
+                    experimental = {
+                        completions = { enable = true }
+                    }
+                }
+            },
             tailwindcss = {
                 settings = {
                     tailwindCSS = {
@@ -67,9 +77,6 @@ return {
                         },
                     }
                 }
-            },
-            elixirls = {
-                root_dir = lspconfig.util.root_pattern('mix.exs')
             },
             emmet_language_server = {
                 filetypes = { "heex" }
