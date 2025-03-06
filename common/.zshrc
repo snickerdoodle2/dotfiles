@@ -17,6 +17,10 @@ if [ -f $HOME/.zshrc.local ]; then
     source $HOME/.zshrc.local
 fi
 
+# LOAD edit-command-line WIDGET
+autoload -z edit-command-line
+zle -N edit-command-line
+
 source "${ZINIT_HOME}/zinit.zsh"
 
 # PROMPT
@@ -57,10 +61,16 @@ zinit light Aloxaf/fzf-tab
 # KEYBINDS
 bindkey -e
 bindkey "^r" atuin-search
+
 bindkey "^p" history-search-backward
 bindkey "^n" history-search-forward
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
+
+bindkey "^h" backward-word
+bindkey "^l" forward-word
+bindkey "^e" edit-command-line
+
 bindkey "^y" autosuggest-accept
 
 # HISTORY TWEAKS
