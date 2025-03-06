@@ -67,8 +67,8 @@ bindkey "^n" history-search-forward
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
-bindkey "^h" backward-word
-bindkey "^l" forward-word
+bindkey "^n" backward-word
+bindkey "^j" forward-word
 bindkey "^e" edit-command-line
 
 bindkey "^y" autosuggest-accept
