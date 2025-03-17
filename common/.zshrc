@@ -69,7 +69,7 @@ bindkey "^[[B" history-search-forward
 
 bindkey "^n" backward-word
 bindkey "^j" forward-word
-bindkey "^e" edit-command-line
+bindkey "^x" edit-command-line
 
 bindkey "^y" autosuggest-accept
 
