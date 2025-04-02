@@ -103,8 +103,6 @@ alias tree="lsd --tree"
 alias vim="nvim"
 alias vi="nvim"
 
-alias btwb-ex="nix shell nixpkgs#elixir nixpkgs#erlang_26 nixpkgs#nodejs_20"
-
 # EXPORTS
 export EDITOR="nvim"
 
