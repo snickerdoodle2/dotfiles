@@ -28,7 +28,7 @@
     cargo-binstall
 
     # elixir
-    elixir
+    elixir_1_18
 
     # node
     nodejs
