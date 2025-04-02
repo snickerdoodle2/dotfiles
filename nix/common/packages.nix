@@ -27,9 +27,6 @@
     rustup
     cargo-binstall
 
-    # elixir
-    elixir_1_18
-
     # node
     nodejs
   ];
