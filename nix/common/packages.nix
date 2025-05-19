@@ -28,7 +28,7 @@
     cargo-binstall
 
     # node
-    nodejs
+    nodejs_22
   ];
   personal = with pkgs; [
     # tui tools
