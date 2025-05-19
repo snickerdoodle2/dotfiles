@@ -29,7 +29,7 @@
           "obsidian"
           "microsoft-teams"
           "blender"
-          "cursor"
+          "visual-studio-code"
         ];
         masApps = {
           "Affinity Photo 2: Image Editor" = 1616822987;
