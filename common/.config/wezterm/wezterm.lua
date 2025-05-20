@@ -1,3 +1,5 @@
+require("updates")
+
 local wezterm = require('wezterm')
 local colors = require('colors')
 local keys = require('keys')
@@ -23,6 +25,7 @@ config.color_schemes = colors.color_schemes
 config.color_scheme = colors.color_scheme()
 
 config.disable_default_key_bindings = true
+config.leader = { key = "Space", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = keys
 
 return config
