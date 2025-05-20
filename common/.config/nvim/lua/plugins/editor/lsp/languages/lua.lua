@@ -1,5 +1,12 @@
 return {
     "folke/lazydev.nvim",
     ft = "lua",
-    opts = {}
+    dependencies = {
+        { 'gonstoll/wezterm-types', lazy = true },
+    },
+    opts = {
+        library = {
+            { path = 'wezterm-types', mods = { 'wezterm' } },
+        },
+    }
 }
