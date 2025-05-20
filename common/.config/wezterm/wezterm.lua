@@ -1,10 +1,9 @@
-local wezterm = require 'wezterm'
+local wezterm = require('wezterm')
+local colors = require('colors')
 
 ---@type Config
 ---@diagnostic disable-next-line: undefined-field
 local config = wezterm.config_builder()
-
-config.color_scheme = 'Kanagawa (Gogh)'
 
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
@@ -18,5 +17,8 @@ config.font = wezterm.font_with_fallback({
     { family = "Apple Color Emoji", assume_emoji_presentation = true }
 })
 config.font_size = 15.0
+
+config.color_schemes = colors.color_schemes
+config.color_scheme = colors.color_scheme()
 
 return config
