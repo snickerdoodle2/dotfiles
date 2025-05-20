@@ -1,5 +1,6 @@
 local wezterm = require('wezterm')
 local colors = require('colors')
+local keys = require('keys')
 
 ---@type Config
 ---@diagnostic disable-next-line: undefined-field
@@ -20,5 +21,8 @@ config.font_size = 15.0
 
 config.color_schemes = colors.color_schemes
 config.color_scheme = colors.color_scheme()
+
+config.disable_default_key_bindings = true
+config.keys = keys
 
 return config
