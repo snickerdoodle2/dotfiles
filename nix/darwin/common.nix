@@ -94,6 +94,7 @@ args @ {
           "nikitabobko/tap/aerospace"
           "raycast"
           "spotify"
+          "wezterm"
         ];
 
       masApps =

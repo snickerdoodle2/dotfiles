@@ -9,6 +9,7 @@
     delta
     fzf
     lazygit
+    lazydocker
     tmux
 
     # shell tools
@@ -26,6 +27,8 @@
     # rust
     rustup
     cargo-binstall
+    alejandra
+    nushell
 
     # node
     nodejs_22
