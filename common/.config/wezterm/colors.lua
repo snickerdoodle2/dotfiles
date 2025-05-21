@@ -19,6 +19,18 @@ M.color_schemes = {
     ["Light"] = wezterm.color.get_builtin_schemes()['Catppuccin Latte'],
 }
 
-wezterm.log_info(wezterm.color.get_builtin_schemes()['Gruvbox'])
 
+M.inactive_pane_hsb = function()
+    if M.color_scheme() == "Dark" then
+        return {
+            saturation = 0.4,
+            brightness = 0.2,
+        }
+    else
+        return {
+            saturation = 1,
+            brightness = 0.7,
+        }
+    end
+end
 return M
