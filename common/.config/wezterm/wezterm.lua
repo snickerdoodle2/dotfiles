@@ -34,4 +34,7 @@ config.unix_domains = mux.unix_domains
 config.default_gui_startup_args = mux.default_gui_startup_args
 config.default_workspace = mux.default_workspace
 
+-- yikess
+config.default_prog = { "/run/current-system/sw/bin/nu" }
+
 return config
