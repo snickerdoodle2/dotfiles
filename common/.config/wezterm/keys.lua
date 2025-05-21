@@ -48,6 +48,46 @@ local keys = {
         action = actions.QuitApplication
     },
     {
+        key = "h",
+        mods = 'CMD',
+        action = actions.ActivatePaneDirection('Left')
+    },
+    {
+        key = "j",
+        mods = 'CMD',
+        action = actions.ActivatePaneDirection('Down')
+    },
+    {
+        key = "k",
+        mods = 'CMD',
+        action = actions.ActivatePaneDirection('Up')
+    },
+    {
+        key = "l",
+        mods = 'CMD',
+        action = actions.ActivatePaneDirection('Right')
+    },
+    {
+        key = "LeftArrow",
+        mods = 'CMD',
+        action = actions.ActivatePaneDirection('Left')
+    },
+    {
+        key = "DownArrow",
+        mods = 'CMD',
+        action = actions.ActivatePaneDirection('Down')
+    },
+    {
+        key = "UpArrow",
+        mods = 'CMD',
+        action = actions.ActivatePaneDirection('Up')
+    },
+    {
+        key = "RightArrow",
+        mods = 'CMD',
+        action = actions.ActivatePaneDirection('Right')
+    },
+    {
         key = "l",
         mods = "CTRL|LEADER",
         action = actions.ShowDebugOverlay
@@ -81,6 +121,11 @@ local keys = {
         key = "n",
         mods = "LEADER",
         action = actions.ActivateTabRelative(1)
+    },
+    {
+        key = "z",
+        mods = "LEADER",
+        action = actions.TogglePaneZoomState
     }
 }
 
