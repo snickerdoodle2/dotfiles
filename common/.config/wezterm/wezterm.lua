@@ -23,6 +23,10 @@ config.font_size = 15.0
 
 config.color_schemes = colors.color_schemes
 config.color_scheme = colors.color_scheme()
+config.inactive_pane_hsb = {
+    saturation = 0.4,
+    brightness = 0.2,
+}
 
 config.disable_default_key_bindings = true
 config.leader = { key = "Space", mods = "CTRL", timeout_milliseconds = 1000 }
