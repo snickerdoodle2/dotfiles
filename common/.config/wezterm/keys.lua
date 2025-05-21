@@ -1,12 +1,13 @@
 ---@diagnostic disable:assign-type-mismatch
 local wezterm = require('wezterm')
+local mux     = require('mux')
 
 ---@type Action
 ---@diagnostic disable-next-line:undefined-field
 local actions = wezterm.action
 
 ---@type Key[]
-local keys = {
+local keys    = {
     {
         key = "c",
         mods = "SUPER",
@@ -126,6 +127,16 @@ local keys = {
         key = "z",
         mods = "LEADER",
         action = actions.TogglePaneZoomState
+    },
+    {
+        key = "o",
+        mods = "LEADER",
+        action = wezterm.action_callback(mux.sessionizer)
+    },
+    {
+        key = "$",
+        mods = "LEADER|SHIFT",
+        action = wezterm.action_callback(mux.rename)
     }
 }
 

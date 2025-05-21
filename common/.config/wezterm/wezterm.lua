@@ -3,6 +3,7 @@ require("updates")
 local wezterm = require('wezterm')
 local colors = require('colors')
 local keys = require('keys')
+local mux = require('mux')
 
 ---@type Config
 ---@diagnostic disable-next-line: undefined-field
@@ -28,5 +29,9 @@ config.inactive_pane_hsb = colors.inactive_pane_hsb()
 config.disable_default_key_bindings = true
 config.leader = { key = "Space", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = keys
+
+config.unix_domains = mux.unix_domains
+config.default_gui_startup_args = mux.default_gui_startup_args
+config.default_workspace = mux.default_workspace
 
 return config
