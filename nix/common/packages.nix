@@ -28,7 +28,6 @@
     rustup
     cargo-binstall
     alejandra
-    nushell
 
     # node
     nodejs_22
