@@ -10,10 +10,11 @@ return {
         require("nvim-treesitter.query_predicates")
     end,
     opts = {
-        highlight = { enable = true },
+        highlight = { enable = true, disable = { "csv" } },
         indent = { enable = true },
         sync_install = false,
         auto_install = true,
+        ignore_install = { "csv" },
         ensure_installed = {
             "bash",
             "c",
