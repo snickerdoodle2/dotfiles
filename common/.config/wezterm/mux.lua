@@ -83,8 +83,9 @@ end
 
 M.rename = function(window, pane)
     window:perform_action(actions.PromptInputLine({
+        description = "Rename workspace",
         ---@diagnostic disable-next-line:undefined-field
-        description = string.format("Rename workspace (%s)", wezterm.mux.get_active_workspace()),
+        initial_value = wezterm.mux.get_active_workspace(),
         ---@diagnostic disable-next-line:undefined-field
         action = wezterm.action_callback(rename_workspace)
     }), pane)
