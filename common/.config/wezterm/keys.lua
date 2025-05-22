@@ -131,11 +131,13 @@ local keys    = {
     {
         key = "o",
         mods = "LEADER",
+        ---@diagnostic disable-next-line:undefined-field
         action = wezterm.action_callback(mux.sessionizer)
     },
     {
         key = "$",
         mods = "LEADER|SHIFT",
+        ---@diagnostic disable-next-line:undefined-field
         action = wezterm.action_callback(mux.rename)
     }
 }

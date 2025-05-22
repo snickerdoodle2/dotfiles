@@ -15,8 +15,7 @@ local get_leader = function(window)
 end
 
 ---@param window Window
----@param pane Pane
-local update_left_status = function(window, pane)
+local update_left_status = function(window, _)
     local leader = get_leader(window)
     window:set_left_status(string.format(" %s  %s ", leader, window:active_workspace()))
 end
