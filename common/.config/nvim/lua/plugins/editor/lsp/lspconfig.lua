@@ -32,7 +32,9 @@ return {
                 map('<F4>', vim.lsp.buf.code_action, 'Code Actions')
 
                 local client = vim.lsp.get_client_by_id(event.data.client_id)
-                signature.setup(client, event.buf)
+                if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_signatureHelp, event.buf) then
+                    signature.setup(client, event.buf)
+                end
             end
         })
 
