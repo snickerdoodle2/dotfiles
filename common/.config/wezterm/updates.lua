@@ -17,7 +17,8 @@ end
 ---@param window Window
 ---@param pane Pane
 local update_left_status = function(window, pane)
-    window:set_left_status(window:active_workspace())
+    local leader = get_leader(window)
+    window:set_left_status(string.format(" %s  %s ", leader, window:active_workspace()))
 end
 
 ---@param window Window
@@ -30,8 +31,7 @@ local update_right_status = function(window, pane)
         ---@diagnostic disable-next-line:undefined-field
         directory = helpers.basename(directory.path)
     end
-    local leader = get_leader(window)
-    window:set_right_status(string.format("%s %s %s", time, directory, leader))
+    window:set_right_status(string.format(" %s %s ", time, directory))
 end
 
 ---@param window Window
