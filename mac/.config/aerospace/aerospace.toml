@@ -92,7 +92,7 @@ outer.right =      8
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
-alt-q = 'exec-and-forget open -na /Applications/Ghostty.app'
+alt-q = 'exec-and-forget open -na /Applications/WezTerm.app'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 alt-h = 'focus left'
