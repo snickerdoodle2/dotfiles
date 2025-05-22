@@ -1,3 +1,5 @@
+local signature = require('config.signature')
+
 return {
     "neovim/nvim-lspconfig",
     event = "LazyFile",
@@ -28,6 +30,9 @@ return {
                 map('<C-s>', function() vim.lsp.buf.signature_help({ border = 'single' }) end, '[S]ignature Help')
                 map('<F2>', vim.lsp.buf.rename, 'Rename')
                 map('<F4>', vim.lsp.buf.code_action, 'Code Actions')
+
+                local client = vim.lsp.get_client_by_id(event.data.client_id)
+                signature.setup(client, event.buf)
             end
         })
 
