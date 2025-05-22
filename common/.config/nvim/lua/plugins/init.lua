@@ -38,6 +38,6 @@ require("lazy").setup({
     },
 })
 
-vim.cmd("colorscheme " .. ColorTheme)
+vim.cmd("colorscheme " .. vim.g.color_scheme)
 -- TODO:
 -- debugging (DAP, hydra)

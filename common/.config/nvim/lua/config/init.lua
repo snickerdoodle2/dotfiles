@@ -1,7 +1,7 @@
 require("config.remaps")
 require("config.augroups")
+require("config.colors")
 
-ColorTheme = 'catppuccin'
 -- Relative numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true

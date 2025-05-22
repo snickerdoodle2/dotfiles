@@ -2,8 +2,8 @@ return {
     "neovim/nvim-lspconfig",
     event = "LazyFile",
     dependencies = {
-        'williamboman/mason.nvim',
-        'williamboman/mason-lspconfig.nvim',
+        'mason-org/mason.nvim',
+        'mason-org/mason-lspconfig.nvim',
         'j-hui/fidget.nvim',
         'saghen/blink.cmp'
     },
@@ -18,24 +18,45 @@ return {
 
                 -- TODO: TELESCOPE??
                 map('gd', vim.lsp.buf.definition, '[G]oto [d]efinition')
-                map('K', vim.lsp.buf.hover, 'Hover')
+                map('K', function() vim.lsp.buf.hover({ border = 'single' }) end, 'Hover')
                 map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclarations')
                 map('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
                 map('gr', vim.lsp.buf.references, '[G]oto [R]eferences')
                 map('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinitions')
                 -- map('<leader>ds', document_symbols, '[D]ocument [Symbols]')
                 -- map('<leader>ws', workspace_symbols, '[W]orkspace [Symbols]')
-                map('<C-s>', vim.lsp.buf.signature_help, '[S]ignature Help')
+                map('<C-s>', function() vim.lsp.buf.signature_help({ border = 'single' }) end, '[S]ignature Help')
                 map('<F2>', vim.lsp.buf.rename, 'Rename')
                 map('<F4>', vim.lsp.buf.code_action, 'Code Actions')
             end
         })
 
-        local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-        for type, icon in pairs(signs) do
-            local hl = "DiagnosticSign" .. type
-            vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-        end
+        vim.diagnostic.config({
+            severity_sort = true,
+            float = { border = 'single', source = 'if_many' },
+            virtual_text = {
+                source = 'if_many',
+                spacing = 2,
+                format = function(diagnostic)
+                    local diagnostic_message = {
+                        [vim.diagnostic.severity.ERROR] = diagnostic.message,
+                        [vim.diagnostic.severity.WARN] = diagnostic.message,
+                        [vim.diagnostic.severity.INFO] = diagnostic.message,
+                        [vim.diagnostic.severity.HINT] = diagnostic.message,
+                    }
+                    return diagnostic_message[diagnostic.severity]
+                end,
+            },
+            underline = { severity = vim.diagnostic.severity.ERROR },
+            signs = {
+                text = {
+                    [vim.diagnostic.severity.ERROR] = '󰅚 ',
+                    [vim.diagnostic.severity.WARN] = '󰀪 ',
+                    [vim.diagnostic.severity.INFO] = '󰋽 ',
+                    [vim.diagnostic.severity.HINT] = '󰌶 ',
+                },
+            },
+        })
 
         local capabilities = vim.lsp.protocol.make_client_capabilities()
         capabilities = vim.tbl_deep_extend('force', capabilities, require('blink.cmp').get_lsp_capabilities())
@@ -94,8 +115,10 @@ return {
 
         -- Installed locally
 
+        require("mason").setup()
         require('mason-lspconfig').setup {
             ensure_installed = ensure_installed,
+            automatic_enable = true,
             automatic_installation = false,
             handlers = {
                 function(server_name)

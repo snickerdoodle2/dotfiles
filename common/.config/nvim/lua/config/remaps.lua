@@ -24,3 +24,15 @@ vim.keymap.set('n', '<leader>Y', '"+Y')
 -- ex mode
 vim.keymap.set('n', 'Q', '<nop>')
 vim.keymap.set('n', '<F1>', '<nop>')
+
+vim.keymap.set('n', '<leader>k', function()
+    vim.diagnostic.config({ virtual_lines = { current_line = true }, virtual_text = false })
+
+    vim.api.nvim_create_autocmd('CursorMoved', {
+        group = vim.api.nvim_create_augroup('line-diagnostics', { clear = true }),
+        callback = function()
+            vim.diagnostic.config({ virtual_lines = false, virtual_text = true })
+            return true
+        end,
+    })
+end, { desc = "Show virtual lines" })
