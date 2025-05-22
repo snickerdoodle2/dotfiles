@@ -30,7 +30,7 @@
     alejandra
 
     # node
-    nodejs_22
+    nodejs_23
   ];
   personal = with pkgs; [
     # tui tools
