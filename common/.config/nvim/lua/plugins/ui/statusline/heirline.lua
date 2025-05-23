@@ -15,6 +15,8 @@ return {
                 require('plugins.ui.statusline.components.git'),
                 require('plugins.ui.statusline.components.diagnostics'),
                 require('plugins.ui.statusline.components.file'),
+                { provider = "%=" },
+                require('plugins.ui.statusline.components.search_count'),
             },
         })
 
