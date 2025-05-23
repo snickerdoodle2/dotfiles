@@ -1,5 +1,8 @@
 return {
     "rebelot/heirline.nvim",
+    dependencies = {
+        'echasnovski/mini.icons',
+    },
     event = "VeryLazy",
     config = function()
         local palletes = require('catppuccin.palettes')
@@ -11,6 +14,7 @@ return {
                 require('plugins.ui.statusline.components.vimode'),
                 require('plugins.ui.statusline.components.git'),
                 require('plugins.ui.statusline.components.diagnostics'),
+                require('plugins.ui.statusline.components.file'),
             },
         })
 
