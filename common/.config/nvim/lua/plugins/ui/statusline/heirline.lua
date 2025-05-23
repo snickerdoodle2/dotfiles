@@ -9,7 +9,8 @@ return {
         heirline.setup({
             statusline = {
                 require('plugins.ui.statusline.components.vimode'),
-                require('plugins.ui.statusline.components.git')
+                require('plugins.ui.statusline.components.git'),
+                require('plugins.ui.statusline.components.diagnostics'),
             },
         })
 
