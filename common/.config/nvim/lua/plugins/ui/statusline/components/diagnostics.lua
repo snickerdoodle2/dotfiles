@@ -1,4 +1,5 @@
 local conditions = require('heirline.conditions')
+local utils = require('heirline.utils')
 local separator = require('plugins.ui.statusline.components.seperator')
 
 return {
@@ -20,27 +21,27 @@ return {
         separator,
         {
             provider = function(self)
-                return self.errors > 0 and (self.error_icon .. self.errors .. " ")
+                return self.errors > 0 and (self.error_icon .. self.errors)
             end,
-            hl = { fg = "red" },
+            hl = { fg = utils.get_highlight("DiagnosticError").fg },
         },
         {
             provider = function(self)
                 return self.warnings > 0 and (self.warn_icon .. self.warnings .. " ")
             end,
-            hl = { fg = "yellow" },
+            hl = { fg = utils.get_highlight("DiagnosticWarn").fg },
         },
         {
             provider = function(self)
                 return self.info > 0 and (self.info_icon .. self.info .. " ")
             end,
-            hl = { fg = "blue" },
+            hl = { fg = utils.get_highlight("DiagnosticInfo").fg },
         },
         {
             provider = function(self)
                 return self.hints > 0 and (self.hint_icon .. self.hints .. " ")
             end,
-            hl = { fg = "teal" },
+            hl = { fg = utils.get_highlight("DiagnosticHint").fg },
         },
     }
 }
