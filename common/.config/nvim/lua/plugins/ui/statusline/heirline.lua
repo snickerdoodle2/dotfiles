@@ -7,7 +7,10 @@ return {
         local utils = require('heirline.utils')
         heirline.load_colors(palletes.get_palette())
         heirline.setup({
-            statusline = { require('plugins.ui.statusline.components.vimode') },
+            statusline = {
+                require('plugins.ui.statusline.components.vimode'),
+                require('plugins.ui.statusline.components.git')
+            },
         })
 
         vim.api.nvim_create_augroup("Heirline", { clear = true })
