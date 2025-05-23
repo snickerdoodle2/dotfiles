@@ -11,12 +11,27 @@ return {
         end
     end,
     {
-        separator,
+        {
+            provider = "  ",
+            hl = { fg = "yellow" }
+        },
+        {
+            provider = function(self)
+                return string.format("%d", self.search.current)
+            end,
+            hl = { fg = "peach" }
+        },
+        {
+            provider = "/",
+            hl = { fg = "yellow" }
+        },
         {
             provider = function(self)
                 local search = self.search
-                return string.format(" %d/%d ", search.current, math.min(search.total, search.maxcount))
+                return string.format("%d", math.min(search.total, search.maxcount))
             end,
-        }
+            hl = { fg = "peach" }
+        },
+        separator,
     }
 }

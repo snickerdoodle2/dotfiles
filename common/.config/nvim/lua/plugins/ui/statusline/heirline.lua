@@ -17,6 +17,7 @@ return {
                 require('plugins.ui.statusline.components.file'),
                 { provider = "%=" },
                 require('plugins.ui.statusline.components.search_count'),
+                require('plugins.ui.statusline.components.macro'),
             },
         })
 
