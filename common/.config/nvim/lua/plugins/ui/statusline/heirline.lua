@@ -1,3 +1,10 @@
+local show_statusline = function()
+    local disabled_ft = {
+        ["oil"] = true
+    }
+    return disabled_ft[vim.bo.filetype] == nil
+end
+
 return {
     "rebelot/heirline.nvim",
     dependencies = {
@@ -12,12 +19,15 @@ return {
         heirline.setup({
             statusline = {
                 require('plugins.ui.statusline.components.vimode'),
-                require('plugins.ui.statusline.components.git'),
-                require('plugins.ui.statusline.components.diagnostics'),
-                require('plugins.ui.statusline.components.file'),
-                { provider = "%=" },
-                require('plugins.ui.statusline.components.search_count'),
-                require('plugins.ui.statusline.components.macro'),
+                {
+                    condition = show_statusline,
+                    require('plugins.ui.statusline.components.git'),
+                    require('plugins.ui.statusline.components.diagnostics'),
+                    require('plugins.ui.statusline.components.file'),
+                    { provider = "%=" },
+                    require('plugins.ui.statusline.components.search_count'),
+                    require('plugins.ui.statusline.components.macro'),
+                }
             },
         })
 
