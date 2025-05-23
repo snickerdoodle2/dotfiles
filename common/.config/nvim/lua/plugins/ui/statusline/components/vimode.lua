@@ -2,7 +2,7 @@ local utils = require('heirline.utils')
 
 local mode_display = {
     provider = function(self)
-        return " %2(" .. self.mode_names[self.mode] .. "%)"
+        return "󰮯 %2(" .. self.mode_names[self.mode] .. "%)"
     end,
     hl = function(self)
         local mode = self.mode:sub(1, 1)
