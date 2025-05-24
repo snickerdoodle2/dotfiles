@@ -5,6 +5,7 @@
 [core]
     compression = 9
     preloadindex = true
+    pager = "delta"
     whitespace = error
 
 [advice]
@@ -24,3 +25,14 @@
     showStash = true
     showUntrackedFiles = all
     short = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    side-by-side = true
+    hyperlinks = true
+
+[merge]
+    conflictstyle = zdiff3
