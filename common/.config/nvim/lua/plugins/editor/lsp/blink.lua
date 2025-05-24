@@ -3,7 +3,8 @@ return {
     version = 'v1.3.*',
     dependencies = {
         'rafamadriz/friendly-snippets',
-        'xzbdmw/colorful-menu.nvim'
+        'xzbdmw/colorful-menu.nvim',
+        'echasnovski/mini.icons',
     },
     lazy = true,
     enabled = true,
@@ -34,9 +35,6 @@ return {
         },
         appearance = {
             nerd_font_variant = 'mono',
-            kind_icons = {
-                Color = "██",
-            }
         },
         completion = {
             keyword = {
@@ -53,6 +51,23 @@ return {
                 draw = {
                     columns = { { 'kind_icon' }, { 'label', gap = 1 } },
                     components = {
+                        kind_icon = {
+                            width = { min = 2 },
+                            text = function(ctx)
+                                if ctx.kind == "Color" then
+                                    return "██"
+                                end
+                                local kind_icon, _, _ = require('mini.icons').get('lsp', ctx.kind)
+                                return kind_icon
+                            end,
+                            highlight = function(ctx)
+                                if ctx.kind == "Color" then
+                                    return ctx.kind_hl
+                                end
+                                local _, hl, _ = require('mini.icons').get('lsp', ctx.kind)
+                                return hl
+                            end
+                        },
                         label = {
                             text = function(ctx)
                                 return require('colorful-menu').blink_components_text(ctx)
