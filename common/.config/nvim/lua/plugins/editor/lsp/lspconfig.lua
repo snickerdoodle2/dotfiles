@@ -112,6 +112,7 @@ return {
         end
 
         setup_local('rust_analyzer')
+        setup_local('nushell')
 
         -- Installed locally
 
