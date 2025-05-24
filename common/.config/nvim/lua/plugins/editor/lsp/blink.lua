@@ -45,6 +45,9 @@ return {
             documentation = {
                 auto_show = true,
                 auto_show_delay_ms = 300,
+                window = {
+                    border = 'single'
+                }
             },
             menu = {
                 draw = {
@@ -68,6 +71,9 @@ return {
         },
         signature = {
             enabled = true,
+            window = {
+                border = 'single'
+            }
         },
         enabled = function()
             return not vim.tbl_contains({ "oil" }, vim.bo.filetype)
