@@ -4,6 +4,7 @@ local wezterm = require('wezterm')
 local colors = require('colors')
 local keys = require('keys')
 local mux = require('mux')
+local helpers = require('helpers')
 
 ---@type Config
 ---@diagnostic disable-next-line: undefined-field
@@ -33,5 +34,13 @@ config.keys = keys
 config.unix_domains = mux.unix_domains
 config.default_gui_startup_args = mux.default_gui_startup_args
 config.default_workspace = mux.default_workspace
+
+config.default_prog = { 'nu' }
+local path = helpers.run("launchctl getenv PATH")
+if string.len(path) > 0 then
+    config.set_environment_variables = {
+        PATH = path
+    }
+end
 
 return config
