@@ -12,6 +12,7 @@
     lazydocker
 
     # shell tools
+    nushell
     bat
     fd
     gh
