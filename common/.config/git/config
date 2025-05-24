@@ -49,3 +49,6 @@
     navigate = true
     side-by-side = true
     hyperlinks = true
+
+[include]
+    path = ~/.gitconfig.local
