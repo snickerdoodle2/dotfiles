@@ -11,6 +11,9 @@ return {
             mocha = {
                 base = "#000000"
             }
+        },
+        integrations = {
+            blink_cmp = true
         }
     }
 }
