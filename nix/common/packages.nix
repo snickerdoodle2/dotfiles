@@ -23,6 +23,7 @@
     tldr
     wget
     zoxide
+    carapace
 
     # rust
     rustup
