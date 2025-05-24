@@ -86,7 +86,6 @@ args @ {
           "1password"
           "docker"
           "font-jetbrains-mono-nerd-font"
-          "ghostty"
           "google-chrome"
           "nikitabobko/tap/aerospace"
           "raycast"

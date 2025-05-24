@@ -10,7 +10,6 @@
     fzf
     lazygit
     lazydocker
-    tmux
 
     # shell tools
     bat
