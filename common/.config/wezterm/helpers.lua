@@ -7,14 +7,18 @@ M.basename = function(path)
     return string.gsub(path, '(.*[/\\])(.*)', '%2')
 end
 
+---@param command string
+---@return string
 M.run = function(command)
     local file = io.popen(command)
     if file then
+        ---@type string
         local result = file:read("*a")
         file:close()
-        return result
+        return result:gsub("\n$", "")
     else
         wezterm.log_error("Error opening file")
+        return ""
     end
 end
 

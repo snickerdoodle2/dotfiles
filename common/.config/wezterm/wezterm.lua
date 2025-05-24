@@ -37,9 +37,11 @@ config.default_workspace = mux.default_workspace
 
 config.default_prog = { 'nu' }
 local path = helpers.run("launchctl getenv PATH")
-if string.len(path) > 0 then
+local xdg_config_home = helpers.run("launchctl getenv XDG_CONFIG_HOME")
+if string.len(path) > 0 and string.len(xdg_config_home) then
     config.set_environment_variables = {
-        PATH = path
+        PATH = path,
+        XDG_CONFIG_HOME = xdg_config_home,
     }
 end
 
