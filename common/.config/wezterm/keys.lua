@@ -139,6 +139,11 @@ local keys    = {
         mods = "LEADER|SHIFT",
         ---@diagnostic disable-next-line:undefined-field
         action = wezterm.action_callback(mux.rename)
+    },
+    {
+        key = "p",
+        mods = "SUPER|SHIFT",
+        action = actions.ShowLauncher
     }
 }
 
