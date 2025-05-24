@@ -26,6 +26,22 @@
     showUntrackedFiles = all
     short = true
 
+[push]
+    autoSetupRemote = true
+    default = current
+    followTags = true
+
+[pull]
+    default = current
+    rebase = true
+
+[rebase]
+    autoStash = true
+    missingCommitsCheck = warn
+
+[merge]
+    conflictstyle = zdiff3
+
 [interactive]
     diffFilter = delta --color-only
 
@@ -33,6 +49,3 @@
     navigate = true
     side-by-side = true
     hyperlinks = true
-
-[merge]
-    conflictstyle = zdiff3
