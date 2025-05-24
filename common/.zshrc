@@ -105,7 +105,6 @@ alias vi="nvim"
 
 # EXPORTS
 export EDITOR="nvim"
-export XDG_CONFIG_HOME="$HOME/.config"
 
 export GOPATH="$HOME/.go"
 if [ -d "$GOPATH/bin" ]; then
@@ -125,4 +124,9 @@ eval "$(zoxide init zsh)"
 
 if which fnm &> /dev/null; then
     eval "$(fnm env --use-on-cd)"
+fi
+
+# LOCAL FILES
+if [ -d "$HOME/.zshrc.local" ]; then
+    source "$HOME/.zshrc.local"
 fi
