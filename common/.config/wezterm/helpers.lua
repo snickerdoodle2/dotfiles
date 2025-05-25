@@ -22,4 +22,7 @@ M.run = function(command)
     end
 end
 
+M.default_prog = { 'zsh' }
+-- M.default_prog = { 'nu' }
+
 return M

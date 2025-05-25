@@ -37,7 +37,8 @@ local select_workspace = function(window, pane, id, label)
                 name = cwd(pane),
                 spawn = {
                     ---@diagnostic disable-next-line:undefined-field
-                    cwd = pane:get_current_working_dir().path
+                    cwd = pane:get_current_working_dir().path,
+                    args = helpers.default_prog
                 }
             }), pane)
             return

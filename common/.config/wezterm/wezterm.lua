@@ -35,7 +35,7 @@ config.unix_domains = mux.unix_domains
 config.default_gui_startup_args = mux.default_gui_startup_args
 config.default_workspace = mux.default_workspace
 
-config.default_prog = { 'nu' }
+config.default_prog = helpers.default_prog
 local path = helpers.run("launchctl getenv PATH")
 local xdg_config_home = helpers.run("launchctl getenv XDG_CONFIG_HOME")
 if string.len(path) > 0 and string.len(xdg_config_home) then
