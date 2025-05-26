@@ -58,11 +58,6 @@ return {
             },
         })
 
-        local capabilities = vim.lsp.protocol.make_client_capabilities()
-        capabilities = vim.tbl_deep_extend('force', capabilities, require('blink.cmp').get_lsp_capabilities())
-
-        local lspconfig = require('lspconfig')
-
         local servers = {
             lua_ls = {
                 -- cmd = { ... },
@@ -105,21 +100,13 @@ return {
         }
 
         for server, opts in pairs(servers) do
-            opts.capabilities = vim.tbl_deep_extend('force', {}, capabilities, opts.capabilities or {})
             vim.lsp.config(server, opts)
         end
 
         local ensure_installed = vim.tbl_keys(servers or {})
 
-        local setup_local = function(server, opts)
-            opts = opts or {}
-            opts.capabilities = vim.tbl_deep_extend('force', {}, capabilities, opts.capabilities or {})
-            vim.lsp.config(server, opts)
-            vim.lsp.enable(server)
-        end
-
-        setup_local('rust_analyzer')
-        setup_local('nushell')
+        vim.lsp.enable('rust_analyzer')
+        vim.lsp.enable('nushell')
 
         -- Installed locally
 
