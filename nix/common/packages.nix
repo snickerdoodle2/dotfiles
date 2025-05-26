@@ -9,9 +9,10 @@
     delta
     fzf
     lazygit
-    tmux
+    lazydocker
 
     # shell tools
+    nushell
     bat
     fd
     gh
@@ -22,13 +23,15 @@
     tldr
     wget
     zoxide
+    carapace
 
     # rust
     rustup
     cargo-binstall
+    alejandra
 
     # node
-    nodejs_22
+    nodejs_24
   ];
   personal = with pkgs; [
     # tui tools

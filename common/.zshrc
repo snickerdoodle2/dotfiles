@@ -50,7 +50,6 @@ zinit snippet OMZP::gh
 zinit snippet OMZP::git
 #zinit snippet OMZP::ripgrep
 zinit snippet OMZP::rust
-zinit snippet OMZP::tmux
 zinit snippet OMZP::docker
 
 # LOAD COMPLETIONS
@@ -124,4 +123,9 @@ eval "$(zoxide init zsh)"
 
 if which fnm &> /dev/null; then
     eval "$(fnm env --use-on-cd)"
+fi
+
+# LOCAL FILES
+if [ -d "$HOME/.zshrc.local" ]; then
+    source "$HOME/.zshrc.local"
 fi

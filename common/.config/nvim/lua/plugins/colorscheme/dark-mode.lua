@@ -7,11 +7,11 @@ return {
         update_interval = 1000,
         set_dark_mode = function()
             vim.api.nvim_set_option_value("background", "dark", {})
-            vim.cmd("colorscheme " .. ColorTheme)
+            vim.cmd("colorscheme " .. vim.g.color_scheme)
         end,
         set_light_mode = function()
             vim.api.nvim_set_option_value("background", "light", {})
-            vim.cmd("colorscheme " .. ColorTheme)
+            vim.cmd("colorscheme " .. vim.g.color_scheme)
         end,
     },
 }

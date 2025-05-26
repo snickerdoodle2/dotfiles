@@ -18,7 +18,7 @@ args @ {
     system.configurationRevision = self.rev or self.dirtyRev or null;
     system.stateVersion = 5;
     nixpkgs.hostPlatform = "aarch64-darwin";
-    security.pam.enableSudoTouchIdAuth = true;
+    security.pam.services.sudo_local.touchIdAuth = true;
 
     system.defaults = {
       NSGlobalDomain = {
@@ -64,10 +64,7 @@ args @ {
     };
 
     system.startup.chime = false; # Disable startup chime
-
-    services = {
-      nix-daemon.enable = true; # NOTE: is it needed???
-    };
+    system.primaryUser = "domi"; # FIXME:Fix during home manager migration
 
     homebrew = {
       enable = true;
@@ -89,11 +86,11 @@ args @ {
           "1password"
           "docker"
           "font-jetbrains-mono-nerd-font"
-          "ghostty"
           "google-chrome"
           "nikitabobko/tap/aerospace"
           "raycast"
           "spotify"
+          "wezterm@nightly"
         ];
 
       masApps =
