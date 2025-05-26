@@ -1,5 +1,5 @@
 return {
-    "ethanholz/nvim-lastplace",
-    event = "LazyFile",
-    opts = {}
+	"ethanholz/nvim-lastplace",
+	event = "LazyFile",
+	opts = {},
 }

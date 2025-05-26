@@ -1,6 +1,6 @@
 return {
-    'echasnovski/mini.ai',
-    version = false,
-    event = "LazyFile",
-    opts = {}
+	"echasnovski/mini.ai",
+	version = false,
+	event = "LazyFile",
+	opts = {},
 }

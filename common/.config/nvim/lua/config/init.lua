@@ -46,14 +46,15 @@ vim.g.netrw_banner = 0
 vim.opt.signcolumn = "yes"
 
 vim.o.cmdheight = 0
-vim.opt.shortmess = vim.opt.shortmess + {
-    c = true, -- Do not show completion messages in command line
-    F = true, -- Do not show file info when editing a file, in the command line
-    W = true, -- Do not show "written" in command line when writing
-    I = true, -- Do not show intro message when starting Vim
-}
+vim.opt.shortmess = vim.opt.shortmess
+	+ {
+		c = true, -- Do not show completion messages in command line
+		F = true, -- Do not show file info when editing a file, in the command line
+		W = true, -- Do not show "written" in command line when writing
+		I = true, -- Do not show intro message when starting Vim
+	}
 
 vim.opt.mouse = nil
 
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }

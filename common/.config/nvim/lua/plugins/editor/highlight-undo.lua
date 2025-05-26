@@ -1,5 +1,5 @@
 return {
-    'tzachar/highlight-undo.nvim',
-    event = "LazyFile",
-    opts = {},
+	"tzachar/highlight-undo.nvim",
+	event = "LazyFile",
+	opts = {},
 }

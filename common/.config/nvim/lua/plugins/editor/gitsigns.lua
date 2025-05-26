@@ -1,5 +1,5 @@
 return {
-    "lewis6991/gitsigns.nvim",
-    event = "LazyFile",
-    opts = {},
+	"lewis6991/gitsigns.nvim",
+	event = "LazyFile",
+	opts = {},
 }

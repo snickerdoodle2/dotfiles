@@ -1,3 +1,3 @@
 return {
-    { import = 'plugins.ui.statusline' },
+	{ import = "plugins.ui.statusline" },
 }
