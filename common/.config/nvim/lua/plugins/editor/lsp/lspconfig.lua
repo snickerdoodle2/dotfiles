@@ -103,12 +103,19 @@ return {
                 filetypes = { "heex" }
             },
         }
+
+        for server, opts in pairs(servers) do
+            opts.capabilities = vim.tbl_deep_extend('force', {}, capabilities, opts.capabilities or {})
+            vim.lsp.config(server, opts)
+        end
+
         local ensure_installed = vim.tbl_keys(servers or {})
 
-        local setup_local = function(server_name, server)
+        local setup_local = function(server, opts)
             server = server or {}
-            server.capabilities = vim.tbl_extend('force', {}, capabilities, server.capabilities or {})
-            lspconfig[server_name].setup(server)
+            opts.capabilities = vim.tbl_deep_extend('force', {}, capabilities, opts.capabilities or {})
+            vim.lsp.config(server, opts)
+            vim.lsp.enable(server)
         end
 
         setup_local('rust_analyzer')
@@ -121,13 +128,6 @@ return {
             ensure_installed = ensure_installed,
             automatic_enable = true,
             automatic_installation = false,
-            handlers = {
-                function(server_name)
-                    local server = servers[server_name] or {}
-                    server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-                    lspconfig[server_name].setup(server)
-                end,
-            },
         }
     end,
 }
