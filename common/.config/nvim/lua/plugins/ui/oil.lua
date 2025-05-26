@@ -4,7 +4,7 @@ return {
 	dependencies = {
 		"echasnovski/mini.icons",
 	},
-	keys = { "<leader>ee", "<cmd>Oil<CR>", mode = { "n" }, desc = "Open oil" },
+	keys = { { "<leader>ee", "<cmd>Oil<CR>", mode = { "n" }, desc = "Open oil" } },
 	opts = {
 		keymaps = {
 			["<C-s>"] = false,

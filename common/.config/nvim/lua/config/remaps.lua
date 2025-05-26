@@ -23,7 +23,7 @@ vim.keymap.set("n", "<leader>Y", '"+Y')
 
 -- ex mode
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<F1>", "<nop>")
+vim.keymap.set({ "n", "i" }, "<F1>", "<nop>")
 
 vim.keymap.set("n", "<leader>k", function()
 	vim.diagnostic.config({ virtual_lines = { current_line = true }, virtual_text = false })
