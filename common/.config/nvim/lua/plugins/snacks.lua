@@ -85,7 +85,7 @@ return {
 			},
 		},
 		indent = {
-			animate = { enabled = true },
+			animate = { enabled = false },
 		},
 		quickfile = {},
 		notifier = {},
