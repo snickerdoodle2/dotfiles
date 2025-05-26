@@ -3,6 +3,7 @@ $env.config.show_banner = false
 
 source './completions.nu'
 source 'themes/catppuccin_mocha.nu'
+source './prompt.nu'
 if ('~/.local.nu' | path exists) { source '~/.local.nu' }
 
 if ((which atuin | length) > 0) { source ./atuin.nu }

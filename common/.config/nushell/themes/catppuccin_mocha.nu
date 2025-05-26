@@ -1,4 +1,4 @@
-let theme = {
+$env.colors = {
   rosewater: "#f5e0dc"
   flamingo: "#f2cdcd"
   pink: "#f5c2e7"
@@ -28,34 +28,34 @@ let theme = {
 }
 
 let scheme = {
-  recognized_command: $theme.blue
-  unrecognized_command: $theme.text
-  constant: $theme.peach
-  punctuation: $theme.overlay2
-  operator: $theme.sky
-  string: $theme.green
-  virtual_text: $theme.surface2
-  variable: { fg: $theme.flamingo attr: i }
-  filepath: $theme.yellow
+  recognized_command: $env.colors.blue
+  unrecognized_command: $env.colors.text
+  constant: $env.colors.peach
+  punctuation: $env.colors.overlay2
+  operator: $env.colors.sky
+  string: $env.colors.green
+  virtual_text: $env.colors.surface2
+  variable: { fg: $env.colors.flamingo attr: i }
+  filepath: $env.colors.yellow
 }
 
 $env.config.color_config = {
-  separator: { fg: $theme.surface2 attr: b }
-  leading_trailing_space_bg: { fg: $theme.lavender attr: u }
-  header: { fg: $theme.text attr: b }
+  separator: { fg: $env.colors.surface2 attr: b }
+  leading_trailing_space_bg: { fg: $env.colors.lavender attr: u }
+  header: { fg: $env.colors.text attr: b }
   row_index: $scheme.virtual_text
-  record: $theme.text
-  list: $theme.text
+  record: $env.colors.text
+  list: $env.colors.text
   hints: $scheme.virtual_text
-  search_result: { fg: $theme.base bg: $theme.yellow }
-  shape_closure: $theme.teal
-  closure: $theme.teal
-  shape_flag: { fg: $theme.maroon attr: i }
+  search_result: { fg: $env.colors.base bg: $env.colors.yellow }
+  shape_closure: $env.colors.teal
+  closure: $env.colors.teal
+  shape_flag: { fg: $env.colors.maroon attr: i }
   shape_matching_brackets: { attr: u }
-  shape_garbage: $theme.red
-  shape_keyword: $theme.mauve
-  shape_match_pattern: $theme.green
-  shape_signature: $theme.teal
+  shape_garbage: $env.colors.red
+  shape_keyword: $env.colors.mauve
+  shape_match_pattern: $env.colors.green
+  shape_signature: $env.colors.teal
   shape_table: $scheme.punctuation
   cell-path: $scheme.punctuation
   shape_list: $scheme.punctuation
@@ -65,53 +65,53 @@ $env.config.color_config = {
   empty: { attr: n }
   filesize: {||
     if $in < 1kb {
-      $theme.teal
+      $env.colors.teal
     } else if $in < 10kb {
-      $theme.green
+      $env.colors.green
     } else if $in < 100kb {
-      $theme.yellow
+      $env.colors.yellow
     } else if $in < 10mb {
-      $theme.peach
+      $env.colors.peach
     } else if $in < 100mb {
-      $theme.maroon
+      $env.colors.maroon
     } else if $in < 1gb {
-      $theme.red
+      $env.colors.red
     } else {
-      $theme.mauve
+      $env.colors.mauve
     }
   }
   duration: {||
     if $in < 1day {
-      $theme.teal
+      $env.colors.teal
     } else if $in < 1wk {
-      $theme.green
+      $env.colors.green
     } else if $in < 4wk {
-      $theme.yellow
+      $env.colors.yellow
     } else if $in < 12wk {
-      $theme.peach
+      $env.colors.peach
     } else if $in < 24wk {
-      $theme.maroon
+      $env.colors.maroon
     } else if $in < 52wk {
-      $theme.red
+      $env.colors.red
     } else {
-      $theme.mauve
+      $env.colors.mauve
     }
   }
   date: {|| (date now) - $in |
     if $in < 1day {
-      $theme.teal
+      $env.colors.teal
     } else if $in < 1wk {
-      $theme.green
+      $env.colors.green
     } else if $in < 4wk {
-      $theme.yellow
+      $env.colors.yellow
     } else if $in < 12wk {
-      $theme.peach
+      $env.colors.peach
     } else if $in < 24wk {
-      $theme.maroon
+      $env.colors.maroon
     } else if $in < 52wk {
-      $theme.red
+      $env.colors.red
     } else {
-      $theme.mauve
+      $env.colors.mauve
     }
   }
   shape_external: $scheme.unrecognized_command
@@ -119,11 +119,11 @@ $env.config.color_config = {
   shape_external_resolved: $scheme.recognized_command
   shape_block: $scheme.recognized_command
   block: $scheme.recognized_command
-  shape_custom: $theme.pink
-  custom: $theme.pink
-  background: $theme.base
-  foreground: $theme.text
-  cursor: { bg: $theme.rosewater fg: $theme.base }
+  shape_custom: $env.colors.pink
+  custom: $env.colors.pink
+  background: $env.colors.base
+  foreground: $env.colors.text
+  cursor: { bg: $env.colors.rosewater fg: $env.colors.base }
   shape_range: $scheme.operator
   range: $scheme.operator
   shape_pipe: $scheme.operator
@@ -148,19 +148,19 @@ $env.config.color_config = {
   shape_literal: $scheme.constant
   string: $scheme.string
   shape_string: $scheme.string
-  shape_string_interpolation: $theme.flamingo
+  shape_string_interpolation: $env.colors.flamingo
   shape_raw_string: $scheme.string
   shape_externalarg: $scheme.string
 }
 $env.config.highlight_resolved_externals = true
 $env.config.explore = {
-    status_bar_background: { fg: $theme.text, bg: $theme.mantle },
-    command_bar_text: { fg: $theme.text },
-    highlight: { fg: $theme.base, bg: $theme.yellow },
+    status_bar_background: { fg: $env.colors.text, bg: $env.colors.mantle },
+    command_bar_text: { fg: $env.colors.text },
+    highlight: { fg: $env.colors.base, bg: $env.colors.yellow },
     status: {
-        error: $theme.red,
-        warn: $theme.yellow,
-        info: $theme.blue,
+        error: $env.colors.red,
+        warn: $env.colors.yellow,
+        info: $env.colors.blue,
     },
-    selected_cell: { bg: $theme.blue fg: $theme.base },
+    selected_cell: { bg: $env.colors.blue fg: $env.colors.base },
 }
