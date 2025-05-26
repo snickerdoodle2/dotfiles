@@ -10,7 +10,7 @@ return {
     enabled = true,
     opts = {
         cmdline = {
-            enaled = true,
+            enabled = true,
             keymap = { preset = 'cmdline' },
             sources = function()
                 local type = vim.fn.getcmdtype()

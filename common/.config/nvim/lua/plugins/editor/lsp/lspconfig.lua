@@ -112,7 +112,7 @@ return {
         local ensure_installed = vim.tbl_keys(servers or {})
 
         local setup_local = function(server, opts)
-            server = server or {}
+            opts = opts or {}
             opts.capabilities = vim.tbl_deep_extend('force', {}, capabilities, opts.capabilities or {})
             vim.lsp.config(server, opts)
             vim.lsp.enable(server)
