@@ -19,6 +19,8 @@ $env.config.table.missing_value_symbol = " "
 
 $env.config.datetime_format.normal = "%m.%d.%Y %k:%M:%S"
 
+if ((which vivid | length) > 0) { $env.LS_COLORS = (vivid generate catppuccin-mocha) }
+
 source '~/.zoxide.nu' 
 alias vim = nvim
 alias vi = nvim
