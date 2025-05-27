@@ -24,6 +24,7 @@
     wget
     zoxide
     carapace
+    vivid
 
     # rust
     rustup
