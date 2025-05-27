@@ -49,8 +49,23 @@ let git_status = {||
     $"($GRAY)(do $git_branch $status)(do $changes $status) ($BLUE)(do $behind $status)(do $ahead $status)($R)"
 }
 
+let last_cmd_duration = {||
+    let duration = $env.CMD_DURATION_MS | into duration --unit ms
+    if $duration > 5sec {
+        let YELLOW = (ansi $env.colors.yellow)
+        let R = (ansi reset)
+        $"($YELLOW)($duration)($R)"
+    } else {
+        ""
+    }
+}
+
 $env.PROMPT_COMMAND = {|| 
     $"(pwd | do $pathname $in) (do $git_status)\n"
+}
+
+$env.PROMPT_COMMAND_RIGHT = {||
+    [(do $last_cmd_duration)] | str join " "
 }
 
 $env.PROMPT_INDICATOR = "❯ "
