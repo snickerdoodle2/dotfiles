@@ -60,12 +60,20 @@ let last_cmd_duration = {||
     }
 }
 
+let in_nix_shell = {||
+    if ($env.IN_NIX_SHELL? != null) {
+        "󱄅 "
+    } else {
+        ""
+    }
+}
+
 $env.PROMPT_COMMAND = {|| 
     $"(pwd | do $pathname $in) (do $git_status)\n"
 }
 
 $env.PROMPT_COMMAND_RIGHT = {||
-    [(do $last_cmd_duration)] | str join " "
+    [(do $in_nix_shell), (do $last_cmd_duration)] | str join " "
 }
 
 $env.PROMPT_INDICATOR = "❯ "
