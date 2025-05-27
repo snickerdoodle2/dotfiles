@@ -45,7 +45,7 @@ let git_status = {||
     let status = gstat
     let R = (ansi reset)
     let BLUE = (ansi $env.colors.teal)
-    let GRAY = (ansi $env.colors.overlay0)
+    let GRAY = (ansi $env.colors.surface1)
     $"($GRAY)(do $git_branch $status)(do $changes $status) ($BLUE)(do $behind $status)(do $ahead $status)($R)"
 }
 
@@ -69,12 +69,16 @@ let in_nix_shell = {||
 }
 
 $env.PROMPT_COMMAND = {|| 
-    $"(pwd | do $pathname $in) (do $git_status)\n"
+    let BLUE = (ansi $env.colors.blue)
+    $"($BLUE)(pwd | do $pathname $in) (do $git_status)\n"
 }
 
 $env.PROMPT_COMMAND_RIGHT = {||
     [(do $in_nix_shell), (do $last_cmd_duration)] | str join " "
 }
 
-$env.PROMPT_INDICATOR = "❯ "
+let PINK = (ansi $env.colors.pink)
+let R = (ansi reset)
+
+$env.PROMPT_INDICATOR = $"($PINK)❯($R) "
 $env.TRANSIENT_PROMPT_COMMAND = ""
