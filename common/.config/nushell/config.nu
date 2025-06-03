@@ -5,6 +5,7 @@ source './completions.nu'
 source './themes/catppuccin.nu'
 source './hooks.nu'
 source './prompt.nu'
+source './keybindings.nu'
 
 if ('~/.local.nu' | path exists) { source '~/.local.nu' }
 
