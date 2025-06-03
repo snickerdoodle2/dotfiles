@@ -13,6 +13,7 @@
 
     # shell tools
     nushell
+    nushellPlugins.gstat
     bat
     fd
     gh
