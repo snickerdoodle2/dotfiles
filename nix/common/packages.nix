@@ -26,6 +26,8 @@
     zoxide
     carapace
     vivid
+    direnv
+    nix-direnv
 
     # rust
     rustup
