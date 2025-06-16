@@ -50,5 +50,8 @@
     side-by-side = true
     hyperlinks = true
 
+[log]
+    abbrevCommit = true
+
 [include]
     path = ~/.gitconfig.local

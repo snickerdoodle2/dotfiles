@@ -2,6 +2,7 @@ git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+  branchLogCmd: git log --color=always --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n' {{branchName}}
 gui:
   filterMode: fuzzy
   sidePanelWidth: 0.2
