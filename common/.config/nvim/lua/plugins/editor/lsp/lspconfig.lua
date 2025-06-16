@@ -119,6 +119,7 @@ return {
 		local ensure_installed = vim.tbl_keys(servers or {})
 
 		vim.lsp.enable("rust_analyzer")
+		vim.lsp.enable("zls")
 		vim.lsp.enable("nushell")
 
 		-- Installed locally
