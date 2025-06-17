@@ -24,6 +24,8 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/dominik-pc
+          ./modules/nixos/desktop.nix
+          ./modules/nixos/secure-boot.nix
         ];
       };
   };

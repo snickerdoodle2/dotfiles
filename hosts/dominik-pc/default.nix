@@ -6,8 +6,6 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ../../nix/nixos/desktop.nix
-    ../../nix/nixos/secure-boot.nix
   ];
 
   environment.systemPackages = with pkgs; [
