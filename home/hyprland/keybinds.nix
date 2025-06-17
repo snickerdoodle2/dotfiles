@@ -26,7 +26,9 @@
 
       "$mainMod, S, togglespecialworkspace, magic"
       "$mainMod SHIFT, S, movetoworkspace, special:magic"
+    ];
 
+    bindm = [
       "$mainMod, mouse:272, movewindow"
       "$mainMod, mouse:273, resizewindow"
     ];
