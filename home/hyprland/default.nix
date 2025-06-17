@@ -13,7 +13,7 @@
       sensitivity = -0.5;
     };
 
-    cursos.no_warps = true;
+    cursor.no_warps = true;
   };
 
   imports = [
