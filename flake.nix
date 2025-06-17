@@ -9,11 +9,16 @@
     self,
     nixpkgs,
   } @ inputs: {
-    nixosConfigurations.dominik-pc = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ./hosts/dominik-pc
-      ];
-    };
+    nixosConfigurations.dominik-pc = let
+      hostname = "dominik-pc";
+      specialArgs = {inherit hostname;};
+    in
+      nixpkgs.lib.nixosSystem {
+        inherit specialArgs;
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/dominik-pc
+        ];
+      };
   };
 }
