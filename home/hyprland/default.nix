@@ -1,4 +1,5 @@
-{...}: {
+{config, ...}: {
+  wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
     misc = {
       disable_hyprland_logo = true;
@@ -12,4 +13,8 @@
       sensitivity = -0.5;
     };
   };
+
+  imports = [
+    ./keybinds.nix
+  ];
 }

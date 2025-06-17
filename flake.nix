@@ -39,8 +39,10 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = inputs // specialArgs;
-            home-manager.users.domi = import ./home;
+            home-manager.users.domi = ./home;
+
+            # Optionally, use home-manager.extraSpecialArgs to pass
+            # arguments to home.nix
           }
         ];
       };
