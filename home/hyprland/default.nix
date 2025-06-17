@@ -12,9 +12,12 @@
       follow_mouse = 2;
       sensitivity = -0.5;
     };
+
+    cursos.no_warps = true;
   };
 
   imports = [
     ./keybinds.nix
+    ./decorations.nix
   ];
 }
