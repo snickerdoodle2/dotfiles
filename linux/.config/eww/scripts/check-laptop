@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-if [ -d "/proc/acpi/button/lid" ]; then
-    echo "laptop"
-else
-    echo "desktop"
-fi
