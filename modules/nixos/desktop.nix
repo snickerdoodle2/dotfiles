@@ -24,7 +24,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    kitty
     inputs.zen-browser.packages."${system}".default
   ];
 }

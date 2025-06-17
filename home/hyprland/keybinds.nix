@@ -1,7 +1,15 @@
-{...}: {
+{pkgs, ...}: {
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER";
     bind = [
+      "$mainMod, Q, exec, ${pkgs.wezterm}/bin/wezterm"
+      "$mainMod, E, exec, ${pkgs.nautilus}/bin/nautilus"
+      "$mainMod, C, killactive,"
+
+      "$mainMod, F, fullscreen # toggle fullscreen"
+      "$mainMod SHIFT, F, togglefloating # toggle floating"
+      "$mainMod SHIFT, P, pin # pin active floating window"
+
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"
       "$mainMod, 3, workspace, 3"
