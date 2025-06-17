@@ -30,3 +30,4 @@ alias vi = nvim
 alias lg = lazygit
 alias cat = bat
 alias tree = lsd --tree
+alias la = ls -a
