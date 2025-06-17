@@ -13,6 +13,7 @@
 
     # shell tools
     nushell
+    nushellPlugins.gstat
     bat
     fd
     gh
@@ -24,6 +25,9 @@
     wget
     zoxide
     carapace
+    vivid
+    direnv
+    nix-direnv
 
     # rust
     rustup

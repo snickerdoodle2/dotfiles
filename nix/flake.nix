@@ -30,6 +30,7 @@
           "microsoft-teams"
           "blender"
           "visual-studio-code"
+          "utm"
         ];
         masApps = {
           "Affinity Photo 2: Image Editor" = 1616822987;

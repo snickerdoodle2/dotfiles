@@ -2,3 +2,30 @@ git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+  branchLogCmd: git log --color=always --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n' {{branchName}}
+gui:
+  filterMode: fuzzy
+  sidePanelWidth: 0.2
+  expandFocusedSidePanel: true
+  expandedSidePanelWeight: 2
+  timeFormat: 02-01-2006 15:04
+  shortTimeFormat: 15:04
+  commitLength:
+    show: false
+  showRootItemInFileTree: false
+  showCommandLog: false
+  nerdFontsVersion: 3
+  commitHashLength: 0
+  border: single
+  spinner:
+    frames:
+      - '⣾'
+      - '⢿'
+      - '⡿'
+      - '⣷'
+      - '⣯'
+      - '⢟'
+      - '⡻'
+      - '⣽'
+    rate: 100
+  statusPanelView: allBranchesLog
