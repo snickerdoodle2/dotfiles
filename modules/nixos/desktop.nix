@@ -13,8 +13,6 @@
     portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
   };
 
-  programs.firefox.enable = true;
-
   services.pipewire = {
     enable = true;
     pulse.enable = true;
@@ -24,4 +22,9 @@
     enable = true;
     wayland = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    kitty
+    inputs.zen-browser.packages."${system}".default
+  ];
 }

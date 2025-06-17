@@ -12,7 +12,6 @@
     neovim
     alejandra
     wget
-    kitty
     git
     fzf
     ripgrep
