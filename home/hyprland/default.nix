@@ -1,5 +1,15 @@
-{config, ...}: {
-  wayland.windowManager.hyprland.enable = true;
+{
+  config,
+  inputs,
+  pkgs,
+  ...
+}: {
+  wayland.windowManager.hyprland = {
+    enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
+  };
+
   wayland.windowManager.hyprland.settings = {
     misc = {
       disable_hyprland_logo = true;
