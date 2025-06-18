@@ -6,8 +6,17 @@
   home.username = "domi";
   home.homeDirectory = "/home/domi";
 
-  home.packages = [
-    pkgs.lazygit
+  home.packages = with pkgs; [
+    lazygit
+    neovim
+    alejandra
+    wget
+    git
+    fzf
+    ripgrep
+    gcc
+    gnumake
+    nodejs_24
   ];
 
   programs.bash = {

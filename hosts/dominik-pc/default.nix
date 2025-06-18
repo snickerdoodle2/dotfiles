@@ -9,14 +9,6 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    neovim
-    alejandra
-    wget
-    git
-    fzf
-    ripgrep
-    gcc
-    gnumake
   ];
 
   home-manager.users.domi.imports = [
