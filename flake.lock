@@ -570,12 +570,34 @@
         "type": "github"
       }
     },
+    "quickshell": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1749677201,
+        "narHash": "sha256-DdE50ZJN/mKsSF/vc9hrMboOeJ7BST5DD6GNEXgVbWg=",
+        "owner": "quickshell-mirror",
+        "repo": "quickshell",
+        "rev": "703a3789083d2f990c4e99cd25c97c2a4cccbd81",
+        "type": "github"
+      },
+      "original": {
+        "owner": "quickshell-mirror",
+        "ref": "v0.1.0",
+        "repo": "quickshell",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "lanzaboote": "lanzaboote",
         "nixpkgs": "nixpkgs_2",
+        "quickshell": "quickshell",
         "zen-browser": "zen-browser"
       }
     },

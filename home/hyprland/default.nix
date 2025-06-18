@@ -26,6 +26,7 @@
     exec-once = let
       startupScript = pkgs.pkgs.writeShellScriptBin "script" ''
         ${pkgs.swww}/bin/swww-daemon &
+        ${inputs.quickshell.packages."${pkgs.system}".default}/bin/quickshell &
         sleep 1
         ${pkgs.swww}/bin/swww img ${./wallpaper.png} &
       '';
