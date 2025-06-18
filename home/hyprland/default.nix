@@ -20,5 +20,6 @@
     ./keybinds.nix
     ./decorations.nix
     ./animations.nix
+    ./monitors.nix
   ];
 }
