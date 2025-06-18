@@ -16,6 +16,14 @@
         size = 3;
         passes = 1;
       };
+
+      shadow = {
+        range = 0;
+        render_power = 4;
+        offset = "8 8";
+        color = "rgba(1a1a1aaa)";
+        color_inactive = "rgba(1a1a1a00)";
+      };
     };
   };
 }
