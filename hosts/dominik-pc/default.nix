@@ -2,7 +2,6 @@
   config,
   lib,
   pkgs,
-  home-manager,
   ...
 }: {
   imports = [
@@ -20,20 +19,9 @@
     gnumake
   ];
 
-  home-manager.users.domi = {
-    monitors = [
-      {
-        name = "DP-2";
-        enabled = false;
-      }
-      {
-        name = "DP-3";
-        width = 2560;
-        height = 1440;
-        refreshRate = 165;
-      }
-    ];
-  };
+  home-manager.users.domi.imports = [
+    ./home.nix
+  ];
 
   system.stateVersion = "25.05";
 }

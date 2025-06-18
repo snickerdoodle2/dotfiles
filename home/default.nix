@@ -3,7 +3,6 @@
   pkgs,
   ...
 }: {
-  imports = [./hyprland];
   home.username = "domi";
   home.homeDirectory = "/home/domi";
 
