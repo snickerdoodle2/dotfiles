@@ -24,6 +24,14 @@
     };
 
     cursor.no_warps = true;
+
+    exec-once = let
+      startupScript = pkgs.pkgs.writeShellScriptBin "script" ''
+        ${pkgs.swww}/bin/swww-daemon &
+        sleep 1
+        ${pkgs.swww}/bin/swww img ${./wallpaper.png} &
+      '';
+    in "${startupScript}/bin/script";
   };
 
   imports = [
