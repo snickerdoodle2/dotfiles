@@ -10,6 +10,22 @@
       "$mainMod SHIFT, F, togglefloating # toggle floating"
       "$mainMod SHIFT, P, pin # pin active floating window"
 
+      "$mainMod SHIFT, H, layoutmsg,mfact -0.1"
+      "$mainMod, H, layoutmsg,mfact -0.01"
+      "$mainMod, L, layoutmsg,mfact 0.01"
+      "$mainMod SHIFT, L, layoutmsg,mfact 0.1"
+
+      "$mainMod, J, layoutmsg,cyclenext"
+      "$mainMod, K, layoutmsg,cycleprev"
+
+      "$mainMod, Return,layoutmsg,focusmaster"
+      "$mainMod SHIFT, Return,layoutmsg,swapwithmaster"
+
+      "$mainMod, D,layoutmsg,removemaster"
+      "$mainMod, I,layoutmsg,addmaster"
+
+      "$mainMod SHIFT, Tab,layoutmsg,orientationcycle left right top center"
+
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"
       "$mainMod, 3, workspace, 3"
