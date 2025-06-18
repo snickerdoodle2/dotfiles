@@ -19,5 +19,6 @@
   imports = [
     ./keybinds.nix
     ./decorations.nix
+    ./animations.nix
   ];
 }

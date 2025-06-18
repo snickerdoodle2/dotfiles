@@ -8,8 +8,7 @@
   home.homeDirectory = "/home/domi";
 
   home.packages = [
-    pkgs.hello
-    pkgs.cowsay
+    pkgs.lazygit
   ];
 
   programs.bash = {
@@ -18,6 +17,7 @@
 
     shellAliases = {
       vim = "nvim";
+      lg = "lazygit";
     };
   };
 
