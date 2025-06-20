@@ -28,4 +28,6 @@
     dates = lib.mkDefault "weekly";
     options = lib.mkDefault "--delete-older-than 7d";
   };
+
+  programs.nix-ld.enable = true;
 }
