@@ -27,4 +27,8 @@
     inputs.zen-browser.packages."${system}".default
     wl-clipboard
   ];
+
+  fonts.packages = [
+    inputs.fonts.berkeley-mono
+  ];
 }

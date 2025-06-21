@@ -20,6 +20,11 @@
       url = "github:quickshell-mirror/quickshell/v0.1.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    fonts = {
+      url = "git+ssh://git@github.com/snickerdoodle2/fonts?ref=main";
+      inputs.nixpkgs.follows = "nixpkgs";
+      flake = false;
+    };
   };
 
   outputs = {
