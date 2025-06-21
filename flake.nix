@@ -15,9 +15,12 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url = "github:hyprwm/Hyprland";
-    quickshell = {
-      url = "github:quickshell-mirror/quickshell/v0.1.0";
+    hyprland = {
+      url = "github:hyprwm/Hyprland/v0.49.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprpanel = {
+      url = "github:jas-singhfsu/hyprpanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     fonts = {

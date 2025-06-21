@@ -26,7 +26,7 @@
     exec-once = let
       startupScript = pkgs.pkgs.writeShellScriptBin "script" ''
         ${pkgs.swww}/bin/swww-daemon &
-        ${inputs.quickshell.packages."${pkgs.system}".default}/bin/quickshell &
+        ${inputs.hyprpanel.packages."${pkgs.system}".default}/bin/hyprpanel
         sleep 1
         ${pkgs.swww}/bin/swww img ${./wallpaper.png} &
       '';
@@ -38,5 +38,6 @@
     ./decorations.nix
     ./animations.nix
     ./monitors.nix
+    ./hyprpanel.nix
   ];
 }
