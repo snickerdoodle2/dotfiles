@@ -101,14 +101,37 @@
         "type": "github"
       }
     },
-    "fonts": {
-      "flake": false,
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
       "locked": {
-        "lastModified": 1750466018,
-        "narHash": "sha256-jB3b74AJqQr8FZ5TCazKNvRJT/cMtpYaOXSECZAoxfo=",
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "fonts": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1750467423,
+        "narHash": "sha256-XcadPO8u62xEzJtQ95Ll8xkAx5PQYNxP/MwXXu9HRDM=",
         "ref": "main",
-        "rev": "f1b9958462f0ed6d443a892da0d53215ce48dcfa",
-        "revCount": 1,
+        "rev": "11759b2cccf36fdd908117bbd496ecd6a96aa171",
+        "revCount": 2,
         "type": "git",
         "url": "ssh://git@github.com/snickerdoodle2/fonts"
       },
@@ -274,7 +297,7 @@
         "hyprwayland-scanner": "hyprwayland-scanner",
         "nixpkgs": "nixpkgs",
         "pre-commit-hooks": "pre-commit-hooks",
-        "systems": "systems",
+        "systems": "systems_2",
         "xdph": "xdph"
       },
       "locked": {
@@ -641,6 +664,21 @@
       }
     },
     "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_2": {
       "locked": {
         "lastModified": 1689347949,
         "narHash": "sha256-12tWmuL2zgBgZkdoB6qXZsgJEH9LR3oUgpaQq2RbI80=",

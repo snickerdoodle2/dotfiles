@@ -29,6 +29,6 @@
   ];
 
   fonts.packages = [
-    inputs.fonts.berkeley-mono
+    inputs.fonts.packages.${pkgs.system}.berkeley-mono
   ];
 }
