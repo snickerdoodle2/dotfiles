@@ -19,8 +19,6 @@ in {
     home.homeDirectory = "/home/domi";
 
     home.packages = with pkgs; [
-      lazygit
-      git
       gcc
       gnumake
     ];

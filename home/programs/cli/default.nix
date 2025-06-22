@@ -6,6 +6,7 @@
   imports = [
     ./nvim.nix
     ./git.nix
+    ./lazygit.nix
   ];
 
   home.packages = with pkgs; [
