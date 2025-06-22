@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./nvim.nix
+    ./git.nix
   ];
 
   home.packages = with pkgs; [
