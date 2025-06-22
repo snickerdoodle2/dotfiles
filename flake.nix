@@ -43,14 +43,6 @@
           ./hosts/dominik-pc
           ./modules/nixos/desktop.nix
           ./modules/nixos/secure-boot.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.domi = ./home;
-
-            home-manager.extraSpecialArgs = specialArgs;
-          }
         ];
       };
   };
