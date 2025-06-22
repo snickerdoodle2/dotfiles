@@ -20,7 +20,6 @@ in {
 
     home.packages = with pkgs; [
       lazygit
-      neovim
       alejandra
       wget
       git
@@ -44,4 +43,7 @@ in {
     home.stateVersion = "25.05";
     programs.home-manager.enable = true;
   };
+  imports = [
+    ./programs/cli
+  ];
 }
