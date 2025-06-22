@@ -20,14 +20,9 @@ in {
 
     home.packages = with pkgs; [
       lazygit
-      alejandra
-      wget
       git
-      fzf
-      ripgrep
       gcc
       gnumake
-      nodejs_24
     ];
 
     programs.bash = {
