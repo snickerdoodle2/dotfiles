@@ -38,5 +38,6 @@ in {
   };
   imports = [
     ./programs/cli
+    ./programs/desktop
   ];
 }
