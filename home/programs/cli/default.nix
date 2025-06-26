@@ -12,9 +12,14 @@
 
   home.packages = with pkgs; [
     alejandra
-    wget
+    fd
     fzf
-    ripgrep
+    jq
     nodejs_24
+    ripgrep
+    tldr
+    tokei
+    tree-sitter
+    wget
   ];
 }
