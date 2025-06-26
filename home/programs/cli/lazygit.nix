@@ -46,6 +46,9 @@
           ];
         };
       };
+
+      promptToReturnFromSubprocess = false;
+      disableStartupPopups = false;
     };
   };
 }
