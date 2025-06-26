@@ -7,10 +7,10 @@
     enable = true;
     package = pkgs.bat;
     config = {
-      theme = "catppuccin_mocha";
+      theme = "Catppuccin Mocha";
     };
     themes = {
-      catppuccin_mocha = {
+      "Catppuccin Mocha" = {
         src = pkgs.fetchFromGitHub {
           owner = "catppuccin";
           repo = "bat";
