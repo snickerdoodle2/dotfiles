@@ -15,4 +15,8 @@
     iconDirs);
 in {
   home.file = icons;
+  wayland.windowManager.hyprland.settings.env = [
+    "HYPRCURSOR_THEME,MacOS"
+    "HYPRCURSOR_SIZE,24"
+  ];
 }
