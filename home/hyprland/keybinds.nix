@@ -5,6 +5,7 @@
       "$mainMod, Q, exec, ${pkgs.wezterm}/bin/wezterm"
       "$mainMod, E, exec, ${pkgs.nautilus}/bin/nautilus"
       "$mainMod, C, killactive,"
+      "$mainMod, R, exec, ${pkgs.rofi}/bin/rofi -show drun"
 
       "$mainMod, F, fullscreen # toggle fullscreen"
       "$mainMod SHIFT, F, togglefloating # toggle floating"
