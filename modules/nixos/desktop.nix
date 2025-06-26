@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./common.nix
+    ./1password.nix
   ];
 
   services.pipewire = {
