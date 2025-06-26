@@ -12,7 +12,9 @@
         enable = true;
         package = pkgs.wezterm;
         extraConfig = ''
-        print("dupa")
+        local config = require("config")
+        config.default_prog = { "${pkgs.bash}/bin/bash" }
+        return config
         '';
     };
 }
