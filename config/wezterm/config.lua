@@ -21,7 +21,6 @@ config.font = wezterm.font_with_fallback({
     { family = "Berkeley Mono",     weight = "Medium" },
     { family = "Apple Color Emoji", assume_emoji_presentation = true },
 })
-config.font_size = 15.0
 
 config.color_schemes = colors.color_schemes
 config.color_scheme = colors.color_scheme()
