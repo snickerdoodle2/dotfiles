@@ -39,5 +39,6 @@
     ./animations.nix
     ./monitors.nix
     ./hyprpanel.nix
+    ./cursor
   ];
 }
