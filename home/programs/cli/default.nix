@@ -4,10 +4,11 @@
   ...
 }: {
   imports = [
-    ./nvim.nix
+    ./bat.nix
+    ./gh.nix
     ./git.nix
     ./lazygit.nix
-    ./bat.nix
+    ./nvim.nix
   ];
 
   home.packages = with pkgs; [
