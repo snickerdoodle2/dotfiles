@@ -12,6 +12,7 @@
     ./lazydocker.nix
     ./lazygit.nix
     ./nvim.nix
+    ./superfile.nix
   ];
 
   home.packages = with pkgs; [
