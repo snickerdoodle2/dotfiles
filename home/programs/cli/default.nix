@@ -8,6 +8,7 @@
     ./bat.nix
     ./gh.nix
     ./git.nix
+    ./lazydocker.nix
     ./lazygit.nix
     ./nvim.nix
   ];
