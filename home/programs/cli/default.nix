@@ -11,6 +11,7 @@
     ./git.nix
     ./lazydocker.nix
     ./lazygit.nix
+    ./nushell.nix
     ./nvim.nix
     ./superfile.nix
   ];
