@@ -76,6 +76,10 @@
             "#f9e2af"
           ];
         };
+
+        authorColors = {
+          "Dominik Pilipczuk" = "#cba6f7";
+        };
       };
 
       promptToReturnFromSubprocess = false;
