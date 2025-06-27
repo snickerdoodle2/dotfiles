@@ -6,6 +6,7 @@
   imports = [
     ./atuin.nix
     ./bat.nix
+    ./btop.nix
     ./gh.nix
     ./git.nix
     ./lazydocker.nix
