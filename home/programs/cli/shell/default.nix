@@ -9,6 +9,7 @@ in {
   imports = [
     ./atuin.nix
     ./direnv.nix
+    ./nushell.nix
   ];
 
   programs.nushell = {
