@@ -17,5 +17,15 @@
       };
     };
     silent = true;
+    enableNushellIntegration = false;
   };
+
+  programs.nushell.extraConfig = ''
+    $env.config.hooks.env_change.PWD = [
+        { ||
+            ${pkgs.direnv}/bin/direnv export json | from json | default {} | load-env
+            $env.PATH = $env.PATH | split row (char env_sep)
+        }
+    ];
+  '';
 }
