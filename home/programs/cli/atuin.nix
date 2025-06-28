@@ -17,9 +17,14 @@ in {
   programs.atuin = {
     enable = true;
     package = pkgs.atuin;
+    daemon.enable = true;
     settings = {
       style = "auto";
+      enter_accept = true;
       theme.name = "catppuccin-mocha-mauve";
     };
+    flags = [
+      "--disable-up-arrow"
+    ];
   };
 }
