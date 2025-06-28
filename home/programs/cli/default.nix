@@ -4,16 +4,16 @@
   ...
 }: {
   imports = [
-    ./atuin.nix
     ./bat.nix
     ./btop.nix
     ./gh.nix
     ./git.nix
     ./lazydocker.nix
     ./lazygit.nix
-    ./nushell.nix
     ./nvim.nix
     ./superfile.nix
+
+    ./shell
   ];
 
   home.packages = with pkgs; [
