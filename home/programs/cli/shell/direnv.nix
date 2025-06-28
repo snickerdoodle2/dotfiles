@@ -18,13 +18,4 @@
     };
     silent = true;
   };
-
-  programs.nushell.extraConfig = ''
-    $env.config.hooks.env_change.PWD = [
-        { ||
-            direnv export json | from json | default {} | load-env
-            $env.PATH = $env.PATH | split row (char env_sep)
-        }
-    ];
-  '';
 }
