@@ -17,6 +17,9 @@ in {
     plugins = [
       pkgs-unstable.nushellPlugins.gstat
     ];
+    extraEnv = ''
+      $env.LS_COLORS = (${pkgs.vivid}/bin/vivid generate catppuccin-mocha)
+    '';
   };
 
   programs.zoxide = {
