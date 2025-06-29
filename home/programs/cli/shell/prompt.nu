@@ -42,7 +42,7 @@ let behind = {|status|
 }
 
 let git_status = {|| 
-    let status = gstat
+    let status = gstat --no-tag
     let R = (ansi reset)
     let BLUE = (ansi $env.colors.teal)
     let GRAY = (ansi $env.colors.surface1)
