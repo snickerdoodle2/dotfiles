@@ -30,5 +30,6 @@
 
   fonts.packages = [
     inputs.fonts.packages.${pkgs.system}.berkeley-mono
+    inputs.fonts.packages.${pkgs.system}.berkeley-mono-nerd
   ];
 }
