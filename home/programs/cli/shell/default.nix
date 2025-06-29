@@ -5,6 +5,12 @@
   ...
 }: let
   pkgs-unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
+  themes = pkgs.fetchFromGitHub {
+    owner = "catppuccin";
+    repo = "nushell";
+    rev = "05987d258cb765a881ee1f2f2b65276c8b379658";
+    sha256 = "13a2am30w1v8lz7drc04z3762jrywdqflfbn446iab6slfpw23dm";
+  };
 in {
   imports = [
     ./atuin.nix
@@ -20,6 +26,9 @@ in {
     ];
     extraEnv = ''
       $env.LS_COLORS = (${pkgs.vivid}/bin/vivid generate catppuccin-mocha)
+    '';
+    extraConfig = ''
+      source ${themes}/themes/catppuccin_mocha.nu
     '';
   };
 
