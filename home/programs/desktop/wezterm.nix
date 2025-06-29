@@ -2,9 +2,11 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }: let
   inherit (lib) mkOption types;
+  pkgs-unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
 in {
   options = {
     weztermFontSize = mkOption {
@@ -23,7 +25,7 @@ in {
       package = pkgs.wezterm;
       extraConfig = ''
         local config = require("config")
-        config.default_prog = { "${pkgs.bash}/bin/bash" }
+        config.default_prog = { "${pkgs-unstable.nushell}/bin/nu" }
         config.font_size = ${toString (config.weztermFontSize)}.0
         return config
       '';
