@@ -19,7 +19,7 @@
       menus.dashboard.directories.enabled = false;
       theme.bar.transparent = true;
       theme.font = {
-        name = "Berkeley Mono";
+        name = "BerkeleyMono Nerd Font";
         size = "16px";
       };
     };
