@@ -21,5 +21,15 @@
       use_ansi_coloring = true;
       datetime_format.normal = "%m.%d.%Y %k:%M:%S";
     };
+    environmentVariables = {
+      EDITOR = "nvim";
+    };
+    shellAliases = {
+      vim = "nvim";
+      vi = "nvim";
+      cat = "bat";
+      tree = "lsd --tree";
+      la = "ls -a";
+    };
   };
 }

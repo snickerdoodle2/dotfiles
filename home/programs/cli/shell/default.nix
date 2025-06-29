@@ -30,6 +30,6 @@ in {
 
   programs.carapace = {
     enable = true;
-    package = pkgs.carapace;
+    package = pkgs-unstable.carapace;
   };
 }
