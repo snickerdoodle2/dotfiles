@@ -192,11 +192,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1751198520,
-        "narHash": "sha256-MThEJGIlVoB6Jmb2mDMIxwAP1I2EihKGV4Uq/FJ6qbo=",
+        "lastModified": 1751199050,
+        "narHash": "sha256-UDKcxUPJkpoKlxycnDY07JgDRTVQMYwI9RwVJUu33LE=",
         "ref": "main",
-        "rev": "e125a2bcb831b6a62a9b4f99ce65fd26e6d7a30e",
-        "revCount": 3,
+        "rev": "cfc32fd8784032a8f89f614540610962053b6830",
+        "revCount": 4,
         "type": "git",
         "url": "ssh://git@github.com/snickerdoodle2/fonts"
       },
