@@ -3,15 +3,13 @@
   pkgs,
   ...
 }: let
-  macosCursor = pkgs.fetchFromGitHub {
-    owner = "driedpampas";
-    repo = "macOS-hyprcursor";
-    rev = "94b831a2ac5acb9162862efb84102c2b88dc1fa2";
-    sha256 = "1hxa0c27w3vg5wyrzjkxxjq3l7gsxqmc2r05mg8r0a01j36ac6ak";
+  macosCursor = pkgs.fetchurl {
+    url = "https://github.com/driedpampas/macOS-hyprcursor/releases/download/v1/macOS.Hyprcursor.SVG.tar.gz";
+    sha256 = "xflMx4OmNAye6rZBaphUt7IZ46OX5GGGA/08M1v5BdE=";
   };
 in {
   home.file.".local/share/icons/macOS" = {
-    source = "${macosCursor}/src/macOS (SVG)";
+    source = "${macosCursor}";
     recursive = true;
   };
   wayland.windowManager.hyprland.settings.env = [
