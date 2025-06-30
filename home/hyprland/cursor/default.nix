@@ -3,9 +3,9 @@
   pkgs,
   ...
 }: let
-  macosCursor = pkgs.fetchurl {
+  macosCursor = pkgs.fetchzip {
     url = "https://github.com/driedpampas/macOS-hyprcursor/releases/download/v1/macOS.Hyprcursor.SVG.tar.gz";
-    sha256 = "xflMx4OmNAye6rZBaphUt7IZ46OX5GGGA/08M1v5BdE=";
+    sha256 = "0222dprg3yr54v716rg33sgidla36mfxvyicizjs4b1lj85c7zi2";
   };
 in {
   home.file.".local/share/icons/macOS" = {
