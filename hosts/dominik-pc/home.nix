@@ -16,5 +16,5 @@
       refreshRate = 165;
     }
   ];
-  weztermFontSize = 12;
+  weztermFontSize = 14;
 }
