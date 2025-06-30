@@ -121,6 +121,7 @@ return {
 		vim.lsp.enable("rust_analyzer")
 		vim.lsp.enable("zls")
 		vim.lsp.enable("nushell")
+		vim.lsp.enable("nil_ls")
 
 		-- Installed locally
 

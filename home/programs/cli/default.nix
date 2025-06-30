@@ -21,6 +21,7 @@
     fd
     fzf
     jq
+    nil
     nodejs_24
     ripgrep
     tldr
