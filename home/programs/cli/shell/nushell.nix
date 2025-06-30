@@ -25,11 +25,12 @@
       EDITOR = "nvim";
     };
     shellAliases = {
-      vim = "nvim";
-      vi = "nvim";
+      lg = "lazygit";
       cat = "bat";
-      tree = "lsd --tree";
       la = "ls -a";
+      tree = "lsd --tree";
+      vi = "nvim";
+      vim = "nvim";
     };
   };
 }
