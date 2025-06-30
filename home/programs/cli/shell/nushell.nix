@@ -6,9 +6,6 @@
       rm.always_trash = true;
       use_kitty_protocol = true;
       footer_mode = "auto";
-      completions = {
-        algorithm = "fuzzy";
-      };
       table = {
         mode = "single";
         index_mode = "auto";
