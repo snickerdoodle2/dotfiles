@@ -18,8 +18,8 @@ config.window_close_confirmation = "NeverPrompt"
 
 ---@diagnostic disable-next-line: undefined-field
 config.font = wezterm.font_with_fallback({
-    { family = "Berkeley Mono",     weight = "Medium" },
-    { family = "Apple Color Emoji", assume_emoji_presentation = true },
+	{ family = "Berkeley Mono", weight = "Medium" },
+	{ family = "Apple Color Emoji", assume_emoji_presentation = true },
 })
 
 config.color_schemes = colors.color_schemes
