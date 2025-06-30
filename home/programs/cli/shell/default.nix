@@ -15,6 +15,7 @@
   catppuccin-mocha = builtins.toFile "catppuccin_mocha.nu" (builtins.readFile "${themes}/themes/catppuccin_mocha.nu" + "\n$env.colors = $theme");
 in {
   imports = [
+    ./keybindings.nix
     ./atuin.nix
     ./direnv.nix
     ./nushell.nix
