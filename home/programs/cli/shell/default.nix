@@ -20,6 +20,10 @@ in {
     ./nushell.nix
   ];
 
+  home.packages = [
+    pkgs-unstable.nushellPlugins.gstat
+  ];
+
   programs.nushell = {
     enable = true;
     package = pkgs-unstable.nushell;
