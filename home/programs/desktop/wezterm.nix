@@ -25,7 +25,7 @@ in {
       package = pkgs.wezterm;
       extraConfig = ''
         local config = require("config")
-        config.default_prog = { "${pkgs-unstable.nushell}/bin/nu" }
+        config.default_prog = { "${config.programs.nushell.package}/bin/nu" }
         config.font_size = ${toString (config.weztermFontSize)}.0
         return config
       '';
