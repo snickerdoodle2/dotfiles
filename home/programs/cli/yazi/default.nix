@@ -2,10 +2,9 @@
   programs.yazi = {
     enable = true;
     package = pkgs.yazi;
-    theme = {
-      flavor = {
-        dark = "catppuccin-mocha";
-      };
+    theme.flavor = {
+      dark = "catppuccin-mocha";
+      light = "catppuccin-latte";
     };
     settings = {
       mgr = {
