@@ -11,9 +11,9 @@
     ./lazydocker.nix
     ./lazygit.nix
     ./nvim.nix
-    ./superfile.nix
 
     ./shell
+    ./yazi
   ];
 
   home.packages = with pkgs; [
