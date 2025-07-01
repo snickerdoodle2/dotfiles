@@ -29,6 +29,7 @@
         ${inputs.hyprpanel.packages."${pkgs.system}".default}/bin/hyprpanel &
         sleep 1
         ${pkgs.swww}/bin/swww img ${./wallpaper.png} &
+        ${pkgs._1password-gui}/bin/1password --silent &
       '';
     in "${startupScript}/bin/script";
   };
