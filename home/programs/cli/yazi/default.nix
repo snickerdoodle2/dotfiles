@@ -27,25 +27,9 @@ in {
         scrolloff = 8;
       };
       plugin = {
-        append_previewers = [
+        prepend_previewers = [
           {
             mime = "text/*";
-            run = "bat";
-          }
-          {
-            mime = "*/xml";
-            run = "bat";
-          }
-          {
-            mime = "*/cs";
-            run = "bat";
-          }
-          {
-            mime = "*/javascript";
-            run = "bat";
-          }
-          {
-            mime = "*/x-wine-extension-ini";
             run = "bat";
           }
         ];
