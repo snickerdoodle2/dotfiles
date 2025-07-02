@@ -6,6 +6,9 @@
 }: let
   onePassPath = "~/.1password/agent.sock";
 in {
+  home.packages = with pkgs; [
+    _1password-gui
+  ];
   programs.ssh = {
     enable = true;
     extraConfig = ''

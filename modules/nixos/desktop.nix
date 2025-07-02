@@ -17,19 +17,15 @@
     wayland = true;
   };
 
-  programs.hyprland = {
-    enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
-  };
-
-  environment.systemPackages = with pkgs; [
-    inputs.zen-browser.packages."${system}".default
-    wl-clipboard
-  ];
-
   fonts.packages = [
     inputs.fonts.packages.${pkgs.system}.berkeley-mono
     inputs.fonts.packages.${pkgs.system}.berkeley-mono-nerd
   ];
+
+  environment.etc."1password/custom_allowed_browsers" = {
+    text = ''
+      zen
+    '';
+    mode = "0755";
+  };
 }

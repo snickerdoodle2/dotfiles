@@ -4,8 +4,15 @@
   pkgs,
   ...
 }: {
+  home.packages = with pkgs; [
+    inputs.zen-browser.packages."${system}".default
+    wl-clipboard
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
   };
 
   wayland.windowManager.hyprland.settings = {
@@ -25,11 +32,11 @@
 
     exec-once = let
       startupScript = pkgs.pkgs.writeShellScriptBin "script" ''
-        ${pkgs.swww}/bin/swww-daemon &
         ${inputs.hyprpanel.packages."${pkgs.system}".default}/bin/hyprpanel &
+        ${pkgs._1password-gui}/bin/1password --silent &
+        ${pkgs.swww}/bin/swww-daemon &
         sleep 1
         ${pkgs.swww}/bin/swww img ${./wallpaper.png} &
-        ${pkgs._1password-gui}/bin/1password --silent &
       '';
     in "${startupScript}/bin/script";
   };

@@ -44,7 +44,6 @@
           ./hosts/dominik-pc
           ./modules/nixos/desktop.nix
           ./modules/nixos/secure-boot.nix
-          ./modules/nixos/1password.nix
           ./modules/nixos/docker.nix
         ];
       };

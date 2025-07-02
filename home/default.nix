@@ -23,16 +23,6 @@ in {
       gnumake
     ];
 
-    programs.bash = {
-      enable = true;
-      enableCompletion = true;
-
-      shellAliases = {
-        vim = "nvim";
-        lg = "lazygit";
-      };
-    };
-
     home.stateVersion = "25.05";
     programs.home-manager.enable = true;
   };
