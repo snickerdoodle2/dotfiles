@@ -1,4 +1,4 @@
-{config, ...}: {
+{...}: {
   programs.nushell = {
     settings = {
       buffer_editor = "nvim";

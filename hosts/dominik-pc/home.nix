@@ -1,4 +1,4 @@
-{config, ...}: {
+{...}: {
   imports = [
     ./../../home/hyprland
     ./../../home/programs/1password.nix

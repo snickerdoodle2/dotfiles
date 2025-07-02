@@ -2,11 +2,9 @@
   config,
   lib,
   pkgs,
-  inputs,
   ...
 }: let
   inherit (lib) mkOption types;
-  pkgs-unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
 in {
   options = {
     weztermFontSize = mkOption {

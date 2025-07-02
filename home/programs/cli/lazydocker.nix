@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   programs.lazydocker = {
     enable = true;
     package = pkgs.lazydocker;

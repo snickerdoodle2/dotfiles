@@ -1,16 +1,7 @@
-{
-  config,
-  lib,
-  pkgs,
-  inputs,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
-  ];
-
-  environment.systemPackages = with pkgs; [
   ];
 
   home-manager.useGlobalPkgs = true;

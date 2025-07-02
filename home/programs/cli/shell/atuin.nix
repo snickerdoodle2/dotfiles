@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: let
+{pkgs, ...}: let
   themes = pkgs.fetchFromGitHub {
     owner = "catppuccin";
     repo = "atuin";
