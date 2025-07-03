@@ -61,6 +61,7 @@
       common-darwin = import ./darwin/common.nix inputs {
         casks = [
           "visual-studio-code"
+          "utm"
         ];
         persistent-apps = [
           "/Applications/Google Chrome.app"

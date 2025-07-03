@@ -98,7 +98,6 @@ inputs @ {pkgs, ...}: {
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-emoji
-    (nerdfonts.override {fonts = ["JetBrainsMono"];})
   ];
 
   security.polkit.enable = true;
