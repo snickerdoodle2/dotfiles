@@ -52,16 +52,17 @@
           ./modules/nixos/docker.nix
         ];
       };
-      darwinConfigurations."dominik-mb" = let
-        hostname = "dominik-mb";
-        system = {
-          configurationRevision = self.rev or self.dirtyRev or null;
-          stateVersion = 6;
-        };
-        specialArgs = {inherit hostname inputs system;};
-      in nix-darwin.lib.darwinSystem {
+    darwinConfigurations."dominik-mb" = let
+      hostname = "dominik-mb";
+      system = {
+        configurationRevision = self.rev or self.dirtyRev or null;
+        stateVersion = 6;
+      };
+      specialArgs = {inherit hostname inputs system;};
+    in
+      nix-darwin.lib.darwinSystem {
         inherit specialArgs;
-      	modules = [
+        modules = [
           ./hosts/dominik-mb
           ./modules/darwin
         ];
