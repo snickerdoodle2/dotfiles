@@ -3,6 +3,7 @@
     enable = true;
     casks = [
       "zen"
+      "raycast"
     ];
   };
 }

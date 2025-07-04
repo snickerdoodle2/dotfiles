@@ -16,10 +16,6 @@
     inputs.fonts.packages.${pkgs.system}.berkeley-mono
   ];
 
-  environment.systemPackages = [
-    pkgs.raycast
-  ];
-
   nixpkgs.hostPlatform = "aarch64-darwin";
 
   users.users.domi.home = lib.mkDefault "/Users/domi";
