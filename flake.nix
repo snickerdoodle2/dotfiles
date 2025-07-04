@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nix-darwin = {
-      url = "github:nix-darwin/nix-darwin/master";
+      url = "github:nix-darwin/nix-darwin/nix-darwin-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
@@ -52,13 +52,19 @@
           ./modules/nixos/docker.nix
         ];
       };
-      darwinConfiguration."dominik-mb" = let
+      darwinConfigurations."dominik-mb" = let
         hostname = "dominik-mb";
-        specialArgs = {inherit hostname inputs;};
+        system = {
+          configurationRevision = self.rev or self.dirtyRev or null;
+          stateVersion = 6;
+        };
+        specialArgs = {inherit hostname inputs system;};
       in nix-darwin.lib.darwinSystem {
+        inherit specialArgs;
       	modules = [
-	  ./hosts/dominik-mb
-	];
+          ./hosts/dominik-mb
+          ./modules/darwin
+        ];
       };
   };
 }

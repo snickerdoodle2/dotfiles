@@ -3,6 +3,10 @@
   hostname,
   ...
 }: {
+  imports = [
+    ../common
+  ];
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -22,8 +26,6 @@
     extraGroups = ["wheel"];
   };
 
-  nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = ["nix-command" "flakes"];
   nix.gc = {
     automatic = lib.mkDefault true;
     dates = lib.mkDefault "weekly";
