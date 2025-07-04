@@ -4,9 +4,11 @@
   ...
 }: let
   onePassPath = "~/.1password/agent.sock";
+  inherit (lib) mkIf;
+  inherit (pkgs.stdenv.hostPlatform) isDarwin;
 in {
-  home.packages = with pkgs; [
-    _1password-gui
+  home.packages = mkIf (!isDarwin) [
+    pkgs._1password-gui
   ];
   programs.ssh = {
     enable = true;
