@@ -4,7 +4,7 @@
   lib,
   ...
 }: let
-  inherit (lib) mkOption types;
+  inherit (lib) mkDefault mkOption types;
 in {
   options = {
     dotfiles = mkOption {
@@ -15,9 +15,6 @@ in {
     };
   };
   config = {
-    home.username = "domi";
-    home.homeDirectory = "/home/domi";
-
     home.packages = with pkgs; [
       gcc
       gnumake
