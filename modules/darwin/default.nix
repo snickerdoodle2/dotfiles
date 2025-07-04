@@ -12,6 +12,8 @@
     inputs.home-manager.darwinModules.home-manager
   ];
 
+  security.pam.services.sudo_local.touchIdAuth = true;
+
   fonts.packages = [
     inputs.fonts.packages.${pkgs.system}.berkeley-mono
   ];
