@@ -1,8 +1,12 @@
-{system, inputs, lib, ...}: {
+{pkgs, system, inputs, lib, ...}: {
     inherit system;
     imports = [
         ../common
         inputs.home-manager.darwinModules.home-manager
+    ];
+
+    fonts.packages = [
+        inputs.fonts.packages.${pkgs.system}.berkeley-mono
     ];
 
     nixpkgs.hostPlatform = "aarch64-darwin";
