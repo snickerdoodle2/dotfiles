@@ -1,5 +1,7 @@
 {pkgs, ...}: {
   common = with pkgs; [
+    # yikers
+    git
     # editor
     neovim
     tree-sitter
