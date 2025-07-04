@@ -8,6 +8,7 @@
   inherit system;
   imports = [
     ../common
+    ./homebrew.nix
     inputs.home-manager.darwinModules.home-manager
   ];
 
@@ -26,4 +27,3 @@
     ../../home/darwin.nix
   ];
 }
-
