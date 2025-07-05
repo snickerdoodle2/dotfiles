@@ -15,6 +15,7 @@
     ./finder.nix
     ./homebrew.nix
     ./misc.nix
+    ./nsgd.nix
 
     inputs.home-manager.darwinModules.home-manager
   ];
