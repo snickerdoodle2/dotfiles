@@ -16,6 +16,7 @@
     ./homebrew.nix
     ./misc.nix
     ./nsgd.nix
+    ./screencapture.nix
 
     inputs.home-manager.darwinModules.home-manager
   ];
