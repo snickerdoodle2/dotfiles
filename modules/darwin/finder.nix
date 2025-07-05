@@ -11,4 +11,6 @@
     ShowPathbar = true;
     ShowStatusBar = true;
   };
+
+  system.defaults.NSGlobalDomain.NSTableViewDefaultSizeMode = 2;
 }
