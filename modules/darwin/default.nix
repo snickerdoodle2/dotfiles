@@ -9,6 +9,7 @@
   imports = [
     ../common
 
+    ./clock.nix
     ./control-center.nix
     ./dock.nix
     ./finder.nix
