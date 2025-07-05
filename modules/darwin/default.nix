@@ -10,6 +10,7 @@
     ../common
     ./homebrew.nix
     ./dock.nix
+    ./control-center.nix
     inputs.home-manager.darwinModules.home-manager
   ];
 
