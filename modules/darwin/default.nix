@@ -8,9 +8,12 @@
   inherit system;
   imports = [
     ../common
-    ./homebrew.nix
-    ./dock.nix
+
     ./control-center.nix
+    ./dock.nix
+    ./finder.nix
+    ./homebrew.nix
+
     inputs.home-manager.darwinModules.home-manager
   ];
 
