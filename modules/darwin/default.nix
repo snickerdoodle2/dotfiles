@@ -10,13 +10,14 @@
     ../common
 
     ./clock.nix
-    ./control-center.nix
+    ./control_center.nix
     ./dock.nix
     ./finder.nix
     ./homebrew.nix
     ./misc.nix
     ./nsgd.nix
     ./screencapture.nix
+    ./window_manager.nix
 
     inputs.home-manager.darwinModules.home-manager
   ];
