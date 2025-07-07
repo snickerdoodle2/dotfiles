@@ -19,6 +19,8 @@
     ./screencapture.nix
     ./window_manager.nix
 
+    ./kanata
+
     inputs.home-manager.darwinModules.home-manager
   ];
 
