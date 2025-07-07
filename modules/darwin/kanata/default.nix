@@ -11,6 +11,7 @@
         "-c"
         "${./caps2esc.kbd}"
         "--debug"
+        "--log-layer-changes"
       ];
       RunAtLoad = true;
       KeepAlive = true;
