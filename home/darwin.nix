@@ -6,5 +6,6 @@
 
   imports = [
     ./programs/1password.nix
+    ./programs/darwin
   ];
 }
