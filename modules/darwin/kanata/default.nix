@@ -1,13 +1,11 @@
-{pkgs, ...}: {
-  environment.systemPackages = [
-    pkgs.kanata
-  ];
-
+{...}: {
   # based on https://github.com/jtroo/kanata/discussions/1537
+  homebrew.brews = ["kanata"];
+
   launchd.daemons = {
     kanata.serviceConfig = {
       ProgramArguments = [
-        "${pkgs.kanata}/bin/kanata"
+        "/opt/homebrew/bin/kanata"
         "-c"
         "${./caps2esc.kbd}"
       ];
