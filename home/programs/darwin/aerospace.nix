@@ -4,6 +4,7 @@
   ...
 }: let
   package = pkgs.aerospace;
+  bin = "${package}/bin/aerospace";
 in {
   programs.aerospace = {
     enable = true;
@@ -25,18 +26,19 @@ in {
     };
   };
 
+  # https://github.com/nikitabobko/AeroSpace/issues/1012
   skhd-keybinds = builtins.concatMap (i: let
     key = toString (lib.mod i 10);
   in [
     {
       inherit key;
       modifiers = ["lalt"];
-      action = "${package}/bin/aerospace workspace ${toString i}";
+      action = "${bin} workspace ${toString i}";
     }
     {
       inherit key;
       modifiers = ["lalt" "lshift"];
-      action = "${package}/bin/aerospace move-node-to-workspace ${toString i}";
+      action = "${bin} move-node-to-workspace ${toString i}";
     }
   ]) (lib.range 1 10);
 }
