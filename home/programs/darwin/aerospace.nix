@@ -36,6 +36,11 @@ in {
         key = "f";
         action = "${bin} fullscreen";
       }
+      {
+        modifiers = ["lalt"];
+        key = "q";
+        action = "open -na Wezterm";
+      }
     ]
     ++ builtins.concatLists (
       builtins.attrValues (
