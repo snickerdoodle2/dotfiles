@@ -11,6 +11,8 @@ in {
     package = package;
     userSettings = {
       start-at-login = true;
+      accordion-padding = 64;
+      key-mapping.preset = "qwerty";
       gaps = {
         inner = {
           horizontal = 8;
@@ -28,7 +30,33 @@ in {
 
   # https://github.com/nikitabobko/AeroSpace/issues/1012
   skhd-keybinds =
-    builtins.concatLists (
+    [
+      {
+        modifiers = ["lalt"];
+        key = "f";
+        action = "${bin} fullscreen";
+      }
+    ]
+    ++ builtins.concatLists (
+      builtins.attrValues (
+        builtins.mapAttrs (key: sign: [
+          {
+            inherit key;
+            modifiers = ["lalt"];
+            action = "${bin} resize smart ${sign}10";
+          }
+          {
+            inherit key;
+            modifiers = ["lalt" "lshift"];
+            action = "${bin} resize smart ${sign}50";
+          }
+        ]) {
+          "0x1B" = "-"; # -
+          "0x18" = "+"; # =
+        }
+      )
+    )
+    ++ builtins.concatLists (
       builtins.attrValues (
         builtins.mapAttrs (key: dir: [
           {
