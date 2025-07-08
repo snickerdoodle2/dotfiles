@@ -10,6 +10,9 @@
         "${pkgs.kanata}/bin/kanata"
         "-c"
         "${./caps2esc.kbd}"
+        "--port"
+        "13337"
+        "--debug"
       ];
       RunAtLoad = true;
       KeepAlive = true;
