@@ -25,6 +25,12 @@ in {
           bottom = 8;
         };
       };
+      mode.window-managment.binding = {
+        h = ["join-with left" "mode main"];
+        j = ["join-with down" "mode main"];
+        k = ["join-with up" "mode main"];
+        l = ["join-with right" "mode main"];
+      };
     };
   };
 
@@ -40,6 +46,11 @@ in {
         modifiers = ["lalt"];
         key = "q";
         action = "open -na Wezterm";
+      }
+      {
+        modifiers = ["lalt" "lshift"];
+        key = "w";
+        action = "${bin} mode window-managment";
       }
     ]
     ++ builtins.concatLists (
