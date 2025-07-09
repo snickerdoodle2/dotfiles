@@ -3,13 +3,14 @@
     enable = true;
     onActivation = {
       cleanup = "uninstall";
-      autoUpdate = true;
-      upgrade = true;
     };
     casks = [
       "zen"
       "raycast"
       "1password"
     ];
+    masApps = {
+      "Hidden Bar" = 1452453066;
+    };
   };
 }
