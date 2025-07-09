@@ -25,6 +25,7 @@ in {
           bottom = 8;
         };
       };
+      mode.main.binding = {};
       mode.window-managment.binding = {
         h = ["join-with left" "mode main"];
         j = ["join-with down" "mode main"];
