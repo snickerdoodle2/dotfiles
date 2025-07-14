@@ -1,0 +1,39 @@
+;; Caps to escape/control configuration for Kanata
+
+(defcfg
+  macos-dev-names-include (
+    "Apple Internal Keyboard / Trackpad"
+    "Karabiner DriverKit VirtualHIDKeyboard 1.8.0"
+  )
+  process-unmapped-keys no
+)
+
+(defsrc
+  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10   f11   f12
+  IntlBackslash
+  caps
+  Backquote
+  fn 
+)
+
+;; Definine two aliases, one for esc/control to other for function key
+(defalias
+  escctrl (tap-hold 100 100 esc lctl)
+  fn1 (layer-while-held fn)
+)
+
+(deflayer base
+ f1   f2   f3   f4   f5   f6   f7   f8   f9   f10   f11   f12
+ Backquote
+ @escctrl
+ XX
+ @fn1
+ )
+
+(deflayer fn
+  brdn  brup  _    _    _    _   prev  pp  next  mute  vold  volu
+  Backquote
+  caps
+  XX
+  _
+)
