@@ -8,6 +8,7 @@
       "zen"
       "raycast"
       "1password"
+      "docker"
     ];
     masApps = {
       "Hidden Bar" = 1452453066;
