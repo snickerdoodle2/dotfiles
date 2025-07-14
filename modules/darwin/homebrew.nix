@@ -1,14 +1,12 @@
 {...}: {
   homebrew = {
     enable = true;
-    onActivation = {
-      cleanup = "uninstall";
-    };
     casks = [
       "zen"
       "raycast"
       "1password"
       "docker"
+      "google-chrome"
     ];
     masApps = {
       "Hidden Bar" = 1452453066;
