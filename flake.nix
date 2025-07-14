@@ -68,5 +68,21 @@
           ./modules/darwin
         ];
       };
+    darwinConfigurations."dpilipczuk-swm" = let
+      hostname = "dpilipczuk-swm";
+      system = {
+        configurationRevision = self.rev or self.dirtyRev or null;
+        stateVersion = 6;
+        primaryUser = "domi";
+      };
+      specialArgs = {inherit hostname inputs system;};
+    in
+      nix-darwin.lib.darwinSystem {
+        inherit specialArgs;
+        modules = [
+          ./hosts/dpilipczuk-swm
+          ./modules/darwin
+        ];
+      };
   };
 }
