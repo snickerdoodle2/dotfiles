@@ -86,16 +86,6 @@ return {
 					},
 				},
 			},
-			nextls = {
-				init_options = {
-					extensions = {
-						credo = { enable = true },
-					},
-					experimental = {
-						completions = { enable = true },
-					},
-				},
-			},
 			tailwindcss = {
 				settings = {
 					tailwindCSS = {
