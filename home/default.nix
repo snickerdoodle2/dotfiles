@@ -4,7 +4,7 @@
   lib,
   ...
 }: let
-  inherit (lib) mkDefault mkOption types;
+  inherit (lib) mkOption types;
 in {
   options = {
     dotfiles = mkOption {
@@ -16,8 +16,7 @@ in {
   };
   config = {
     home.packages = with pkgs; [
-      gcc
-      gnumake
+      rustup
     ];
 
     home.stateVersion = "25.05";
