@@ -10,6 +10,7 @@ in {
         line-number = "relative";
         mouse = false;
         bufferline = "multiple";
+        auto-pairs = false;
         cursor-shape = {
           insert = "bar";
         };
