@@ -4,6 +4,7 @@
     ./btop.nix
     ./gh.nix
     ./git.nix
+    ./helix.nix
     ./lazydocker.nix
     ./lazygit.nix
     ./nvim.nix
