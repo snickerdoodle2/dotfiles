@@ -12,19 +12,55 @@ in {
     settings = {
       theme = "catppuccin_black";
       editor = {
-        line-number = "relative";
+        scrolloff = 8;
         mouse = false;
+        line-number = "relative";
+        completion-timeout = 5;
+        rulers = [80];
         bufferline = "multiple";
+        trim-trailing-whitespace = true;
+        popup-border = "all";
+        end-of-line-diagnostics = "hint";
         auto-pairs = false;
+        lsp = {
+          display-progress-messages = true;
+          display-inlay-hints = true;
+          inlay-hints-length-limit = 32;
+        };
         cursor-shape = {
+          normal = "block";
           insert = "bar";
+          select = "underline";
+        };
+        whitespace = {
+          render = {
+            space = "none";
+            tab = "all";
+            nbsp = "all";
+            nnbsp = "all";
+            newline = "none";
+          };
+          characters = {
+            nbsp = "⍽";
+            nnbsp = "␣";
+            tab = "→";
+          };
+        };
+        indent-guides.render = true;
+        inline-diagnostics = {
+          cursor-line = "warning";
         };
       };
       keys.normal = {
         esc = ["collapse_selection" "keep_primary_selection"];
         space = {
           g = [":new" ":insert-output ${config.programs.lazygit.package}/bin/lazygit" ":buffer-close!" ":redraw"];
-          e = [":sh rm -f /tmp/yazi-path" ":insert-output ${config.programs.yazi.package}/bin/yazi %{buffer_name} --chooser-file=/tmp/yazi-path" ":open %sh{${pkgs.coreutils}/bin/cat /tmp/yazi-path}" ":redraw"];
+          e = [
+            ":sh rm -f /tmp/yazi-path"
+            ":insert-output ${config.programs.yazi.package}/bin/yazi %{buffer_name} --chooser-file=/tmp/yazi-path"
+            ":open %sh{${pkgs.coreutils}/bin/cat /tmp/yazi-path}"
+            ":redraw"
+          ];
         };
       };
     };
