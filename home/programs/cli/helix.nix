@@ -38,6 +38,10 @@ in {
           };
           auto-format = true;
         }
+        {
+          name = "elixir";
+          auto-format = true;
+        }
       ];
     };
     themes = {
