@@ -48,19 +48,21 @@ in {
         };
         indent-guides.render = true;
         inline-diagnostics = {
-          cursor-line = "warning";
+          cursor-line = "disable";
         };
       };
       keys.normal = {
         esc = ["collapse_selection" "keep_primary_selection"];
         space = {
-          g = [":new" ":insert-output ${config.programs.lazygit.package}/bin/lazygit" ":buffer-close!" ":redraw"];
+          g = [":new" ":insert-output ${config.programs.lazygit.package}/bin/lazygit" ":buffer-close!" ":redraw" ":reload-all"];
           e = [
             ":sh rm -f /tmp/yazi-path"
             ":insert-output ${config.programs.yazi.package}/bin/yazi %{buffer_name} --chooser-file=/tmp/yazi-path"
             ":open %sh{${pkgs.coreutils}/bin/cat /tmp/yazi-path}"
             ":redraw"
+            ":reload-all"
           ];
+          K = ":toggle-option inline-diagnostics.cursor-line disable error";
         };
       };
     };
