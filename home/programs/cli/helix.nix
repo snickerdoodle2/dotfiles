@@ -18,6 +18,7 @@ in {
         completion-timeout = 5;
         rulers = [80];
         bufferline = "multiple";
+        color-modes = true;
         trim-trailing-whitespace = true;
         popup-border = "all";
         end-of-line-diagnostics = "hint";
