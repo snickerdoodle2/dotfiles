@@ -68,6 +68,13 @@ in {
       };
     };
     languages = {
+      language-server = {
+        rust-analyzer.config.files = {
+          excludeDirs = [
+            ".direnv"
+          ];
+        };
+      };
       language = [
         {
           name = "nix";
