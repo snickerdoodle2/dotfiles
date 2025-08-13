@@ -1,4 +1,4 @@
-{...}: {
+{config, ...}: {
   programs.nushell = {
     settings = {
       buffer_editor = "nvim";
@@ -19,7 +19,8 @@
       datetime_format.normal = "%m.%d.%Y %k:%M:%S";
     };
     environmentVariables = {
-      EDITOR = "nvim";
+      EDITOR = "hx";
+      GOPATH = "${config.home.homeDirectory}/.go";
     };
     shellAliases = {
       lg = "lazygit";
