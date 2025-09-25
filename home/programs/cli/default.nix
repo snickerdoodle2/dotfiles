@@ -19,6 +19,7 @@
     jq
     nil
     nodejs_24
+    nurl
     ripgrep
     tldr
     tokei
