@@ -57,6 +57,8 @@ in {
         window-padding-x = 8;
         window-padding-y = 4;
         command = "${pkgs.bash}/bin/bash -i -c \"${config.programs.zellij.package}/bin/zellij a -c main\"";
+
+        macos-option-as-alt = "left";
       };
     };
   };
