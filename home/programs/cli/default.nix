@@ -8,6 +8,7 @@
     ./lazydocker.nix
     ./lazygit.nix
     ./nvim.nix
+    ./zellij.nix
 
     ./shell
     ./yazi
