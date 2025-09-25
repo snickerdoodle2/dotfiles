@@ -56,7 +56,7 @@ in {
         font-size = config.ghosttyFontSize;
         window-padding-x = 8;
         window-padding-y = 4;
-        command = "${pkgs.bash}/bin/bash -i -c ${config.programs.nushell.package}/bin/nu";
+        command = "${pkgs.bash}/bin/bash -i -c \"${config.programs.zellij.package}/bin/zellij a -c main\"";
       };
     };
   };

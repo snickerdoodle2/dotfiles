@@ -46,7 +46,7 @@ in {
       {
         modifiers = ["lalt"];
         key = "q";
-        action = "open -na Wezterm";
+        action = "open -na Ghostty";
       }
       {
         modifiers = ["lalt" "lshift"];
