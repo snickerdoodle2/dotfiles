@@ -59,6 +59,10 @@ in {
         command = "${pkgs.bash}/bin/bash -i -c \"${config.programs.zellij.package}/bin/zellij a -c main\"";
 
         macos-option-as-alt = "left";
+        keybind = [
+          "alt+left=unbind"
+          "alt+right=unbind"
+        ];
       };
     };
   };

@@ -144,23 +144,23 @@
             }
         }
         shared_among "normal" "locked" {
-            bind "Super left" { MoveFocusOrTab "left"; }
-            bind "Super down" { MoveFocus "down"; }
-            bind "Super up" { MoveFocus "up"; }
-            bind "Super right" { MoveFocusOrTab "right"; }
-            bind "Super +" { Resize "Increase"; }
-            bind "Super -" { Resize "Decrease"; }
-            bind "Super =" { Resize "Increase"; }
-            bind "Super [" { PreviousSwapLayout; }
-            bind "Super ]" { NextSwapLayout; }
-            bind "Super f" { ToggleFloatingPanes; }
-            bind "Super h" { MoveFocusOrTab "left"; }
-            bind "Super i" { MoveTab "left"; }
-            bind "Super j" { MoveFocus "down"; }
-            bind "Super k" { MoveFocus "up"; }
-            bind "Super l" { MoveFocusOrTab "right"; }
-            bind "Super n" { NewPane; }
-            bind "Super o" { MoveTab "right"; }
+            bind "Alt left" { MoveFocusOrTab "left"; }
+            bind "Alt down" { MoveFocus "down"; }
+            bind "Alt up" { MoveFocus "up"; }
+            bind "Alt right" { MoveFocusOrTab "right"; }
+            bind "Alt +" { Resize "Increase"; }
+            bind "Alt -" { Resize "Decrease"; }
+            bind "Alt =" { Resize "Increase"; }
+            bind "Alt [" { PreviousSwapLayout; }
+            bind "Alt ]" { NextSwapLayout; }
+            bind "Alt f" { ToggleFloatingPanes; }
+            bind "Alt h" { MoveFocusOrTab "left"; }
+            bind "Alt i" { MoveTab "left"; }
+            bind "Alt j" { MoveFocus "down"; }
+            bind "Alt k" { MoveFocus "up"; }
+            bind "Alt l" { MoveFocusOrTab "right"; }
+            bind "Alt n" { NewPane; }
+            bind "Alt o" { MoveTab "right"; }
         }
         shared_except "locked" "renametab" "renamepane" {
             bind "Ctrl q" { Quit; }
