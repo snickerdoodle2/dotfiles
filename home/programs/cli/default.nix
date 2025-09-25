@@ -5,6 +5,7 @@
     ./gh.nix
     ./git.nix
     ./helix.nix
+    ./jujutsu.nix
     ./lazydocker.nix
     ./lazygit.nix
     ./nvim.nix
