@@ -23,7 +23,6 @@ in {
       compression = 9;
       preloadindex = true;
       whitespace = "error";
-      pager = "${pkgs.delta}/bin/delta";
     };
 
     include.path = [
@@ -34,8 +33,6 @@ in {
     url."git@github.com:".insteadOf = "gh:";
 
     init.defaultBranch = "main";
-
-    interactive.diffFilter = "${pkgs.delta}/bin/delta --color-only";
 
     status = {
       branch = true;
@@ -68,7 +65,7 @@ in {
   };
 
   programs.git.delta = {
-    enable = true;
+    enable = false;
     package = pkgs.delta;
     options = {
       navigate = true;
@@ -77,10 +74,10 @@ in {
       features = "catppuccin-mocha";
     };
   };
-}
-# [interactive]
-#     diffFilter = delta --color-only
-#
-# [include]
-#     path = ~/.gitconfig.local
 
+  programs.git.difftastic = {
+    enable = true;
+    package = pkgs.difftastic;
+    enableAsDifftool = true;
+  };
+}

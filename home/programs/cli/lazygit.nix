@@ -1,12 +1,15 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   programs.lazygit = {
     enable = true;
     package = pkgs.lazygit;
     settings = {
       git = {
         paging = {
-          colorArg = "always";
-          pager = "${pkgs.delta}/bin/delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format=\"lazygit-edit://{path}:{line}\"";
+          externalDiffCommand = "${config.programs.git.difftastic.package}/bin/difft --color=always";
         };
         branchLogCmd = "${pkgs.git}/bin/git log --color=always --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n' {{branchName}}";
       };
