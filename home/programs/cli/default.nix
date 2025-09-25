@@ -18,6 +18,7 @@
     fd
     fzf
     jq
+    mergiraf
     nil
     nodejs_24
     nurl

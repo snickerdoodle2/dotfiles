@@ -16,6 +16,10 @@ in {
     ignores = [
       ".DS_Store"
     ];
+
+    attributes = [
+      "* merge=mergiraf"
+    ];
   };
 
   programs.git.extraConfig = {
@@ -59,6 +63,10 @@ in {
 
     merge = {
       conflictstyle = "zdiff3";
+      "mergiraf" = {
+        name = "mergiraf";
+        driver = "${pkgs.mergiraf}/bin/mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L";
+      };
     };
 
     log.abbrevCommit = true;
