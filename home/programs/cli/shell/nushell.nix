@@ -1,7 +1,7 @@
 {config, ...}: {
   programs.nushell = {
     settings = {
-      buffer_editor = "nvim";
+      buffer_editor = "hx";
       show_banner = false;
       rm.always_trash = true;
       use_kitty_protocol = true;

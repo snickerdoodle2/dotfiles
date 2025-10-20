@@ -74,6 +74,9 @@ in {
             ".direnv"
           ];
         };
+        tinymist.config = {
+          formatterMode = "typstyle";
+        };
       };
       language = [
         {
@@ -82,6 +85,10 @@ in {
             command = "${pkgs.alejandra}/bin/alejandra";
             args = ["-"];
           };
+          auto-format = true;
+        }
+        {
+          name = "typst";
           auto-format = true;
         }
         {
