@@ -23,6 +23,7 @@
     nil
     nodejs_24
     nurl
+    pipe-rename
     ripgrep
     tldr
     tokei
