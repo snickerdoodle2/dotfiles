@@ -95,6 +95,15 @@ in {
           name = "elixir";
           auto-format = true;
         }
+        {
+          name = "tsx";
+          language-servers = ["tailwindcss-ls" "vscode-eslint-language-server" "typescript-language-server"];
+          formatter = {
+            command = "prettier";
+            args = ["--parser" "typescript"];
+          };
+          auto-format = true;
+        }
       ];
     };
     themes = {
