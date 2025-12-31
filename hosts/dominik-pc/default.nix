@@ -23,6 +23,7 @@
       pkgs.helix
       pkgs.jujutsu
       pkgs.ghostty
+      pkgs.just
   ];
 
   programs._1password.enable = true;
