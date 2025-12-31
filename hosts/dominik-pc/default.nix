@@ -18,7 +18,7 @@
     displayManager.sddm.wayland.enable = true;
   };
 
-  users.users.domi.packages = lib.mkAfter [
+  users.users.domi.packages = [
       pkgs.firefox
       pkgs.helix
       pkgs.jujutsu

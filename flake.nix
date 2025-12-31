@@ -16,6 +16,7 @@
         modules = [
           ./hosts/dominik-pc
           ./modules/nixos.nix
+          ./modules/podman.nix
         ];
       };
     };
