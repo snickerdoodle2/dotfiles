@@ -10,15 +10,7 @@
       ./hardware-configuration.nix
     ];
 
-  nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  networking.hostName = "dominik-pc"; # Define your hostname.
-
-  networking.networkmanager.enable = true;
+  nixpkgs.config.allowUnfree = lib.mkForce true;
 
   services = {
     desktopManager.plasma6.enable = true;
@@ -26,29 +18,12 @@
     displayManager.sddm.wayland.enable = true;
   };
 
-  time.timeZone = "Europe/Warsaw";
-
-  i18n.defaultLocale = "en_US.UTF-8";
-  console = {
-    font = "Lat2-Terminus16";
-    keyMap = "us";
-  };
-
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
-
-  users.users.domi = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ];
-    packages = with pkgs; [
-      firefox
-      helix
-      jujutsu
-      ghostty
-    ];
-  };
+  users.users.domi.packages = lib.mkAfter [
+      pkgs.firefox
+      pkgs.helix
+      pkgs.jujutsu
+      pkgs.ghostty
+  ];
 
   programs._1password.enable = true;
   programs._1password-gui = {
