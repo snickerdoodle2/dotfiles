@@ -11,30 +11,44 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... } @ inputs:  {
+  outputs = {
+    self,
+    nixpkgs,
+    nixpkgs-unstable,
+    home-manager,
+    ...
+  } @ inputs: let
+    systems = [
+      "x86_64-linux"
+    ];
+    forAllSystems = nixpkgs.lib.genAttrs systems;
+  in {
+    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+
     nixosConfigurations = {
       dominik-pc = let
         hostname = "dominik-pc";
         system = "x86_64-linux";
-        pkgs-unstable = import nixpkgs-unstable { inherit system; };
+        pkgs-unstable = import nixpkgs-unstable {inherit system;};
         specialArgs = {inherit hostname pkgs-unstable;};
-      in nixpkgs.lib.nixosSystem {
-        inherit specialArgs system;
-        modules = [
-          ./hosts/dominik-pc
-          ./modules/nixos.nix
-          ./modules/podman.nix
+      in
+        nixpkgs.lib.nixosSystem {
+          inherit specialArgs system;
+          modules = [
+            ./hosts/dominik-pc
+            ./modules/nixos.nix
+            ./modules/podman.nix
 
-          home-manager.nixosModules.home-manager
-          {
+            home-manager.nixosModules.home-manager
+            {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
 
               home-manager.extraSpecialArgs = inputs // specialArgs;
               home-manager.users.domi = import ./home;
-          }
-        ];
-      };
+            }
+          ];
+        };
     };
   };
 }

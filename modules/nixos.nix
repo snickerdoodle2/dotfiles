@@ -1,4 +1,10 @@
-{ config, lib, pkgs, hostname, ... }: {
+{
+  config,
+  lib,
+  pkgs,
+  hostname,
+  ...
+}: {
   imports = [
     ./nix.nix
   ];
@@ -27,6 +33,6 @@
 
   users.users.domi = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = ["wheel"];
   };
 }

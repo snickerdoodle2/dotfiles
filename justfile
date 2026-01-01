@@ -8,3 +8,6 @@ deploy:
 
 check:
     nix flake check
+
+format:
+    nix fmt .
