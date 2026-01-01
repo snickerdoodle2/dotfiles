@@ -18,13 +18,6 @@
     displayManager.sddm.wayland.enable = true;
   };
 
-  users.users.domi.packages = [
-      pkgs.firefox
-      pkgs.helix
-      pkgs-unstable.jujutsu
-      pkgs.ghostty
-      pkgs.just
-  ];
 
   programs._1password.enable = true;
   programs._1password-gui = {
