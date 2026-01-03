@@ -1,6 +1,8 @@
 {
+  config,
   pkgs,
   pkgs-unstable,
+  lib,
   ...
 }: {
   home.packages = [
@@ -21,6 +23,22 @@
         default-command = ["log" "--reversed"];
         merge-editor = "mergiraf";
         diff-formatter = ["${pkgs.difftastic}/bin/difft" "--color=always" "$left" "$right"];
+        show-cryptographic-signatures = true;
+      };
+      signing = {
+        behavior = "own";
+        backend = "ssh";
+        key = config.ssh-key;
+        backends.ssh.program = "${lib.getExe' pkgs._1password-gui "op-ssh-sign"}";
+      };
+      template-aliases = {
+        "format_short_signature(signature)" = "signature.name()";
+        "format_short_cryptographic_signature(sig)" = ''
+          if(sig,
+            sig.status(),
+            "(no sig)",
+          )
+        '';
       };
     };
   };
