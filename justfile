@@ -6,6 +6,9 @@ command := if os() == "linux" { "sudo nixos-rebuild switch --flake ." } else { "
 deploy:
     {{command}}
 
+rollback:
+    {{command}} --rollback
+
 check:
     nix flake check
 
