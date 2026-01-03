@@ -21,12 +21,6 @@
     displayManager.sddm.wayland.enable = true;
   };
 
-  programs._1password.enable = true;
-  programs._1password-gui = {
-    enable = true;
-    polkitPolicyOwners = ["domi"];
-  };
-
   environment.systemPackages = with pkgs; [
     git
   ];
