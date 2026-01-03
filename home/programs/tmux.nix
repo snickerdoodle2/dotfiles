@@ -10,6 +10,7 @@ in {
     customPaneNavigationAndResize = true;
     keyMode = "vi";
     terminal = "tmux-256color";
+    mouse = true;
   };
   programs.tmux.plugins = [
     {
