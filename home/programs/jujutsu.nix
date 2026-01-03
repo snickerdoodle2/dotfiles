@@ -35,8 +35,8 @@
         "format_short_signature(signature)" = "signature.name()";
         "format_short_cryptographic_signature(sig)" = ''
           if(sig,
-            sig.status(),
-            "(no sig)",
+            "",
+            "",
           )
         '';
       };
