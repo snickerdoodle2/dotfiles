@@ -18,7 +18,8 @@ in {
       extraConfig = ''
         set -g @minimal-tmux-bg ${accent}
         set -g @minimal-tmux-fg "#11111b"
-        set -g @minimal-tmux-indicator-str " "
+        set -g @minimal-tmux-indicator-str "#S"
+        set -g @minimal-tmux-right false
         set -g pane-active-border-style fg=${accent}
         set -sg escape-time 0
       '';
