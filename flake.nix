@@ -9,6 +9,11 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    fonts = {
+      url = "git+ssh://git@github.com/snickerdoodle2/fonts?ref=main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -16,6 +21,7 @@
     nixpkgs,
     nixpkgs-unstable,
     home-manager,
+    fonts,
     ...
   } @ inputs: let
     systems = [
@@ -30,14 +36,13 @@
         hostname = "dominik-pc";
         system = "x86_64-linux";
         pkgs-unstable = import nixpkgs-unstable {inherit system;};
-        specialArgs = {inherit hostname pkgs-unstable;};
+        pkgs-fonts = fonts.packages.${system};
+        specialArgs = {inherit hostname pkgs-unstable pkgs-fonts;};
       in
         nixpkgs.lib.nixosSystem {
           inherit specialArgs system;
           modules = [
             ./hosts/dominik-pc
-            ./modules/nixos.nix
-            ./modules/podman.nix
 
             home-manager.nixosModules.home-manager
             {

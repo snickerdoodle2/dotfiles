@@ -1,12 +1,11 @@
 {
-  config,
   lib,
-  pkgs,
   hostname,
+  pkgs,
   ...
 }: {
   imports = [
-    ./nix.nix
+    ../nix.nix
   ];
 
   boot.loader.systemd-boot = {
@@ -26,13 +25,12 @@
     keyMap = "us";
   };
 
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
-
   users.users.domi = {
     isNormalUser = true;
     extraGroups = ["wheel"];
   };
+
+  environment.systemPackages = with pkgs; [
+    git
+  ];
 }
