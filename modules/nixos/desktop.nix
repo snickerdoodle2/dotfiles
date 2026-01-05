@@ -1,4 +1,8 @@
-{pkgs-fonts, ...}: {
+{
+  pkgs,
+  pkgs-fonts,
+  ...
+}: {
   services.pipewire = {
     enable = true;
     pulse.enable = true;
@@ -9,6 +13,10 @@
     displayManager.sddm.enable = true;
     displayManager.sddm.wayland.enable = true;
   };
+
+  environment.systemPackages = [
+    pkgs.wl-clipboard
+  ];
 
   fonts.packages = [
     pkgs-fonts.berkeley-mono
