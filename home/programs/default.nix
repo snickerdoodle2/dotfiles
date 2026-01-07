@@ -5,5 +5,6 @@
     ./helix
     ./jujutsu.nix
     ./tmux.nix
+    ./yazi
   ];
 }

@@ -2,7 +2,22 @@
   pkgs,
   pkgs-unstable,
   ...
-}: {
+}: let
+  open_yazi = projectRoot: let
+    root-env =
+      if projectRoot
+      then "YAZI_GO_ROOT=1"
+      else "";
+
+    tmp-file = "/tmp/yazi-path";
+  in [
+    ":sh rm -f ${tmp-file}"
+    ":insert-output YAZI_INSIDE_EDITOR=1 ${root-env} yazi \"%{buffer_name}\" --chooser-file=${tmp-file}"
+    ":sh printf \"\\x1b[?1049h\\x1b[?2004h\" > /dev/tty"
+    ":open %sh{cat ${tmp-file}}"
+    ":redraw"
+  ];
+in {
   imports = [
     ./languages.nix
   ];
@@ -65,7 +80,8 @@
       ret = "goto_word";
       space = {
         K = ":toggle-option inline-diagnostics.cursor-line disable error";
-        E = "no_op";
+        e = open_yazi true;
+        E = open_yazi false;
       };
     };
     select = {
