@@ -5,7 +5,6 @@ in {
     enable = true;
     baseIndex = 1;
     prefix = "C-Space";
-    newSession = true;
     secureSocket = true;
     customPaneNavigationAndResize = true;
     keyMode = "vi";
@@ -31,6 +30,7 @@ in {
     unbind %
     bind \\ split-window -h -c "#{pane_current_path}"
     bind - split-window -v -c "#{pane_current_path}"
+    bind c new-window -c "#{pane_current_path}"
 
     set-window-option -g mode-keys vi
     bind-key -T copy-mode-vi v send-keys -X begin-selection
