@@ -14,3 +14,6 @@ check:
 
 format:
     nix fmt .
+
+prefetch url:
+    nix develop -c nurl {{url}}

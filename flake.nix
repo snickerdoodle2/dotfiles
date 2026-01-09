@@ -24,12 +24,31 @@
     fonts,
     ...
   } @ inputs: let
+    lib = nixpkgs.lib;
     systems = [
       "x86_64-linux"
     ];
-    forAllSystems = nixpkgs.lib.genAttrs systems;
+
+    pkgsFor = lib.genAttrs systems (system:
+      import nixpkgs {
+        inherit system;
+      });
+
+    forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
+    forAllSystems = lib.genAttrs systems;
   in {
-    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+    formatter = forEachSystem (pkgs: pkgs.alejandra);
+
+    devShells = forAllSystems (system: let
+      pkgs = nixpkgs.legacyPackages.${system};
+    in {
+      default = pkgs.mkShell {
+        nativeBuildInputs = [
+          pkgs.nurl
+          pkgs.just
+        ];
+      };
+    });
 
     nixosConfigurations = {
       dominik-pc = let
