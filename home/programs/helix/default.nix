@@ -80,8 +80,8 @@ in {
       ret = "goto_word";
       space = {
         K = ":toggle-option inline-diagnostics.cursor-line disable error";
-        e = open_yazi true;
-        E = open_yazi false;
+        e = open_yazi false;
+        E = open_yazi true;
       };
     };
     select = {
