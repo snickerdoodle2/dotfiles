@@ -20,10 +20,19 @@
         email = "63516830+snickerdoodle2@users.noreply.github.com";
       };
       ui = {
-        default-command = ["log" "--reversed"];
+        default-command = ["status"];
         merge-editor = "mergiraf";
         diff-formatter = ["${pkgs.difftastic}/bin/difft" "--color=always" "$left" "$right"];
         show-cryptographic-signatures = true;
+      };
+      aliases = {
+        tug = ["bookmark" "move" "--from" "heads(::@ & bookmarks())" "--to" "closest_pushable(@)"];
+      };
+      revsets = {
+        log = "(trunk()..@):: | (trunk()..@)-";
+      };
+      revset-aliases = {
+        "closest_pushable(to)" = ''heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'';
       };
       signing = {
         behavior = "own";
