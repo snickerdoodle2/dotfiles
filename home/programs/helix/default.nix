@@ -28,6 +28,8 @@ in {
     defaultEditor = true;
     extraPackages = with pkgs; [
       nil
+      harper
+      marksman
     ];
   };
 

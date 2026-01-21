@@ -8,5 +8,13 @@
       };
       auto-format = true;
     }
+    {
+      name = "markdown";
+      language-servers = ["marksman" "markdown-oxide" "harper-ls"];
+    }
+    {
+      name = "jjdescription";
+      language-servers = ["harper-ls"];
+    }
   ];
 }
