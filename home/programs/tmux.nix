@@ -1,4 +1,8 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  tsm,
+  ...
+}: let
   accent = "\"#a6e3a1\"";
 in {
   programs.tmux = {
@@ -31,6 +35,8 @@ in {
     bind \\ split-window -h -c "#{pane_current_path}"
     bind - split-window -v -c "#{pane_current_path}"
     bind c new-window -c "#{pane_current_path}"
+
+    bind s display-popup -B -E ${tsm.default}/bin/tsm
 
     set-window-option -g mode-keys vi
     bind-key -T copy-mode-vi v send-keys -X begin-selection

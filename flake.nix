@@ -14,6 +14,11 @@
       url = "git+ssh://git@github.com/snickerdoodle2/fonts?ref=main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    tsm = {
+      url = "github:snickerdoodle2/tsm/main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -56,7 +61,8 @@
         system = "x86_64-linux";
         pkgs-unstable = import nixpkgs-unstable {inherit system;};
         pkgs-fonts = fonts.packages.${system};
-        specialArgs = {inherit hostname pkgs-unstable pkgs-fonts;};
+        tsm = inputs.tsm.packages.${system};
+        specialArgs = {inherit hostname pkgs-unstable pkgs-fonts tsm;};
       in
         nixpkgs.lib.nixosSystem {
           inherit specialArgs system;
