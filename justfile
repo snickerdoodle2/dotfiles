@@ -1,19 +1,25 @@
 @_default:
     just --list
 
-command := if os() == "linux" { "sudo nixos-rebuild switch --flake ." } else { "@echo UNKNOWN OS" }
-
+[linux]
+[group: "deployment"]
 deploy:
-    {{command}}
+    sudo nixos-rebuild switch --flake .
 
+[linux]
+[group: "deployment"]
+[confirm]
 rollback:
-    {{command}} --rollback
+    sudo nixos-rebuild switch --flake . --rollback
 
+[group: "utils"]
 check:
     nix flake check
 
+[group: "utils"]
 format:
     nix fmt .
 
+[group: "utils"]
 prefetch url:
     nix develop -c nurl {{url}}
