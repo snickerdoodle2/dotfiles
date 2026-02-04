@@ -1,5 +1,14 @@
-{lib, ...}: {
+{
+  lib,
+  inputs,
+  ...
+}: {
   nixpkgs.config.allowUnfree = lib.mkDefault false;
+
+  nix.registry = {
+    nixpkgs.flake = inputs.nixpkgs;
+    unstable.flake = inputs.nixpkgs-unstable;
+  };
 
   nix.settings = {
     experimental-features = ["nix-command" "flakes" "pipe-operators"];

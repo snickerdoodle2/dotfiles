@@ -62,7 +62,7 @@
         pkgs-unstable = import nixpkgs-unstable {inherit system;};
         pkgs-fonts = fonts.packages.${system};
         tsm = inputs.tsm.packages.${system};
-        specialArgs = {inherit hostname pkgs-unstable pkgs-fonts tsm;};
+        specialArgs = {inherit hostname pkgs-unstable pkgs-fonts tsm inputs;};
       in
         nixpkgs.lib.nixosSystem {
           inherit specialArgs system;
