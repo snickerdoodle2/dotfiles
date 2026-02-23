@@ -24,6 +24,7 @@ in {
         font-family = "Berkeley Mono";
         font-style = "Medium";
         font-style-bold = "Bold";
+        window-decoration = "none";
         command = "${config.programs.tmux.package}/bin/tmux new-session -A -s main";
         confirm-close-surface = false;
         keybind = [
