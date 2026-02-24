@@ -1,0 +1,1449 @@
+[mgr.cwd]
+fg = "#a6e3a1"
+bold = true
+
+[mgr.find_keyword]
+fg = "#f9e2af"
+italic = true
+
+[mgr.find_position]
+fg = "#cdd6f4"
+italic = true
+
+[mgr.marker_copied]
+fg = "#a6e3a1"
+bg = "#a6e3a1"
+
+[mgr.marker_cut]
+fg = "#f38ba8"
+bg = "#f38ba8"
+
+[mgr.marker_selected]
+fg = "#89b4fa"
+bg = "#89b4fa"
+
+[mgr.count_copied]
+fg = "#11111b"
+bg = "#a6e3a1"
+
+[mgr.count_cut]
+fg = "#11111b"
+bg = "#f38ba8"
+
+[mgr.count_selected]
+fg = "#11111b"
+bg = "#89b4fa"
+
+[indicator.parent]
+bg = "#313244"
+
+[indicator.current]
+bg = "#313244"
+
+[indicator.preview]
+bg = "#313244"
+
+[indicator.padding]
+open = "█"
+close = "█"
+
+[tabs.active]
+fg = "#11111b"
+bg = "#a6e3a1"
+bold = true
+
+[tabs.inactive]
+bg = "reset"
+italic = true
+
+[tabs.sep_inner]
+open = ""
+close = ""
+
+[tabs.sep_outer]
+open = " "
+close = " "
+
+[mode.normal_main]
+fg = "#11111b"
+bg = "#f5e0dc"
+bold = true
+
+[mode.normal_alt]
+fg = "#cdd6f4"
+bg = "#181825"
+
+[mode.select_main]
+fg = "#11111b"
+bg = "#89b4fa"
+bold = true
+
+[mode.select_alt]
+fg = "#cdd6f4"
+bg = "#181825"
+
+[mode.unset_main]
+fg = "#11111b"
+bg = "#f38ba8"
+bold = true
+
+[mode.unset_alt]
+fg = "#cdd6f4"
+bg = "#181825"
+
+[status.sep_left]
+open = ""
+close = ""
+
+[status.sep_right]
+open = ""
+close = ""
+
+[status.perm_type]
+fg = "#cba6f7"
+bold = true
+
+[status.perm_read]
+fg = "#a6e3a1"
+bold = true
+
+[status.perm_write]
+fg = "#f9e2af"
+bold = true
+
+[status.perm_exec]
+fg = "#f38ba8"
+bold = true
+
+[status.progress_normal]
+bg = "#181825"
+italic = true
+
+[status.progress_error]
+bg = "#f38ba8"
+fg = "#11111b"
+bold = true
+
+[which]
+separator = " "
+
+[which.mask]
+bg = "#11111b"
+
+[which.cand]
+fg = "#a6e3a1"
+bold = true
+
+# TODO: which.rest ??
+[which.desc]
+fg = "#a6adc8"
+italic = true
+
+# TODO: rest options
+
+[filetype]
+rules = [
+  { url = "*", is = "orphan", fg = "#f38ba8" },
+  { url = "*", fg = "#cdd6f4" },
+  { url = "*/", fg = "#89b4fa" }
+]
+
+# NOTE: Icons taken from https://github.com/nvim-mini/mini.icons
+#
+# Helix macro to replace colors (yank it into '@' register).
+# This macro assumes that `Mini...` string with color is at the top of the file.
+# gswlmi<S-W>*f#mi<S-W>"cy%s<ret><A-,>gl<S-F>=f'mi'lmi'"cr<esc>"cr<esc>"c<S-R><esc>ggnjgs
+#
+# MiniIconsCyan - #74c7ec - sapphire
+# MiniIconsOrange - #fab387 - peach
+# MiniIconsAzure - #b4befe - lavender
+# MiniIconsGreen - #a6e3a1 - green
+# MiniIconsYellow - #f9e2af - yellow
+# MiniIconsGrey - #6c7086 - overlay 0
+# MiniIconsPurple - #cba6f7 - mauve
+# MiniIconsBlue - #89b4fa - blue
+# MiniIconsRed - #f38ba8 - red
+[icon]
+dirs = [
+  { name = ".cache",       text = '󰪺', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = ".config",      text = '󱁿', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = ".git",         text = '', fg = '#fab387' }, # MiniIconsOrange
+  { name = ".github",      text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = ".local",       text = '󰉌', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = ".vim",         text = '󰉋', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "AppData",      text = '󰉌', fg = '#fab387' }, # MiniIconsOrange
+  { name = "Applications", text = '󱧺', fg = '#fab387' }, # MiniIconsOrange
+  { name = "autoload",     text = '󱁽', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "bin",          text = '󱧺', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "boot",         text = '󰴋', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "build",        text = '󱧼', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "colors",       text = '󱁽', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "compiler",     text = '󱁽', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "Desktop",      text = '󰚝', fg = '#fab387' }, # MiniIconsOrange
+  { name = "dev",          text = '󱧼', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "doc",          text = '󱂷', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "docs",         text = '󱂷', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "Documents",    text = '󱧶', fg = '#fab387' }, # MiniIconsOrange
+  { name = "Downloads",    text = '󰉍', fg = '#fab387' }, # MiniIconsOrange
+  { name = "etc",          text = '󱁿', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "Favorites",    text = '󱃪', fg = '#fab387' }, # MiniIconsOrange
+  { name = "ftdetect",     text = '󱁽', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "ftplugin",     text = '󱁽', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "home",         text = '󱂵', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "indent",       text = '󱁽', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "keymap",       text = '󱁽', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "lang",         text = '󱁽', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "lib",          text = '󰲂', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "Library",      text = '󰲂', fg = '#fab387' }, # MiniIconsOrange
+  { name = "lsp",          text = '󱁽', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "lua",          text = '󰉋', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "media",        text = '󱧺', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "mnt",          text = '󰉓', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "Music",        text = '󱍙', fg = '#fab387' }, # MiniIconsOrange
+  { name = "Network",      text = '󰡰', fg = '#fab387' }, # MiniIconsOrange
+  { name = "node_modules", text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "nvim",         text = '󰉋', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "opt",          text = '󰉗', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "pack",         text = '󱁽', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "parser",       text = '󱁽', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "Pictures",     text = '󰉏', fg = '#fab387' }, # MiniIconsOrange
+  { name = "plugin",       text = '󱁽', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "proc",         text = '󰢬', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "ProgramData",  text = '󰉌', fg = '#fab387' }, # MiniIconsOrange
+  { name = "Public",       text = '󱧰', fg = '#fab387' }, # MiniIconsOrange
+  { name = "queries",      text = '󱁽', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "root",         text = '󰷌', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "rplugin",      text = '󱁽', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "sbin",         text = '󱧺', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "snippets",     text = '󱁽', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "spell",        text = '󱁽', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "src",          text = '󰴉', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "srv",          text = '󱋣', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "syntax",       text = '󱁽', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "System",       text = '󱧼', fg = '#fab387' }, # MiniIconsOrange
+  { name = "Templates",    text = '󱋣', fg = '#fab387' }, # MiniIconsOrange
+  { name = "test",         text = '󱞊', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "tests",        text = '󱞊', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "tmp",          text = '󰪺', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "Trash",        text = '󱧴', fg = '#fab387' }, # MiniIconsOrange
+  { name = "tutor",        text = '󱁽', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "Users",        text = '󰉌', fg = '#fab387' }, # MiniIconsOrange
+  { name = "usr",          text = '󰉌', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "var",          text = '󱋣', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "Videos",       text = '󱞊', fg = '#fab387' }, # MiniIconsOrange
+  { name = "Volumes",      text = '󰉓', fg = '#fab387' }, # MiniIconsOrange
+]
+
+files = [
+  { name = ".bash_profile",       text = '󰒓', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = ".bashrc",             text = '󰒓', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = ".containerignore",    text = '󰒓', fg = '#6c7086' }, # MiniIconsGrey
+  { name = ".dockerignore",       text = '󰡨', fg = '#fab387' }, # MiniIconsOrange
+  { name = ".DS_Store",           text = '󰒓', fg = '#f38ba8' }, # MiniIconsRed
+  { name = ".fdignore",           text = '󰒓', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = ".git",                text = '󰊢', fg = '#fab387' }, # MiniIconsOrange
+  { name = ".gitkeep",            text = '󰊢', fg = '#f38ba8' }, # MiniIconsRed
+  { name = ".gitlab-ci.yml",      text = '󰮠', fg = '#fab387' }, # MiniIconsOrange
+  { name = ".gitolite.rc",        text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = ".ignore",             text = '󰒓', fg = '#6c7086' }, # MiniIconsGrey
+  { name = ".indent.pro",         text = '󰉶', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = ".justfile",           text = '󰖷', fg = '#fab387' }, # MiniIconsOrange
+  { name = ".mailmap",            text = '󰊢', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = ".npmignore",          text = '󰒓', fg = '#6c7086' }, # MiniIconsGrey
+  { name = ".nvmrc",              text = '󰒓', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = ".oelint.cfg",         text = '󰯂', fg = '#b4befe' }, # MiniIconsAzure
+  { name = ".prettierignore",     text = '', fg = '#fab387' }, # MiniIconsOrange
+  { name = ".rgignore",           text = '󰒓', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = ".vscodeignore",       text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = ".wakatime.cfg",       text = '󰯂', fg = '#b4befe' }, # MiniIconsAzure
+  { name = ".xinitrc",            text = '󰒓', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = ".zshrc",              text = '󰒓', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "auto.master",         text = '󰒓', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "build.xml",           text = '󰫮', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "CHANGELOG",           text = '󰉻', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "CHANGELOG.md",        text = '󰉻', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "cm3.cfg",             text = '󰫺', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "CMakeCache.txt",      text = '󱁤', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "CMakeLists.txt",      text = '󱁤', fg = '#fab387' }, # MiniIconsOrange
+  { name = "CODE_OF_CONDUCT",     text = '󱃱', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "CODE_OF_CONDUCT.md",  text = '󱃱', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "CODEOWNERS",          text = '󰜻', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "config.ld",           text = '󰢱', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "constraints.txt",     text = '󱘎', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "CONTRIBUTING",        text = '󰺾', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "CONTRIBUTING.md",     text = '󰺾', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "example.gitolite.rc", text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "FUNDING.yml",         text = '󰇁', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "gitolite.rc",         text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "GNUmakefile.am",      text = '󱁤', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "go.sum",              text = '󰟓', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "go.work.sum",         text = '󰟓', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "indent.pro",          text = '󰉶', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "init.lua",            text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "ipf.rules",           text = '󰒓', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "justfile",            text = '󰖷', fg = '#fab387' }, # MiniIconsOrange
+  { name = "makefile",            text = '󱁤', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "LICENSE",             text = '', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "LICENSE.md",          text = '', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "LICENSE.txt",         text = '', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "lltxxxxx.txt",        text = '󰫴', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "lynx.cfg",            text = '󰒓', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "main.cf.proto",       text = '󰒓', fg = '#fab387' }, # MiniIconsOrange
+  { name = "makefile.am",         text = '󱁤', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "maxima-init.mac",     text = '󰫺', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "meson_options.txt",   text = '󰫺', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "NEWS",                text = '󰎕', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "NEWS.md",             text = '󰎕', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "PKGBUILD",            text = '󱁤', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "pudb.cfg",            text = '󰯂', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "README",              text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "README.md",           text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "README.txt",          text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "requirements.txt",    text = '󱘎', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "robots.txt",          text = '󰚩', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "setup.cfg",           text = '󰯂', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "tclsh.rc",            text = '󰛓', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "TODO",                text = '󰝖', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "TODO.md",             text = '󰝖', fg = '#cba6f7' }, # MiniIconsPurple
+]
+
+
+exts = [
+  { name = "-sst",                text = '󰬀', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "3gp",                 text = '󰈫', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "4gh",                 text = '󰫳', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "4gl",                 text = '󰫳', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "4th",                 text = '󰬽', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "7z",                  text = '󰗄', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "8th",                 text = '󰭁', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "_sst",                text = '󰬀', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "a",                   text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "a43",                 text = '󰋘', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "a65",                 text = '', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "a90",                 text = '󰋘', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "aac",                 text = '󰈣', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "aap",                 text = '󰫮', fg = '#fab387' }, # MiniIconsOrange
+  { name = "abap",                text = '󰫮', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "abc",                 text = '󰝚', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "abl",                 text = '󰫮', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "ace",                 text = '󰫹', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "aconfig",             text = '󰈚', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "action",              text = '󰫽', fg = '#fab387' }, # MiniIconsOrange
+  { name = "ad",                  text = '󰒓', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "ada",                 text = '󱁷', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "adb",                 text = '󱁷', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "ado",                 text = '󰝫', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "adoc",                text = '󰪶', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "ads",                 text = '󱁷', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "afm",                 text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "ahk",                 text = '󰫮', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "ai",                  text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "aidl",                text = '󰫮', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "aif",                 text = '󰈣', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "al",                  text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "am",                  text = '󰫲', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "aml",                 text = '󰫮', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "applescript",         text = '󰀵', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "arr",                 text = '󰫽', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "art",                 text = '󰫮', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "as",                  text = '󰫮', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "asa",                 text = '󰫮', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "asciidoc",            text = '󰪶', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "asd",                 text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "asm",                 text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "asn",                 text = '󰫮', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "asn1",                text = '󰫮', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "ass",                 text = '󰨖', fg = '#fab387' }, # MiniIconsOrange
+  { name = "astro",               text = '', fg = '#fab387' }, # MiniIconsOrange
+  { name = "asy",                 text = '󰫮', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "at",                  text = '󰒓', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "atg",                 text = '󰫰', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "atl",                 text = '󰫮', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "atom",                text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "au3",                 text = '󰫮', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "aux",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "ave",                 text = '󰫮', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "avi",                 text = '󰈫', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "awk",                 text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "bash",                text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "bass",                text = '󰋄', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "bat",                 text = '󰯂', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "bats",                text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "bazel",               text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "bb",                  text = '󰃫', fg = '#fab387' }, # MiniIconsOrange
+  { name = "bbappend",            text = '󰃫', fg = '#fab387' }, # MiniIconsOrange
+  { name = "bbclass",             text = '󰃫', fg = '#fab387' }, # MiniIconsOrange
+  { name = "bbl",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "bbx",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "bc",                  text = '󰫯', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "bd",                  text = '󰘦', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "bda",                 text = '󰘦', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "bdf",                 text = '󰛖', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "beamer",              text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "beancount",           text = '󰫯', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "bib",                 text = '󱉟', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "bicep",               text = '', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "bl",                  text = '󰫯', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "blp",                 text = '󰠡', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "bmp",                 text = '󰈟', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "bp",                  text = '󰫯', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "brf",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "bsd",                 text = '󰫯', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "bsdl",                text = '󰫯', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "bst",                 text = '󰫯', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "BUILD",               text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "builder",             text = '󰴭', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "bxl",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "bxml",                text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "bz",                  text = '󰗄', fg = '#fab387' }, # MiniIconsOrange
+  { name = "bz2",                 text = '󰗄', fg = '#fab387' }, # MiniIconsOrange
+  { name = "bz3",                 text = '󰗄', fg = '#fab387' }, # MiniIconsOrange
+  { name = "bzl",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "c",                   text = '󰙱', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "C",                   text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "c++",                 text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "c++m",                text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "cabal",               text = '󰲒', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "cairo",               text = '󰫰', fg = '#fab387' }, # MiniIconsOrange
+  { name = "cake",                text = '󰌛', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "capnp",               text = '󰫰', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "cast",                text = '󰈫', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "cbl",                 text = '󱌼', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "cbx",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "cc",                  text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "ccm",                 text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "cdc",                 text = '󰻫', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "cdf",                 text = '󰬀', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "cdl",                 text = '󰫰', fg = '#fab387' }, # MiniIconsOrange
+  { name = "cdxml",               text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "cedar",               text = '󰐅', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "cer",                 text = '󰌇', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "cfc",                 text = '󰫰', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "cfg",                 text = '󰒓', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "cfi",                 text = '󰫰', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "cfm",                 text = '󰫰', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "ch",                  text = '󰹳', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "chai",                text = '󰶞', fg = '#fab387' }, # MiniIconsOrange
+  { name = "chatito",             text = '󰫰', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "chf",                 text = '󰫰', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "cho",                 text = '󰫰', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "chopro",              text = '󰫰', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "chordpro",            text = '󰫰', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "chs",                 text = '󰲒', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "cjs",                 text = '󰌞', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "ck",                  text = '󰫰', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "cl",                  text = '󰫰', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "clj",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "cljc",                text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "cljs",                text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "cljx",                text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "clo",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "clp",                 text = '󰫷', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "cm",                  text = '󰬃', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "cmake",               text = '󱁤', fg = '#fab387' }, # MiniIconsOrange
+  { name = "cmm",                 text = '󰬁', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "cmmt",                text = '󰬁', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "cmod",                text = '󰫰', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "cob",                 text = '󱌼', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "comp",                text = '󰫴', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "con",                 text = '󰫰', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "cook",                text = '󰆘', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "corn",                text = '󰞸', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "cpon",                text = '󰫰', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "cpp",                 text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "cppm",                text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "cppobjdump",          text = '󰫼', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "cpt",                 text = '󰌝', fg = '#fab387' }, # MiniIconsOrange
+  { name = "cpy",                 text = '󰌠', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "cql",                 text = '󰫰', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "cr",                  text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "crd",                 text = '󰫰', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "crdpro",              text = '󰫰', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "crm",                 text = '󰫰', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "crt",                 text = '󰌇', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "cs",                  text = '󰌛', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "csc",                 text = '󰫰', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "csdl",                text = '󰫰', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "csh",                 text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "cshtml",              text = '󰌝', fg = '#fab387' }, # MiniIconsOrange
+  { name = "csp",                 text = '󰫰', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "csproj",              text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "csr",                 text = '󰌇', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "css",                 text = '󰌜', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "csv",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "csx",                 text = '󰌛', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "ctags",               text = '󰒓', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "ctl",                 text = '󰛤', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "ctp",                 text = '󰌟', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "cts",                 text = '󰛦', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "cu",                  text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "cue",                 text = '󰝚', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "cuh",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "cxx",                 text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "cxxm",                text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "cygport",             text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "cyn",                 text = '󰙲', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "cypher",              text = '󰫰', fg = '#fab387' }, # MiniIconsOrange
+  { name = "d",                   text = '󰫱', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "dart",                text = '', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "dcd",                 text = '󰫱', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "DEF",                 text = '󰫺', fg = '#fab387' }, # MiniIconsOrange
+  { name = "desc",                text = '󰫱', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "desktop",             text = '󰍹', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "dfy",                 text = '󰫱', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "dhall",               text = '󰏪', fg = '#fab387' }, # MiniIconsOrange
+  { name = "diff",                text = '󰦓', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "directory",           text = '󰍹', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "dm1",                 text = '󰫺', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "dm2",                 text = '󰫺', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "dm3",                 text = '󰫺', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "dmt",                 text = '󰫺', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "do",                  text = '󰝫', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "dob",                 text = '󰛤', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "doc",                 text = '󱎒', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "Dockerfile",          text = '󰡨', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "dockerfile",          text = '󰡨', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "docm",                text = '󱎒', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "docx",                text = '󱎒', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "dot",                 text = '󱁉', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "dot",                 text = '󱎒', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "dotx",                text = '󱎒', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "dpr",                 text = '󱤊', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "drac",                text = '󰭟', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "drc",                 text = '󰭟', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "drt",                 text = '', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "ds",                  text = '󰫱', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "dsm",                 text = '󰛤', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "dsr",                 text = '󰛤', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "dtd",                 text = '󰫱', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "dtml",                text = '󰌝', fg = '#fab387' }, # MiniIconsOrange
+  { name = "dts",                 text = '󰫱', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "dtsi",                text = '󰫱', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "dtso",                text = '󰫱', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "dtx",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "dylan",               text = '󰫱', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "ebuild",              text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "ec",                  text = '󰆼', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "ecd",                 text = '󰫲', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "eclass",              text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "edf",                 text = '󰫲', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "edif",                text = '󰫲', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "edo",                 text = '󰫲', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "eex",                 text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "el",                  text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "elm",                 text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "elv",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "eml",                 text = '󰇮', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "eni",                 text = '󰫰', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "env",                 text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "envrc",               text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "epp",                 text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "epro",                text = '󰙱', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "eps",                 text = '', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "eps",                 text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "eps_tex",             text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "epsf",                text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "epsi",                text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "erb",                 text = '󰴭', fg = '#fab387' }, # MiniIconsOrange
+  { name = "erl",                 text = '', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "errsum",              text = '󰫵', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "es",                  text = '󰌞', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "esdl",                text = '󰆼', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "ev",                  text = '󰫵', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "exe",                 text = '󰖳', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "exp",                 text = '󰫲', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "exs",                 text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "exs",                 text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "eyaml",               text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "F",                   text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "F03",                 text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "f03",                 text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "F08",                 text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "f08",                 text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "F77",                 text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "f77",                 text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "F90",                 text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "f90",                 text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "F95",                 text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "f95",                 text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "factor",              text = '󰫳', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "fal",                 text = '󱗆', fg = '#fab387' }, # MiniIconsOrange
+  { name = "fan",                 text = '󰫳', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "fb",                  text = '󰫳', fg = '#fab387' }, # MiniIconsOrange
+  { name = "fc",                  text = '󰫳', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "fdr",                 text = '󰫰', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "feature",             text = '󰫰', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "fex",                 text = '󰫳', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "filter",              text = '󰫽', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "fir",                 text = '󰫳', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "fish",                text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "flac",                text = '󰈣', fg = '#fab387' }, # MiniIconsOrange
+  { name = "fnl",                 text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "fnlm",                text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "focexec",             text = '󰫳', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "FOR",                 text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "for",                 text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "fortran",             text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "fpc",                 text = '󱁤', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "FPP",                 text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "fpp",                 text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "frag",                text = '󰫴', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "frt",                 text = '󰫿', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "fsh",                 text = '󰫳', fg = '#fab387' }, # MiniIconsOrange
+  { name = "fsi",                 text = '', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "fsl",                 text = '󰫳', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "fsproj",              text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "fsx",                 text = '', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "ft",                  text = '󰬽', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "fth",                 text = '󰬽', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "FTN",                 text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "ftn",                 text = '󱈚', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "fusion",              text = '󰫳', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "fwt",                 text = '󰫳', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "g",                   text = '󰫽', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "g4",                  text = '󰫮', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "gawk",                text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "gd",                  text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "gdb",                 text = '󰈺', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "gdmo",                text = '󰫴', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "gdshader",            text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "ged",                 text = '󰫴', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "gemini",              text = '󰪁', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "gemspec",             text = '󰴭', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "geojson",             text = '󰘦', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "geom",                text = '󰫴', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "gif",                 text = '󰵸', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "gift",                text = '󰹄', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "gjs",                 text = '󰌞', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "gleam",               text = '󰦥', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "glsl",                text = '󰫴', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "gmi",                 text = '󰪁', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "gn",                  text = '󰫴', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "gni",                 text = '󰫴', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "gnuplot",             text = '󰺒', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "go",                  text = '󰟓', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "gp",                  text = '󰫴', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "gpi",                 text = '󰺒', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "gpr",                 text = '󱁷', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "gql",                 text = '󰡷', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "gradle",              text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "graphql",             text = '󰡷', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "graphqls",            text = '󰡷', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "gretl",               text = '󰫴', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "groff",               text = '󰫴', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "groovy",              text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "gs",                  text = '󰫴', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "gsp",                 text = '󰫴', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "gts",                 text = '󰛦', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "gv",                  text = '󱁉', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "gyp",                 text = '󰫴', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "gypi",                text = '󰫴', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "gz",                  text = '󰗄', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "h",                   text = '󰙱', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "H",                   text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "h",                   text = '󰫵', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "h32",                 text = '󰋘', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "h80",                 text = '󰋘', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "h86",                 text = '󰋘', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "ha",                  text = '󰫵', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "hack",                text = '󰫵', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "hackpartial",         text = '󰫵', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "haml",                text = '󰅴', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "hb",                  text = '󰫵', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "hbs",                 text = '󰌞', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "hcl",                 text = '󰫵', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "hdl",                 text = '󰍛', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "heex",                text = '', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "hex",                 text = '󰋘', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "hgrc",                text = '󰒓', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "hh",                  text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "hjson",               text = '󰘦', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "hlp",                 text = '󰄨', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "hog",                 text = '󰫵', fg = '#fab387' }, # MiniIconsOrange
+  { name = "hoon",                text = '󰫵', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "hpp",                 text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "hrl",                 text = '', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "hs",                  text = '󰲒', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "hs-boot",             text = '󰲒', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "hsc",                 text = '󰲒', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "hsig",                text = '󰲒', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "hsm",                 text = '󰫵', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "ht",                  text = '󰫵', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "htb",                 text = '󰫵', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "htm",                 text = '󰌝', fg = '#fab387' }, # MiniIconsOrange
+  { name = "html",                text = '󰌝', fg = '#fab387' }, # MiniIconsOrange
+  { name = "htpp",                text = '󰫵', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "htt",                 text = '󰫵', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "http",                text = '󰌷', fg = '#fab387' }, # MiniIconsOrange
+  { name = "hurl",                text = '󰫵', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "hws",                 text = '󰓎', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "hxx",                 text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "i3",                  text = '󰫺', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "iba",                 text = '󰫶', fg = '#fab387' }, # MiniIconsOrange
+  { name = "ibi",                 text = '󰫶', fg = '#fab387' }, # MiniIconsOrange
+  { name = "ice",                 text = '󰧻', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "icl",                 text = '󰫰', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "icn",                 text = '󰫶', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "idr",                 text = '󰫶', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "ig",                  text = '󰫺', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "ih",                  text = '󰫽', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "ihe",                 text = '󰋘', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "ihex",                text = '󰋘', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "ihlp",                text = '󰄨', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "ihx",                 text = '󰋘', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "ii",                  text = '󰫶', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "ijs",                 text = '󰫷', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "il",                  text = '󰬀', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "ils",                 text = '󰬀', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "ily",                 text = '󱎦', fg = '#fab387' }, # MiniIconsOrange
+  { name = "imata",               text = '󰝫', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "imp",                 text = '󰫯', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "ind",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "INF",                 text = '󰫶', fg = '#fab387' }, # MiniIconsOrange
+  { name = "inf",                 text = '󰫶', fg = '#fab387' }, # MiniIconsOrange
+  { name = "INI",                 text = '󰯂', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "ini",                 text = '󰯂', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "inko",                text = '󱗆', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "inl",                 text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "ino",                 text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "ins",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "int",                 text = '󰋘', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "intr",                text = '󰫱', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "ipd",                 text = '', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "ipkg",                text = '󰫶', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "ipp",                 text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "ipy",                 text = '󰌠', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "ipynb",               text = '󰘦', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "ipynb",               text = '󰠮', fg = '#fab387' }, # MiniIconsOrange
+  { name = "isc",                 text = '󰫺', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "iss",                 text = '󰏗', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "ist",                 text = '󰫶', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "it",                  text = '󰫽', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "itcl",                text = '󰛓', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "itk",                 text = '󰛓', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "its",                 text = '󰫱', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "ixx",                 text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "j73",                 text = '󰫷', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "jacl",                text = '󰛓', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "JAL",                 text = '󰫷', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "jal",                 text = '󰫷', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "janet",               text = '󰫷', fg = '#fab387' }, # MiniIconsOrange
+  { name = "jav",                 text = '󰬷', fg = '#fab387' }, # MiniIconsOrange
+  { name = "java",                text = '󰬷', fg = '#fab387' }, # MiniIconsOrange
+  { name = "javascript",          text = '󰌞', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "jgr",                 text = '󰫷', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "jinja",               text = '', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "jj",                  text = '󰬷', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "jjt",                 text = '󰬷', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "jl",                  text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "journal",             text = '󱪹', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "jov",                 text = '󰫷', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "jovial",              text = '󰫷', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "jpeg",                text = '󰈥', fg = '#fab387' }, # MiniIconsOrange
+  { name = "jpg",                 text = '󰈥', fg = '#fab387' }, # MiniIconsOrange
+  { name = "jpl",                 text = '󰫷', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "jpr",                 text = '󰫷', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "jq",                  text = '󰘦', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "jrexx",               text = '󰫿', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "js",                  text = '󰌞', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "jsh",                 text = '󰬷', fg = '#fab387' }, # MiniIconsOrange
+  { name = "jsm",                 text = '󰌞', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "json",                text = '󰘦', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "json-patch",          text = '󰘦', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "json5",               text = '󰘦', fg = '#fab387' }, # MiniIconsOrange
+  { name = "jsonc",               text = '󰘦', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "jsonl",               text = '󰘦', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "jsonnet",             text = '󰫷', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "jsonp",               text = '󰘦', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "jsp",                 text = '󰫷', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "jsx",                 text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "jupyterlab-settings", text = '󰘦', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "k",                   text = '󰫸', fg = '#fab387' }, # MiniIconsOrange
+  { name = "kdl",                 text = '󰫸', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "keymap",              text = '󰫱', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "kix",                 text = '󰫸', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "ks",                  text = '󰫸', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "kt",                  text = '󱈙', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "ktm",                 text = '󱈙', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "kts",                 text = '󱈙', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "kv",                  text = '󰫸', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "kyaml",               text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "kyml",                text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "L",                   text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "l",                   text = '󰫹', fg = '#fab387' }, # MiniIconsOrange
+  { name = "l++",                 text = '󰫹', fg = '#fab387' }, # MiniIconsOrange
+  { name = "la",                  text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "lai",                 text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "latex",               text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "latte",               text = '󰅶', fg = '#fab387' }, # MiniIconsOrange
+  { name = "lc",                  text = '󰘧', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "ld",                  text = '󰫹', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "ldg",                 text = '󱪹', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "ldif",                text = '󰫹', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "lean",                text = '󱎦', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "ledger",              text = '󱪹', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "leex",                text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "leo",                 text = '󰪂', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "less",                text = '󰌜', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "lex",                 text = '󰫹', fg = '#fab387' }, # MiniIconsOrange
+  { name = "lgt",                 text = '󰫹', fg = '#fab387' }, # MiniIconsOrange
+  { name = "lhs",                 text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "lib",                 text = '󰫳', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "libsonnet",           text = '󰫷', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "lid",                 text = '󰫱', fg = '#fab387' }, # MiniIconsOrange
+  { name = "lidr",                text = '󰫹', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "liq",                 text = '󰐹', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "liquid",              text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "lisp",                text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "lite",                text = '󰫹', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "livemd",              text = '󰂾', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "lm3",                 text = '󰫺', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "lo",                  text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "loe",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "lof",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "lotos",               text = '󰴈', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "lou",                 text = '󰫹', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "lout",                text = '󰫹', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "lpc",                 text = '󰫹', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "lpe",                 text = '󰭟', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "lrc",                 text = '󰫹', fg = '#fab387' }, # MiniIconsOrange
+  { name = "lsp",                 text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "lss",                 text = '󰫹', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "lst",                 text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "lt",                  text = '󰫹', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "lte",                 text = '󰅶', fg = '#fab387' }, # MiniIconsOrange
+  { name = "ltx",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "lua",                 text = '󰢱', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "luau",                text = '󰢱', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "lvs",                 text = '󰭟', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "lxx",                 text = '󰫹', fg = '#fab387' }, # MiniIconsOrange
+  { name = "ly",                  text = '󱎦', fg = '#fab387' }, # MiniIconsOrange
+  { name = "m3",                  text = '󰫺', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "m3u",                 text = '󰲸', fg = '#fab387' }, # MiniIconsOrange
+  { name = "m3u8",                text = '󰲸', fg = '#fab387' }, # MiniIconsOrange
+  { name = "m4",                  text = '󰫺', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "m4a",                 text = '󰈣', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "m4gl",                text = '󰫳', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "m4v",                 text = '󰈫', fg = '#fab387' }, # MiniIconsOrange
+  { name = "mac",                 text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "mak",                 text = '󱁤', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "man",                 text = '󰫻', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "mar",                 text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "masm",                text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "mat",                 text = '󰫿', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "mata",                text = '󰝫', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "mch",                 text = '󰫯', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "mcmeta",              text = '󰘦', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "mcs",                 text = '󰋘', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "mdd",                 text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "mdh",                 text = '󰙱', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "mdown",               text = '󰍔', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "mel",                 text = '󰫺', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "mermaid",             text = '󰫺', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "mf",                  text = '󰫺', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "mg",                  text = '󰫺', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "mgl",                 text = '󰫺', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "mgp",                 text = '󰫺', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "mib",                 text = '󰫺', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "mill",                text = '', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "mix",                 text = '󰫺', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "mixal",               text = '󰫺', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "mjs",                 text = '󰌞', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "mk",                  text = '󱁤', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "mkii",                text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "mkiv",                text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "mklx",                text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "mkv",                 text = '󰈫', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "mkvi",                text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "mkxl",                text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "ml",                  text = '', fg = '#fab387' }, # MiniIconsOrange
+  { name = "mli",                 text = '', fg = '#fab387' }, # MiniIconsOrange
+  { name = "mlip",                text = '', fg = '#fab387' }, # MiniIconsOrange
+  { name = "mlir",                text = '󰫺', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "mll",                 text = '', fg = '#fab387' }, # MiniIconsOrange
+  { name = "mlp",                 text = '', fg = '#fab387' }, # MiniIconsOrange
+  { name = "mlt",                 text = '', fg = '#fab387' }, # MiniIconsOrange
+  { name = "mly",                 text = '', fg = '#fab387' }, # MiniIconsOrange
+  { name = "mmd",                 text = '󰫺', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "mmdc",                text = '󰫺', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "mmi",                 text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "mmp",                 text = '󰫺', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "mo",                  text = '󰫴', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "moc",                 text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "MODX",                text = '󰫿', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "MODx",                text = '󰫿', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "ModX",                text = '󰫿', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "Modx",                text = '󰫿', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "modX",                text = '󰫿', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "modx",                text = '󰫿', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "mof",                 text = '󰫺', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "mojo",                text = '󰈸', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "mom",                 text = '󰫴', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "monk",                text = '󰫺', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "moo",                 text = '󰫺', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "moon",                text = '󰽥', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "mot",                 text = '󰍛', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "mov",                 text = '󰈫', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "move",                text = '󰆾', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "mp",                  text = '󰫺', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "mp3",                 text = '󰈣', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "mp4",                 text = '󰈫', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "mpd",                 text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "mpeg",                text = '󰈫', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "mpg",                 text = '󰈫', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "mpiv",                text = '󰫺', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "mpl",                 text = '󰲓', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "mplstyle",            text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "mpp",                 text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "mpvi",                text = '󰫺', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "mpxl",                text = '󰫺', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "msc",                 text = '󰬅', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "msf",                 text = '󰬅', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "msql",                text = '󰆼', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "mst",                 text = '󰫶', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "mts",                 text = '󰛦', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "mu",                  text = '󰫺', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "mush",                text = '󰫺', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "mustache",            text = '󱗞', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "mv",                  text = '󰲓', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "mw",                  text = '󰖬', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "mws",                 text = '󰲓', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "my",                  text = '󰫺', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "mysql",               text = '󰆼', fg = '#fab387' }, # MiniIconsOrange
+  { name = "n1ql",                text = '󰫻', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "nanorc",              text = '󰒓', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "nasm",                text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "nav",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "nb",                  text = '󰘨', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "ncf",                 text = '󰫻', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "nginx",               text = '󰰓', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "nim",                 text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "nimble",              text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "nims",                text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "ninja",               text = '󰝴', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "nix",                 text = '󱄅', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "nlo",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "nls",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "nmconnection",        text = '󰒓', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "norg",                text = '', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "nqc",                 text = '󱊈', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "nql",                 text = '󰫻', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "nr",                  text = '󰫻', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "NSA",                 text = '󰫻', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "NSC",                 text = '󰫻', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "nse",                 text = '󰢱', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "NSG",                 text = '󰫻', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "nsh",                 text = '󰫻', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "nsi",                 text = '󰫻', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "NSL",                 text = '󰫻', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "NSM",                 text = '󰫻', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "NSN",                 text = '󰫻', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "NSP",                 text = '󰫻', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "NSS",                 text = '󰫻', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "nu",                  text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "nut",                 text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "obj",                 text = '󰆧', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "objdump",             text = '󰫼', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "obl",                 text = '󰫼', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "oblivion",            text = '󰫼', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "obscript",            text = '󰫼', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "obse",                text = '󰫼', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "occ",                 text = '󱦗', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "odin",                text = '󰮔', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "odl",                 text = '󰫺', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "ogg",                 text = '󰈣', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "opam",                text = '󰫼', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "OPL",                 text = '󰫼', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "OPl",                 text = '󰫼', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "OpL",                 text = '󰫼', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "Opl",                 text = '󰫼', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "oPL",                 text = '󰫼', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "oPl",                 text = '󰫼', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "opL",                 text = '󰫼', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "opl",                 text = '󰫼', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "or",                  text = '󰫼', fg = '#fab387' }, # MiniIconsOrange
+  { name = "ora",                 text = '󰒓', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "org",                 text = '', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "org_archive",         text = '', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "orx",                 text = '󰫿', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "overlay",             text = '󰫱', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "ovpn",                text = '󰖂', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "p36",                 text = '󰫽', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "p6",                  text = '󱖉', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "pac",                 text = '󰫽', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "pag",                 text = '󰛤', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "page",                text = '󰫺', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "pandoc",              text = '󰍔', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "papp",                text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "pas",                 text = '󱤊', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "pbtxt",               text = '󰈚', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "pc",                  text = '󰆼', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "pcmk",                text = '󰫽', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "pd",                  text = '󰍔', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "pdb",                 text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "pdc",                 text = '󰍔', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "pde",                 text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "pdf",                 text = '󰈦', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "pdf_tex",             text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "pdk",                 text = '󰍔', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "pem",                 text = '󰌇', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "persistentmodels",    text = '󰲒', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "pfa",                 text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "pgf",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "php",                 text = '󰌟', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "php0",                text = '󰌟', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "php1",                text = '󰌟', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "php2",                text = '󰌟', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "php3",                text = '󰌟', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "php4",                text = '󰌟', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "php5",                text = '󰌟', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "php6",                text = '󰌟', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "php7",                text = '󰌟', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "php8",                text = '󰌟', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "php9",                text = '󰌟', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "phpt",                text = '󰌟', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "phtml",               text = '󰌟', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "pike",                text = '󰈺', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "pip",                 text = '󱘎', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "pk",                  text = '󰫽', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "pkb",                 text = '󰆼', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "pks",                 text = '󰆼', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "pl1",                 text = '󰫽', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "pld",                 text = '󰫰', fg = '#fab387' }, # MiniIconsOrange
+  { name = "pli",                 text = '󰫽', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "plm",                 text = '󰫽', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "plp",                 text = '', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "pls",                 text = '󰆼', fg = '#fab387' }, # MiniIconsOrange
+  { name = "plsql",               text = '󰆼', fg = '#fab387' }, # MiniIconsOrange
+  { name = "plx",                 text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "pm6",                 text = '󱖉', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "pml",                 text = '󰫽', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "pmod",                text = '󰈺', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "png",                 text = '󰸭', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "po",                  text = '󰗊', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "pod",                 text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "pod6",                text = '󱖉', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "pony",                text = '󱖿', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "pot",                 text = '󰗊', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "pov",                 text = '󰫽', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "ppd",                 text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "pps",                 text = '󱎐', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "ppsm",                text = '󱎐', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "ppsx",                text = '󱎐', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "ppt",                 text = '󱎐', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "pptm",                text = '󱎐', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "pptx",                text = '󱎐', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "pr",                  text = '󰬀', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "prettierignore",      text = '󰊢', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "prisma",              text = '', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "properties",          text = '󰬷', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "proto",               text = '', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "prql",                text = '󱘻', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "ps",                  text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "ps1",                 text = '󰨊', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "ps1xml",              text = '󰨊', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "psc1",                text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "psd1",                text = '󰨊', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "psf",                 text = '󰫽', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "psgi",                text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "psl",                 text = '󰫽', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "psm1",                text = '󰨊', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "pssc",                text = '󰨊', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "pt",                  text = '󰌝', fg = '#fab387' }, # MiniIconsOrange
+  { name = "ptl",                 text = '󰌠', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "pug",                 text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "purs",                text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "purs",                text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "pxd",                 text = '󰫽', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "pxi",                 text = '󰫽', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "pxml",                text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "pxsl",                text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "py",                  text = '󰌠', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "pygstyle",            text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "pygtex",              text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "pyi",                 text = '󰌠', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "pyw",                 text = '󰌠', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "pyx",                 text = '󰫽', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "pyx+",                text = '󰫽', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "qbs",                 text = '󰫾', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "qc",                  text = '󰙱', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "ql",                  text = '󰆼', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "qll",                 text = '󰆼', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "qmd",                 text = '󰐗', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "qml",                 text = '󰫾', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "quake",               text = '󰫺', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "quark",               text = '󰆦', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "R",                   text = '󰟔', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "r",                   text = '󰟔', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "rad",                 text = '󰫿', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "rahit",               text = '󰫴', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "rake",                text = '󰴭', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "raku",                text = '󱖉', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "rakudoc",             text = '󱖉', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "rakumod",             text = '󱖉', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "rakutest",            text = '󱖉', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "raml",                text = '󰫿', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "rant",                text = '󰴭', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "rar",                 text = '󰗄', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "rasi",                text = '󰫿', fg = '#fab387' }, # MiniIconsOrange
+  { name = "rasinc",              text = '󰫿', fg = '#fab387' }, # MiniIconsOrange
+  { name = "rb",                  text = '󰴭', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "rbi",                 text = '󰴭', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "rbs",                 text = '󰁯', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "rbw",                 text = '󰴭', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "rc",                  text = '󰒓', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "rcall",               text = '󰫴', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "rch",                 text = '󰒓', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "rchit",               text = '󰫴', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "rcp",                 text = '󰒓', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "rd",                  text = '󰟔', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "rdf",                 text = '󰫿', fg = '#fab387' }, # MiniIconsOrange
+  { name = "recipe",              text = '󰫰', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "ref",                 text = '󰫯', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "rego",                text = '󰫿', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "rej",                 text = '󰦓', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "rem",                 text = '󰢌', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "remind",              text = '󰢌', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "res",                 text = '󰫿', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "resi",                text = '󰫿', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "resource",            text = '󰚩', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "rex",                 text = '󰫿', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "rexx",                text = '󰫿', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "rexxj",               text = '󰫿', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "rgen",                text = '󰫴', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "rhtml",               text = '󰴭', fg = '#fab387' }, # MiniIconsOrange
+  { name = "rib",                 text = '󰫿', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "rint",                text = '󰫴', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "rjs",                 text = '󰴭', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "rkt",                 text = '󰘧', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "rktd",                text = '󰘧', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "rktl",                text = '󰘧', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "rmd",                 text = '󰍔', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "rmiss",               text = '󰫴', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "rnc",                 text = '󰫿', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "rng",                 text = '󰫿', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "rnw",                 text = '󰟔', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "robot",               text = '󰚩', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "roc",                 text = '󱗆', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "rockspec",            text = '󰢱', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "roff",                text = '󰫻', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "ron",                 text = '󱘗', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "rpgle",               text = '󰫿', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "rpgleinc",            text = '󰫿', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "rpl",                 text = '󰫿', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "rpm",                 text = '󰗄', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "rq",                  text = '󰬀', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "rrst",                text = '󰫿', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "rs",                  text = '󱘗', fg = '#fab387' }, # MiniIconsOrange
+  { name = "rsc",                 text = '󱂇', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "rss",                 text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "rst",                 text = '󰊄', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "rtf",                 text = '󰚞', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "ru",                  text = '󰴭', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "run",                 text = '󰫮', fg = '#fab387' }, # MiniIconsOrange
+  { name = "rxj",                 text = '󰫿', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "rxml",                text = '󰴭', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "rxo",                 text = '󰫿', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "S",                   text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "s",                   text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "s19",                 text = '󰍛', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "s28",                 text = '󰍛', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "s37",                 text = '󰍛', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "sage",                text = '󰘨', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "sas",                 text = '󰱐', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "sass",                text = '󰟬', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "sba",                 text = '󰛤', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "sbt",                 text = '', fg = '#fab387' }, # MiniIconsOrange
+  { name = "scad",                text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "scala",               text = '', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "sce",                 text = '󰂓', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "sci",                 text = '󰂓', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "scm",                 text = '󰘧', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "score",               text = '󰬀', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "scpt",                text = '󰀵', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "scss",                text = '󰟬', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "sd",                  text = '󰬀', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "sdc",                 text = '󰬀', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "sdl",                 text = '󰬀', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "sed",                 text = '󰟥', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "sexp",                text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "sface",               text = '󰬀', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "sgm",                 text = '󰬀', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "sgml",                text = '󰬀', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "sh",                  text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "shader",              text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "shtml",               text = '󰌝', fg = '#fab387' }, # MiniIconsOrange
+  { name = "si",                  text = '󰫰', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "sieve",               text = '󰈲', fg = '#fab387' }, # MiniIconsOrange
+  { name = "sit",                 text = '󰗄', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "siv",                 text = '󰈲', fg = '#fab387' }, # MiniIconsOrange
+  { name = "sky",                 text = '', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "sl",                  text = '󰬀', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "sld",                 text = '󰘧', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "slint",               text = '󰬀', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "sln",                 text = '󰘐', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "slnf",                text = '󰘦', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "slnx",                text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "sls",                 text = '󰬀', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "slt",                 text = '󰬁', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "smali",               text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "smcl",                text = '󰄨', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "smd",                 text = '󰍔', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "smith",               text = '󰬀', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "smithy",              text = '󰬀', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "smk",                 text = '󱔎', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "sml",                 text = '󰘧', fg = '#fab387' }, # MiniIconsOrange
+  { name = "smt",                 text = '󰬀', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "snd",                 text = '󰈣', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "sno",                 text = '󰬀', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "snw",                 text = '󰟔', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "sol",                 text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "sp",                  text = '󰬀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "sparql",              text = '󰬀', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "spd",                 text = '󰬀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "spdata",              text = '󰬀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "spec",                text = '', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "speedup",             text = '󰬀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "spfm",                text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "spi",                 text = '󰬀', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "spice",               text = '󰬀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "spt",                 text = '󰬀', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "spy",                 text = '󰬀', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "sqi",                 text = '󰬀', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "sql",                 text = '󰆼', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "sqlj",                text = '󰆼', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "sqr",                 text = '󰬀', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "srec",                text = '󰍛', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "srst",                text = '󰫿', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "srt",                 text = '󰨖', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "ss",                  text = '󰘧', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "ssa",                 text = '󰨖', fg = '#fab387' }, # MiniIconsOrange
+  { name = "ssc",                 text = '󰫺', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "ssi",                 text = '󰬀', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "ssm",                 text = '󰬀', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "sst",                 text = '󰬀', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "st",                  text = '󰄚', fg = '#fab387' }, # MiniIconsOrange
+  { name = "star",                text = '', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "starlark",            text = '', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "stm",                 text = '󰌝', fg = '#fab387' }, # MiniIconsOrange
+  { name = "stp",                 text = '󰬀', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "strl",                text = '󰫲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "stsg",                text = '󰘧', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "sty",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "styl",                text = '󰴒', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "stylus",              text = '󰴒', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "sub",                 text = '󰚩', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "sublime-project",     text = '󰘦', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "sublime-settings",    text = '󰘦', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "sublime-workspace",   text = '󰘦', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "sum",                 text = '󰫵', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "sv",                  text = '󰍛', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "svelte",              text = '', fg = '#fab387' }, # MiniIconsOrange
+  { name = "svg",                 text = '󰜡', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "svh",                 text = '󰍛', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "sw",                  text = '󰬀', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "swg",                 text = '󰬀', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "swift",               text = '󰛥', fg = '#fab387' }, # MiniIconsOrange
+  { name = "swiftinterface",      text = '󰛥', fg = '#fab387' }, # MiniIconsOrange
+  { name = "swig",                text = '󰬀', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "sysx",                text = '󰫿', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "t32",                 text = '󰬁', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "t6",                  text = '󱖉', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "tak",                 text = '󰔏', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "tal",                 text = '󰬁', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "tape",                text = '󰨛', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "tar",                 text = '󰗄', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "task",                text = '󰬁', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "tcc",                 text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "tcl",                 text = '󰛓', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "td",                  text = '󰬁', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "tdf",                 text = '󰫮', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "templ",               text = '󰬁', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "tesc",                text = '󰫴', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "tese",                text = '󰫴', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "testGroup",           text = '󰫿', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "testUnit",            text = '󰫿', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "tex",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "texi",                text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "texinfo",             text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "text",                text = '󰦪', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "textpb",              text = '󰈚', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "textproto",           text = '󰈚', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "tf",                  text = '󰬁', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "tf",                  text = '󱁢', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "tfvars",              text = '󱁢', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "tgz",                 text = '󰗄', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "theme",               text = '󰌟', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "thm",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "thrift",              text = '󰬁', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "ti",                  text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "tif",                 text = '󰈟', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "tiff",                text = '󰈟', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "tikz",                text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "tk",                  text = '󰛓', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "tl",                  text = '󰢱', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "tla",                 text = '󰬁', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "tlh",                 text = '󰙲', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "tli",                 text = '󰬁', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "tlu",                 text = '󰢱', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "tm",                  text = '󰛓', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "tmac",                text = '󰫻', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "tmpl",                text = '󰬁', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "toml",                text = '', fg = '#fab387' }, # MiniIconsOrange
+  { name = "tpl",                 text = '', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "tpm",                 text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "tpp",                 text = '󰐨', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "tr",                  text = '󰫻', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "treetop",             text = '󰔱', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "tres",                text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "ts",                  text = '󰛦', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "tsc",                 text = '󰫺', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "tscn",                text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "tsp",                 text = '󰬁', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "tsscl",               text = '󱣖', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "tssgm",               text = '󱣖', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "tssop",               text = '󱣖', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "tsv",                 text = '', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "tsx",                 text = '', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "tutor",               text = '󱆀', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "twig",                text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "txi",                 text = '', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "txtpb",               text = '󰈚', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "txz",                 text = '󰗄', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "tyb",                 text = '󰆼', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "tyc",                 text = '󰆼', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "u",                   text = '󰡉', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "uc",                  text = '󰬂', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "ui",                  text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "uil",                 text = '󰬂', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "uit",                 text = '󰬂', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "ulpc",                text = '󰫹', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "ungram",              text = '󱘎', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "url",                 text = '󰌷', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "usd",                 text = '󰻇', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "usda",                text = '󰻇', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "uu",                  text = '󰡉', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "v",                   text = '', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "va",                  text = '󰍛', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "vala",                text = '󰬝', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "vams",                text = '󰍛', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "vb",                  text = '󰛤', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "vbe",                 text = '󰍛', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "vbp",                 text = '󰯂', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "vbproj",              text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "vbs",                 text = '󰛤', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "vc",                  text = '󰫵', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "vdf",                 text = '󰬃', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "vdm",                 text = '󱂌', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "vdmpp",               text = '󱂌', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "vdmrt",               text = '󱂌', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "vdmsl",               text = '󱂌', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "vert",                text = '󰫴', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "vhd",                 text = '󰍛', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "vhdl",                text = '󰍛', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "vho",                 text = '󰍛', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "vim",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "vpp",                 text = '󱂌', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "vr",                  text = '󰬃', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "vrb",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "vrh",                 text = '󰬃', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "vri",                 text = '󰬃', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "vroom",               text = '', fg = '#fab387' }, # MiniIconsOrange
+  { name = "vsh",                 text = '', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "vst",                 text = '󰍛', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "vto",                 text = '󱂌', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "vue",                 text = '󰡄', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "vv",                  text = '', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "wast",                text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "wat",                 text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "wav",                 text = '󰈣', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "wbt",                 text = '󰯂', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "wdl",                 text = '󰬄', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "web",                 text = '󰯊', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "webm",                text = '󰈫', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "webmanifest",         text = '󰘦', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "webp",                text = '󰈟', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "wgsl",                text = '󰬄', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "wiki",                text = '󰖬', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "wit",                 text = '', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "wl",                  text = '󰘨', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "wm",                  text = '󰬄', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "wma",                 text = '󰈣', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "wml",                 text = '󰖟', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "wmv",                 text = '󰈫', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "wpl",                 text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "wrap",                text = '󰯂', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "wrl",                 text = '󰬃', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "wrm",                 text = '󰆼', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "wsc",                 text = '󰯂', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "wsdl",                text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "wsf",                 text = '󰯂', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "wsml",                text = '󰬄', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "wxm",                 text = '󰫺', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "x",                   text = '󰫿', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "xba",                 text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "xci",                 text = '󰘦', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "xcu",                 text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "xht",                 text = '󰌝', fg = '#fab387' }, # MiniIconsOrange
+  { name = "xhtml",               text = '󰌝', fg = '#fab387' }, # MiniIconsOrange
+  { name = "xin",                 text = '󰫼', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "xlb",                 text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "xlc",                 text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "xlf",                 text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "xliff",               text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "xls",                 text = '󱎏', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "xlsm",                text = '󱎏', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "xlsx",                text = '󱎏', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "xlt",                 text = '󱎏', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "xltm",                text = '󱎏', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "xltx",                text = '󱎏', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "xmi",                 text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "xml",                 text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "xom",                 text = '󰫼', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "xpfm",                text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "xpm2",                text = '󰍹', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "xpr",                 text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "xq",                  text = '󰗀', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "xql",                 text = '󰗀', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "xqm",                 text = '󰗀', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "xquery",              text = '󰗀', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "xqy",                 text = '󰗀', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "xs",                  text = '', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "xsd",                 text = '󰗀', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "xsl",                 text = '󰗀', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "xslt",                text = '󰗀', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "xul",                 text = '󰗀', fg = '#fab387' }, # MiniIconsOrange
+  { name = "xz",                  text = '󰗄', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "y++",                 text = '󰬆', fg = '#fab387' }, # MiniIconsOrange
+  { name = "yaml",                text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "yang",                text = '󰬆', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "yaws",                text = '', fg = '#f38ba8' }, # MiniIconsRed
+  { name = "yml",                 text = '', fg = '#cba6f7' }, # MiniIconsPurple
+  { name = "yuck",                text = '󰬆', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "yxx",                 text = '󰬆', fg = '#fab387' }, # MiniIconsOrange
+  { name = "yy",                  text = '󰬆', fg = '#fab387' }, # MiniIconsOrange
+  { name = "z",                   text = '󰗄', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "z8a",                 text = '', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "zed",                 text = '󰫮', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "zig",                 text = '', fg = '#fab387' }, # MiniIconsOrange
+  { name = "ziggy",               text = '󰬇', fg = '#89b4fa' }, # MiniIconsBlue
+  { name = "ziggy-schema",        text = '󰬇', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "zip",                 text = '󰗄', fg = '#b4befe' }, # MiniIconsAzure
+  { name = "zon",                 text = '', fg = '#fab387' }, # MiniIconsOrange
+  { name = "zone",                text = '󰫯', fg = '#74c7ec' }, # MiniIconsCyan
+  { name = "zs",                  text = '󰬇', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "zsh",                 text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "zsh-theme",           text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "zsql",                text = '󰆼', fg = '#6c7086' }, # MiniIconsGrey
+  { name = "zst",                 text = '󰗄', fg = '#f9e2af' }, # MiniIconsYellow
+  { name = "zu",                  text = '󰬇', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "zunit",               text = '', fg = '#a6e3a1' }, # MiniIconsGreen
+  { name = "zut",                 text = '󰬇', fg = '#fab387' }, # MiniIconsOrange
+  { name = "🔥",                  text = '󰈸', fg = '#f38ba8' }, # MiniIconsRed
+]
+
+conds = [
+  { if = "hidden & dir", text = '󱞞', fg = '#b4befe' },
+  { if = "dir", text = '󰉋', fg = '#b4befe' },
+  { if = "!dir", text = '󰈔', fg = '#6c7086' }
+]
