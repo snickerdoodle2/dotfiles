@@ -7,7 +7,7 @@
   };
 in {
   xdg.configFile."atuin/themes" = {
-    source = "${themes}/themes";
+    source = "${themes}/themes/mocha";
   };
 
   programs.atuin = {
