@@ -7,6 +7,7 @@
   bin = "${package}/bin/aerospace";
 in {
   programs.aerospace = {
+    launchd.enable = true;
     enable = true;
     package = package;
     userSettings = {

@@ -21,13 +21,23 @@ in {
   ];
   programs.ssh = {
     enable = true;
-    extraConfig = ''
-      Host *
-          IdentityAgent ${onePassPath}
-    '';
+    enableDefaultConfig = false;
+    matchBlocks."*" = {
+      forwardAgent = false;
+      addKeysToAgent = "no";
+      compression = false;
+      serverAliveInterval = 0;
+      serverAliveCountMax = 3;
+      hashKnownHosts = false;
+      userKnownHostsFile = "~/.ssh/known_hosts";
+      controlMaster = "no";
+      controlPath = "~/.ssh/master-%r@%n:%p";
+      controlPersist = "no";
+      identityAgent = "${onePassPath}";
+    };
   };
 
-  programs.git.extraConfig = {
+  programs.git.settings = {
     gpg.format = "ssh";
     "gpg \"ssh\"".program = op-ssh-sign;
     commit.gpgsign = true;

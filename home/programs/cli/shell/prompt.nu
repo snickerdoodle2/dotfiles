@@ -1,12 +1,12 @@
 let pathname = {|dir: path|
-    if ($dir | str starts-with $nu.home-path) {
+    if ($dir | str starts-with $nu.home-dir) {
         (["~"] ++ ($dir | path relative-to $env.HOME | path split)) | path join
     } else {
         $dir
     }
 }
 
-let git_branch = {|status| 
+let git_branch = {|status|
     let branch = $status.branch
     if $branch == "no_branch" {
         ""
@@ -15,7 +15,7 @@ let git_branch = {|status|
     }
 }
 
-let changes = {|status| 
+let changes = {|status|
     let changes  = [$status.wt_untracked, $status.wt_modified, $status.wt_deleted, $status.wt_type_changed, $status.wt_renamed] | any {|x| $x > 0}
 
     if ($changes) {
@@ -25,7 +25,7 @@ let changes = {|status|
     }
 }
 
-let ahead = {|status| 
+let ahead = {|status|
     if ($status.ahead > 0) {
         ""
     } else {
@@ -41,7 +41,7 @@ let behind = {|status|
     }
 }
 
-let git_status = {|| 
+let git_status = {||
     let status = gstat --no-tag
     let R = (ansi reset)
     let BLUE = (ansi $env.colors.teal)
@@ -68,7 +68,7 @@ let in_nix_shell = {||
     }
 }
 
-$env.PROMPT_COMMAND = {|| 
+$env.PROMPT_COMMAND = {||
     let BLUE = (ansi $env.colors.blue)
     $"($BLUE)(pwd | do $pathname $in) (do $git_status)\n"
 }
