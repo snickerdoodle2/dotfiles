@@ -34,7 +34,6 @@
   outputs = {
     self,
     nixpkgs,
-    nixpkgs-unstable,
     nix-darwin,
     home-manager,
     ...
@@ -76,8 +75,7 @@
         stateVersion = 6;
         primaryUser = "domi";
       };
-      pkgs-unstable = import nixpkgs-unstable {inherit system;};
-      specialArgs = {inherit hostname inputs system pkgs-unstable;};
+      specialArgs = {inherit hostname inputs system;};
     in
       nix-darwin.lib.darwinSystem {
         inherit specialArgs;
