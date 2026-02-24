@@ -4,7 +4,6 @@
     ./btop.nix
     ./gh.nix
     ./git.nix
-    ./helix.nix
     ./jujutsu.nix
     ./lazydocker.nix
     ./lazygit.nix
@@ -13,6 +12,7 @@
 
     ./shell
     ./yazi
+    ./helix
   ];
 
   home.packages = with pkgs; [
