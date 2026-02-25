@@ -30,6 +30,7 @@ in {
       nil
       harper
       marksman
+      kdlfmt
     ];
   };
 
