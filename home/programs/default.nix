@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ./bat.nix
+    ./dms.nix
     ./ghostty.nix
     ./helix
     ./jujutsu.nix

@@ -10,6 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     fonts = {
       url = "git+ssh://git@github.com/snickerdoodle2/fonts?ref=main";
       inputs.nixpkgs.follows = "nixpkgs";
