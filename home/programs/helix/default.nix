@@ -1,6 +1,7 @@
 {
   pkgs,
   pkgs-unstable,
+  config,
   ...
 }: let
   open_yazi = projectRoot: let
@@ -12,9 +13,9 @@
     tmp-file = "/tmp/yazi-path";
   in [
     ":sh rm -f ${tmp-file}"
-    ":insert-output YAZI_INSIDE_EDITOR=1 ${root-env} yazi \"%{buffer_name}\" --chooser-file=${tmp-file}"
+    ":insert-output YAZI_INSIDE_EDITOR=1 ${root-env} ${config.programs.yazi.package}/bin/yazi \"%{buffer_name}\" --chooser-file=${tmp-file}"
     ":sh printf \"\\x1b[?1049h\\x1b[?2004h\" > /dev/tty"
-    ":open %sh{cat ${tmp-file}}"
+    ":open %sh{${pkgs.coreutils}/bin/cat ${tmp-file}}"
     ":redraw"
   ];
 in {
