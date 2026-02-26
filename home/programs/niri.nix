@@ -1,4 +1,13 @@
-{config, ...}: {
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}: let
+  startup-script = pkgs.pkgs.writeShellScriptBin "script" ''
+    ${lib.getExe' pkgs._1password-gui "1password"} --silent
+  '';
+in {
   # FIXME: use https://github.com/sodiboo/niri-flake
   xdg.configFile."niri/config.kdl".text =
     # kdl
@@ -22,6 +31,12 @@
       binds {
           Mod+Return {
               spawn "${config.programs.ghostty.package}/bin/ghostty"
+          }
+          Mod+Space {
+              spawn-sh "dms ipc spotlight toggle"
+          }
+          Mod+Alt+L {
+              spawn-sh "dms ipc lock lock"
           }
           Mod+O repeat=false {
               toggle-overview
@@ -291,6 +306,7 @@
       }
       prefer-no-csd
       screenshot-path "~/Pictures/Screenshots/screenshot-%d-%m-%Y-%H-%M-%S.png"
+      spawn-at-startup "${startup-script}/bin/script"
       window-rule {
           match is-floating=true
           shadow {
