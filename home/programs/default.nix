@@ -12,6 +12,7 @@
     ./bat.nix
     ./dms.nix
     ./ghostty.nix
+    ./glow.nix
     ./helix
     ./nushell
     ./jujutsu.nix
