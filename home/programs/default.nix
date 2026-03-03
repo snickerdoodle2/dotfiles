@@ -4,6 +4,7 @@
     ./dms.nix
     ./ghostty.nix
     ./helix
+    ./nushell
     ./jujutsu.nix
     ./niri.nix
     ./tldr.nix

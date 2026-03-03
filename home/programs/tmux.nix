@@ -1,6 +1,8 @@
 {
   pkgs,
   tsm,
+  lib,
+  config,
   ...
 }: let
   accent = "\"#a6e3a1\"";
@@ -15,6 +17,7 @@ in {
     terminal = "tmux-256color";
     mouse = true;
   };
+
   programs.tmux.plugins = [
     pkgs.tmuxPlugins.sensible
     pkgs.tmuxPlugins.yank
@@ -28,7 +31,9 @@ in {
       '';
     }
   ];
+
   programs.tmux.extraConfig = ''
+    set -g default-shell ${lib.getExe' config.programs.nushell.package "nu"}
     set -g exit-empty off
     unbind '"'
     unbind %
