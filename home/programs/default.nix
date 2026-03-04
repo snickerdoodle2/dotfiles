@@ -4,6 +4,7 @@
     pkgs.eva
     pkgs.fd
     pkgs.fzf
+    pkgs.python315
     pkgs.ripgrep
     pkgs.wget
   ];
