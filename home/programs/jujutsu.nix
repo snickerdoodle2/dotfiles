@@ -4,13 +4,28 @@
   pkgs-unstable,
   lib,
   ...
-}: {
+}: let
+  lock-files =
+    [
+      "Cargo.lock"
+      "bun.lock"
+      "flake.lock"
+      "go.sum"
+      "mix.lock"
+      "package-lock.json"
+      "uv.lock"
+      "yarn.lock"
+    ]
+    |> lib.lists.map (x: "**/${x}")
+    |> lib.strings.concatStringsSep " | ";
+in {
   home.packages = [
     pkgs.mergiraf
   ];
 
-  # TODO: more configuration, commit signing
+  # TODO: more configuration
   # example: https://github.com/jj-vcs/jj/discussions/5812
+  # TODO: use fileset-aliases once 0.39 drops
   programs.jujutsu = {
     enable = true;
     package = pkgs-unstable.jujutsu;
@@ -27,6 +42,7 @@
       };
       aliases = {
         tug = ["bookmark" "move" "--from" "heads(::@ & bookmarks())" "--to" "closest_pushable(@)"];
+        df = ["diff" "~(${lock-files})"];
       };
       revsets = {
         log = "(trunk()..@):: | (trunk()..@)-";
