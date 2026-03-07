@@ -4,6 +4,7 @@
     tinymist.config = {
       formatterMode = "typstyle";
     };
+    rust-analyzer.config.check.command = "clippy";
   };
 
   programs.helix.languages.language = [
