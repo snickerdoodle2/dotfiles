@@ -15,6 +15,7 @@
     ./ghostty.nix
     ./glow.nix
     ./helix
+    ./nix-index.nix
     ./nushell
     ./jujutsu.nix
     ./niri.nix
