@@ -41,14 +41,21 @@ in {
         show-cryptographic-signatures = true;
       };
       aliases = {
-        tug = ["bookmark" "move" "--from" "heads(::@ & bookmarks())" "--to" "closest_pushable(@)"];
-        df = ["diff" "~(${lock-files})"];
+        tug = ["bookmark" "advance"];
+        d = ["diff" "~lock"];
       };
       revsets = {
         log = "(trunk()..@):: | (trunk()..@)-";
+        bookmark-advance-to = "closest_pushable(@)";
       };
       revset-aliases = {
         "closest_pushable(to)" = ''heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'';
+        "wip()" = ''description(glob:"wip:*")'';
+        "private()" = ''description(glob:"private:*")'';
+        "blacklist()" = ''wip() | private()'';
+      };
+      fileset-aliases = {
+        lock = lock-files;
       };
       signing = {
         behavior = "own";
@@ -64,6 +71,16 @@ in {
             "not signed",
           )
         '';
+      };
+      git = {
+        private-commits = "blacklist()";
+      };
+      remotes = {
+        origin = {
+          auto-track-bookmarks = "main|master";
+          auto-track-created-bookmarks = "*";
+        };
+        upstream.auto-track-bookmarks = "main|master";
       };
     };
   };
