@@ -17,7 +17,6 @@ in {
     home.homeDirectory = "/home/domi";
 
     home.packages = [
-      pkgs.firefox
       pkgs._1password-cli
       pkgs._1password-gui
     ];

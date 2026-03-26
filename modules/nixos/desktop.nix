@@ -24,4 +24,13 @@
     pkgs-fonts.berkeley-mono
     pkgs-fonts.berkeley-mono-nerd
   ];
+
+  environment.etc = {
+    "1password/custom_allowed_browsers" = {
+      text = ''
+        chromium
+      '';
+      mode = "0755";
+    };
+  };
 }

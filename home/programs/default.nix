@@ -11,6 +11,7 @@
 
   imports = [
     ./bat.nix
+    ./chromium.nix
     ./dms.nix
     ./ghostty.nix
     ./glow.nix
