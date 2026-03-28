@@ -21,6 +21,10 @@
   ];
 
   fonts.packages = [
+    pkgs.noto-fonts
+    pkgs.noto-fonts-cjk-sans
+    pkgs.noto-fonts-cjk-serif
+    pkgs.noto-fonts-color-emoji
     pkgs-fonts.berkeley-mono
     pkgs-fonts.berkeley-mono-nerd
   ];
