@@ -18,6 +18,9 @@
 
   environment.systemPackages = [
     pkgs.wl-clipboard
+    pkgs.xdg-desktop-portal-gtk
+    pkgs.xdg-desktop-portal-gnome
+    pkgs.kdePackages.dolphin
   ];
 
   fonts.packages = [
